@@ -1,0 +1,652 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Netflix Clone Design System - Modern Dark Theme */
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  :root {
+    --header-height: 70px;
+    --nav-height: 3.5rem;
+    --safe-top: env(safe-area-inset-top, 0px);
+    --safe-bottom: env(safe-area-inset-bottom, 0px);
+    --safe-left: env(safe-area-inset-left, 0px);
+    --safe-right: env(safe-area-inset-right, 0px);
+    /* Enhanced Netflix-inspired dark theme */
+    --background: 0 0% 6%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 98%;
+
+    /* Netflix Red - Official Colors */
+    --primary: 355 85% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 14%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 0 0% 16%;
+    --muted-foreground: 0 0% 70%;
+
+    --accent: 0 0% 18%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 16%;
+    --ring: 355 85% 50%;
+
+    --radius: 8px;
+
+    /* Enhanced Netflix Design Tokens */
+    --netflix-red: 355 85% 50%;
+    --netflix-red-dark: 355 70% 40%;
+    --netflix-red-light: 355 95% 60%;
+    --netflix-dark: 0 0% 6%;
+    --netflix-gray: 0 0% 14%;
+    --netflix-light-gray: 0 0% 22%;
+    --netflix-text-gray: 0 0% 75%;
+    
+    /* Enhanced Gradients */
+    --gradient-hero: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.6) 40%, rgba(0,0,0,0.95) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(var(--card)) 0%, hsl(0 0% 8%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(var(--netflix-red)) 0%, hsl(var(--netflix-red-dark)) 100%);
+    --gradient-modal: linear-gradient(180deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 50%, rgba(0,0,0,0.95) 100%);
+    --gradient-recently-added: linear-gradient(135deg, hsl(var(--netflix-red)) 0%, hsl(15 90% 55%) 100%);
+    
+    /* Enhanced Shadows */
+    --shadow-card: 0 8px 32px -8px rgba(0, 0, 0, 0.9);
+    --shadow-card-hover: 0 16px 48px -8px rgba(0, 0, 0, 0.95);
+    --shadow-netflix: 0 0 30px rgba(229, 9, 20, 0.4);
+    --shadow-modal: 0 25px 50px -12px rgba(0, 0, 0, 0.95);
+    --shadow-glow: 0 0 20px rgba(229, 9, 20, 0.3);
+    
+    /* Enhanced Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-modal: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html,
+  body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scrollbar-gutter: stable;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Roboto', 'Netflix Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    letter-spacing: -0.2px;
+    line-height: 1.4;
+    padding-top: var(--safe-top);
+    padding-bottom: var(--safe-bottom);
+    scroll-padding-top: calc(var(--nav-height) + var(--safe-top));
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  #root {
+    width: 100%;
+    min-height: 100dvh;
+    min-height: 100vh;
+  }
+
+  img,
+  video {
+    max-width: 100%;
+    height: auto;
+  }
+
+  @media (min-width: 768px) {
+    :root {
+      --nav-height: 4rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    :root {
+      --nav-height: 5rem;
+    }
+  }
+
+  /* Modal backdrop blur effect */
+  .modal-backdrop {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+}
+
+@layer components {
+  /* Enhanced Netflix Components */
+  .netflix-card {
+    @apply bg-card rounded-lg overflow-hidden shadow-[var(--shadow-card)] 
+           transition-[var(--transition-smooth)] cursor-pointer border border-border/50
+           hover:shadow-[var(--shadow-card-hover)] hover:scale-[1.08] hover:border-border;
+  }
+  
+  .netflix-button-primary {
+    @apply text-primary-foreground font-bold text-base
+           px-8 py-3 rounded-md transition-[var(--transition-smooth)]
+           hover:shadow-[var(--shadow-netflix)] hover:scale-105 
+           bg-white text-black hover:bg-white/90;
+    background: white;
+  }
+  
+  .netflix-button-secondary {
+    @apply bg-secondary/90 text-secondary-foreground font-semibold
+           px-8 py-3 rounded-md backdrop-blur-sm transition-[var(--transition-smooth)]
+           hover:bg-secondary/70 hover:scale-105 border border-white/30;
+  }
+
+  /* Netflix hero CTA buttons (matches netflix.com hero) */
+  .netflix-hero-btn {
+    @apply inline-flex items-center justify-center gap-2
+           h-8 sm:h-9 md:h-10
+           px-3 sm:px-4 md:px-7
+           text-sm sm:text-base md:text-[1.125rem]
+           font-bold leading-none cursor-pointer
+           rounded-[4px] border-0
+           transition-colors duration-200
+           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50;
+    font-family: 'Netflix Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+
+  .netflix-hero-play {
+    @apply netflix-hero-btn bg-white text-black;
+    background-color: #fff;
+  }
+
+  .netflix-hero-play:hover {
+    background-color: rgba(255, 255, 255, 0.75);
+  }
+
+  .netflix-hero-secondary {
+    @apply netflix-hero-btn text-white;
+    background-color: rgba(109, 109, 110, 0.7);
+  }
+
+  .netflix-hero-secondary:hover {
+    background-color: rgba(109, 109, 110, 0.4);
+  }
+
+  .netflix-hero-list {
+    @apply inline-flex items-center justify-center
+           h-8 w-8 sm:h-9 sm:w-9 md:h-10 md:w-10
+           rounded-full border-0 text-white
+           transition-colors duration-200
+           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50;
+    background-color: rgba(42, 42, 42, 0.6);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+  }
+
+  .netflix-hero-list:hover {
+    background-color: rgba(42, 42, 42, 0.8);
+    border-color: rgba(255, 255, 255, 0.7);
+  }
+
+  /* Enhanced Netflix Logo */
+  .netflix-logo {
+    @apply text-white text-2xl font-bold tracking-wider;
+    font-family: 'Netflix Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+
+  /* Enhanced Netflix Title Styling with Red Underline - Responsive */
+  .netflix-section-title {
+    @apply text-white font-bold text-lg sm:text-xl lg:text-2xl tracking-wide mb-4 sm:mb-6 relative;
+    font-family: 'Netflix Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+  
+  .netflix-section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, hsl(var(--netflix-red)) 0%, hsl(var(--netflix-red-light)) 100%);
+    border-radius: 2px;
+    box-shadow: 0 0 8px rgba(229, 9, 20, 0.4);
+  }
+  
+  @media (min-width: 640px) {
+    .netflix-section-title::after {
+      bottom: -6px;
+      width: 50px;
+      height: 3px;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .netflix-section-title::after {
+      bottom: -8px;
+      width: 60px;
+      height: 4px;
+    }
+  }
+  
+  .netflix-top10-title {
+    @apply text-white font-black text-xl sm:text-2xl lg:text-3xl tracking-wider mb-6 relative;
+    font-family: 'Netflix Sans', 'Bebas Neue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 10px rgba(229, 9, 20, 0.3);
+  }
+
+  .netflix-top10-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, hsl(var(--netflix-red)) 0%, hsl(var(--netflix-red-light)) 100%);
+    border-radius: 2px;
+    box-shadow: 0 0 8px rgba(229, 9, 20, 0.4);
+  }
+  
+  .netflix-ranking-badge {
+    @apply bg-netflix-red px-3 py-1.5 rounded-sm flex items-center;
+  }
+  
+  /* Enhanced Text Stroke Effect */
+  .text-stroke-white {
+    -webkit-text-stroke: 3px #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.4);
+  }
+  
+  /* Enhanced Modal Styling */
+  .netflix-modal {
+    @apply bg-background rounded-lg overflow-hidden shadow-[var(--shadow-modal)]
+           border border-border/30 backdrop-blur-xl;
+    background: linear-gradient(135deg, rgba(0,0,0,0.95) 0%, rgba(15,15,15,0.98) 100%);
+  }
+  
+  /* Updated Recently Added Badge - Removed blink effect */
+  .recently-added-badge {
+    background: linear-gradient(135deg, hsl(var(--netflix-red)) 0%, hsl(var(--netflix-red-dark)) 100%);
+    @apply text-white font-bold text-[11px] px-3 py-2 rounded-md shadow-[var(--shadow-glow)] border border-white/20;
+  }
+  
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+  
+  .hero-left-fade {
+    background: linear-gradient(90deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.55) 35%, rgba(0,0,0,0.15) 70%, rgba(0,0,0,0) 100%);
+  }
+  
+  .modal-gradient {
+    background: var(--gradient-modal);
+  }
+  
+  /* Horizontal carousel track — tuned for iOS, Android, and touch laptops */
+  .scroll-container {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: x proximity;
+    overscroll-behavior-x: contain;
+    touch-action: pan-x pan-y;
+  }
+  
+  .scroll-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Cards inside carousels: allow parent to scroll; avoid nested touch-action locks */
+  .carousel-item {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Premium Netflix-Style Scrollbar with Auto-Hide */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  *:hover::-webkit-scrollbar {
+    opacity: 1;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+    margin: 2px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #A31B02;
+    border-radius: 10px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 
+      0 0 8px rgba(163, 27, 2, 0.4),
+      0 0 16px rgba(163, 27, 2, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    position: relative;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #8B1502;
+    box-shadow: 
+      0 0 12px rgba(163, 27, 2, 0.6),
+      0 0 24px rgba(163, 27, 2, 0.3),
+      0 0 36px rgba(163, 27, 2, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    transform: scaleY(1.1);
+  }
+
+  ::-webkit-scrollbar-thumb:active {
+    background: #6B1002;
+    box-shadow: 
+      0 0 6px rgba(163, 27, 2, 0.8),
+      inset 0 2px 4px rgba(0, 0, 0, 0.3);
+    transform: scaleY(0.95);
+  }
+
+  ::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+
+  /* Firefox Premium Scrollbar with Auto-Hide */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #A31B02 transparent;
+  }
+
+  /* Responsive layout container */
+  .container {
+    width: 100%;
+    max-width: 1400px;
+    margin-inline: auto;
+    padding-inline: clamp(12px, 3vw, 32px);
+  }
+
+  /* Smooth scroll snap */
+  .scroll-snap-align-start {
+    scroll-snap-align: start;
+  }
+  
+  /* Enhanced Typography */
+  .netflix-title {
+    @apply font-bold tracking-tight text-foreground;
+  }
+  
+  .netflix-subtitle {
+    @apply font-semibold text-muted-foreground tracking-wide;
+  }
+  
+  .netflix-body {
+    @apply text-muted-foreground leading-relaxed;
+  }
+
+  /* Enhanced Interactive Elements */
+  .interactive-element {
+    @apply transition-all duration-300 ease-out hover:scale-105 active:scale-95;
+  }
+
+  .glow-effect {
+    @apply shadow-[0_0_20px_rgba(229,9,20,0.3)] hover:shadow-[0_0_40px_rgba(229,9,20,0.5)];
+  }
+
+  /* Smooth button animations */
+  .smooth-button {
+    @apply transition-all duration-300 ease-out transform hover:scale-110 active:scale-95
+           hover:shadow-lg active:shadow-sm;
+  }
+  
+  /* Enhanced Profile Card Animations */
+  .profile-card {
+    @apply transition-all duration-500 ease-out cursor-pointer;
+    transform-origin: center;
+  }
+  
+  .profile-card:hover {
+    transform: scale(1.1) translateY(-8px);
+  }
+  
+  .profile-avatar {
+    @apply transition-all duration-400 ease-out border-4 border-transparent;
+    filter: brightness(0.8) contrast(1);
+  }
+  
+  .profile-card:hover .profile-avatar {
+    border-color: white;
+    filter: brightness(1.1) contrast(1.2);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
+  }
+  
+  .profile-name {
+    @apply transition-all duration-300 ease-out text-gray-400;
+  }
+  
+  .profile-card:hover .profile-name {
+    @apply text-white;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+  }
+}
+
+@layer utilities {
+  .pt-safe {
+    padding-top: var(--safe-top);
+  }
+
+  .pb-safe {
+    padding-bottom: var(--safe-bottom);
+  }
+
+  .pl-safe {
+    padding-left: var(--safe-left);
+  }
+
+  .pr-safe {
+    padding-right: var(--safe-right);
+  }
+
+  .min-h-dvh-fallback {
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+
+  .h-dvh-fallback {
+    height: 100vh;
+    height: 100dvh;
+  }
+
+  .tv-focus-ring:focus-visible {
+    @apply outline-none ring-2 ring-white ring-offset-2 ring-offset-black;
+  }
+
+  .text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Enhanced animation utilities */
+  .animate-smooth-fade {
+    animation: smooth-fade 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .animate-smooth-slide {
+    animation: smooth-slide 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .animate-smooth-scale {
+    animation: smooth-scale 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .animate-modal-enter {
+    animation: modal-enter 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .animate-modal-exit {
+    animation: modal-exit 0.3s cubic-bezier(0.4, 0, 1, 1);
+  }
+
+  /* Stagger animation utility */
+  .stagger-animation {
+    animation-fill-mode: both;
+  }
+}
+
+/* Enhanced Keyframe Animations */
+@keyframes smooth-fade {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes smooth-slide {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes smooth-scale {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes modal-enter {
+  0% {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+    backdrop-filter: blur(0px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    backdrop-filter: blur(8px);
+  }
+}
+
+@keyframes modal-exit {
+  0% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    backdrop-filter: blur(8px);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.95) translateY(-10px);
+    backdrop-filter: blur(0px);
+  }
+}
+
+/* Enhanced pulse animation */
+@keyframes enhanced-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+.animate-enhanced-pulse {
+  animation: enhanced-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Floating animation for special elements */
+@keyframes floating {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-floating {
+  animation: floating 3s ease-in-out infinite;
+}

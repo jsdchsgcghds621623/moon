@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Netflix+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Netflix color palette */
+  --netflix-red: 229 9 20;
+  --netflix-red-dark: 153 22 29;
+  --netflix-black: 0 0 0;
+  --netflix-dark-gray: 20 20 20;
+  --netflix-gray: 64 64 64;
+  --netflix-light-gray: 118 118 118;
+  --netflix-white: 255 255 255;
+
+  /* Design system colors */
+  --background: var(--netflix-black);
+  --foreground: var(--netflix-white);
+  --card: var(--netflix-dark-gray);
+  --card-foreground: var(--netflix-white);
+  --popover: var(--netflix-dark-gray);
+  --popover-foreground: var(--netflix-white);
+  --primary: var(--netflix-red);
+  --primary-foreground: var(--netflix-white);
+  --secondary: var(--netflix-gray);
+  --secondary-foreground: var(--netflix-white);
+  --muted: var(--netflix-gray);
+  --muted-foreground: var(--netflix-light-gray);
+  --accent: var(--netflix-red-dark);
+  --accent-foreground: var(--netflix-white);
+  --destructive: var(--netflix-red);
+  --destructive-foreground: var(--netflix-white);
+  --border: var(--netflix-gray);
+  --input: var(--netflix-gray);
+  --ring: var(--netflix-red);
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: var(--netflix-black);
+  --foreground: var(--netflix-white);
+  --card: var(--netflix-dark-gray);
+  --card-foreground: var(--netflix-white);
+  --popover: var(--netflix-dark-gray);
+  --popover-foreground: var(--netflix-white);
+  --primary: var(--netflix-red);
+  --primary-foreground: var(--netflix-white);
+  --secondary: var(--netflix-gray);
+  --secondary-foreground: var(--netflix-white);
+  --muted: var(--netflix-gray);
+  --muted-foreground: var(--netflix-light-gray);
+  --accent: var(--netflix-red-dark);
+  --accent-foreground: var(--netflix-white);
+  --destructive: var(--netflix-red);
+  --destructive-foreground: var(--netflix-white);
+  --border: var(--netflix-gray);
+  --input: var(--netflix-gray);
+  --ring: var(--netflix-red);
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--netflix-red)) transparent;
+}
+
+.font-netflix {
+  font-family: 'Netflix Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+.netflix-section-title {
+  @apply text-white font-semibold mb-4 tracking-wide;
+}
+
+.scroll-container {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Custom animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.8s ease-out forwards;
+}
+
+/* Netflix-style hover effects */
+.netflix-card {
+  @apply transition-all duration-300 ease-in-out transform hover:scale-105 hover:z-10;
+}
+
+.netflix-button {
+  @apply bg-white text-black hover:bg-white/80 transition-all duration-200 font-semibold;
+}
+
+.netflix-button-secondary {
+  @apply bg-gray-600/80 text-white hover:bg-gray-600/60 transition-all duration-200;
+}

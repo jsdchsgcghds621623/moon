@@ -1,0 +1,58 @@
+Sitemap: https://moonflix.site/sitemap.xml
+
+User-agent: Googlebot
+Allow: /
+Allow: /movie/
+Allow: /tv/
+Allow: /anime/
+Allow: /trending
+Allow: /top-rated
+Allow: /comedy-movies
+Allow: /action-movies
+Allow: /horror-movies
+Allow: /korean-drama
+Allow: /hindi-movies
+Allow: /sci-fi-movies
+Disallow: /search
+Disallow: /profiles
+Disallow: /my-list
+
+User-agent: Bingbot
+Allow: /
+Allow: /movie/
+Allow: /tv/
+Allow: /anime/
+Allow: /trending
+Allow: /top-rated
+Allow: /comedy-movies
+Allow: /action-movies
+Allow: /horror-movies
+Allow: /korean-drama
+Allow: /hindi-movies
+Allow: /sci-fi-movies
+Disallow: /search
+Disallow: /profiles
+Disallow: /my-list
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: *
+Allow: /
+Allow: /movie/
+Allow: /tv/
+Allow: /anime/
+Allow: /trending
+Allow: /top-rated
+Allow: /comedy-movies
+Allow: /action-movies
+Allow: /horror-movies
+Allow: /korean-drama
+Allow: /hindi-movies
+Allow: /sci-fi-movies
+Disallow: /search
+Disallow: /profiles
+Disallow: /my-list
