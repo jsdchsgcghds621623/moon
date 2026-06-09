@@ -26,38 +26,16 @@ interface PlayerProps {
   onClose?: () => void;
 }
 
-type BestStream = {
-  url: string;
-  source: string;
-};
-
 type LocalStreamResponse = {
   streams?: Record<string, { token?: string; name?: string }>;
 };
 
 type LocalProviderKey = (typeof LOCAL_PROVIDER_PRIORITY)[number];
 
-const VIDSRC_EMBED_MOVIE = 'https://vidsrc-embed.ru/embed/movie';
-const VIDSRC_EMBED_TV = 'https://vidsrc-embed.ru/embed/tv';
 const PEACHIFY_EMBED_MOVIE = 'https://peachify.top/embed/movie';
 const PEACHIFY_EMBED_TV = 'https://peachify.top/embed/tv';
 
-/** Player 5 — vidsrc-embed.ru (TMDB). */
-const buildVidsrcEmbedUrl = (
-  tmdbId: number,
-  type: 'movie' | 'tv',
-  season?: number,
-  episode?: number
-): string => {
-  if (type === 'movie') {
-    return `${VIDSRC_EMBED_MOVIE}?tmdb=${tmdbId}&autoplay=1`;
-  }
-  const s = season ?? 1;
-  const e = episode ?? 1;
-  return `${VIDSRC_EMBED_TV}?tmdb=${tmdbId}&season=${s}&episode=${e}&autoplay=1`;
-};
-
-/** Player 3 — peachify.top (TMDB). */
+/** Player 2 — peachify.top (TMDB). */
 const buildPeachifyEmbedUrl = (
   tmdbId: number,
   type: 'movie' | 'tv',
@@ -83,25 +61,6 @@ const fetchWithRetry = async (url: string, retries = 3, delay = 1000) => {
       await new Promise((res) => setTimeout(res, delay));
     }
   }
-};
-
-/** Player 1: only Skyflixer primary CDNs. vidsrc/videasy from the API are ignored — use Player 2 for those. */
-const getBestStream = (servers: SkyflixerServers | undefined | null): BestStream | null => {
-  if (!servers) return null;
-
-  const priority = ['streamp2p', 'seekstreaming', 'upnshare', 'rpmshare'] as const;
-
-  for (const key of priority) {
-    const server = servers[key];
-    if (server?.available && server.embedUrl) {
-      return {
-        url: server.embedUrl,
-        source: key,
-      };
-    }
-  }
-
-  return null;
 };
 
 const LOCAL_PROVIDER_PRIORITY = ['strmp2', 'upnshr', 'rpmshre'] as const;
@@ -155,20 +114,15 @@ export const Player: React.FC<PlayerProps> = ({
   episode,
   onClose,
 }) => {
-  const [videoId, setVideoId] = useState<string | null>(null);
   const [localApiStreams, setLocalApiStreams] = useState<Partial<Record<LocalProviderKey, string>>>({});
   const [activeLocalProvider, setActiveLocalProvider] = useState<LocalProviderKey | null>(null);
   const [contentYear, setContentYear] = useState<number>(new Date().getFullYear());
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(true);
   const [fallbackMessage, setFallbackMessage] = useState('');
-  const [activePlayer, setActivePlayer] = useState<
-    'moonflix' | 'videasy' | 'vsEmbed' | 'peachify' | 'localApi'
-  >('localApi');
-  /** True after local API (Player 1 / sub-streams) attempt finishes for this playback. */
+  const [activePlayer, setActivePlayer] = useState<'localApi' | 'peachify'>('localApi');
+  /** True after local API (Player 1) attempt finishes for this playback. */
   const [localApiLoadDone, setLocalApiLoadDone] = useState(false);
-  /** True after Skyflixer (Player 2) fetch attempt finishes for this playback. */
-  const [skyflixerReady, setSkyflixerReady] = useState(false);
   const [contentDuration, setContentDuration] = useState<number>(0);
   const [isRequesting, setIsRequesting] = useState(false);
   const [requestStatus, setRequestStatus] = useState<'none' | 'success' | 'already_requested'>('none');
@@ -180,15 +134,11 @@ export const Player: React.FC<PlayerProps> = ({
   const isMobile = useIsMobile();
   const { isTV } = useDevice();
   const { toast } = useToast();
-  // const { addToContinueWatching, updateProgress } = useContinueWatching();
 
   const handlePlayerClose = useCallback(() => {
     if (onClose) {
       const finalWatchTime = (Date.now() - watchStartTimeRef.current) / (1000 * 60);
       const finalProgress = Math.min((finalWatchTime / contentDuration) * 100, 100);
-      // if (finalProgress > 5) {
-      //   updateProgress(tmdbId, type, finalProgress, episode, season);
-      // }
       onClose();
     }
   }, [onClose, contentDuration, tmdbId, type, episode, season]);
@@ -255,51 +205,6 @@ export const Player: React.FC<PlayerProps> = ({
       isMounted = false;
     };
   }, [tmdbId, type, season, episode]);
-
-  useEffect(() => {
-    if (releaseStatus !== 'released') {
-      if (releaseStatus === 'not_released') setLoading(false);
-      return;
-    }
-
-    let isMounted = true;
-    setSkyflixerReady(false);
-    setVideoId(null);
-
-    const loadStream = async () => {
-      try {
-        if (!SKYFLIXER_VIDEOHOSTING_API) {
-          throw new Error('VITE_SKYFLIXER_VIDEOHOSTING_API is not set');
-        }
-        const data = await fetchSkyflixerVideohosting({
-          title,
-          year: contentYear || new Date().getFullYear(),
-          tmdbId,
-          mediaType: type === 'tv' ? 'tv' : 'movie',
-          ...(type === 'tv' ? { season, episode } : {}),
-        });
-        const servers = extractServersFromVideohostingResponse(data);
-        const best = getBestStream(servers);
-
-        if (best) {
-          setVideoId(best.url);
-        } else {
-          setVideoId(null);
-        }
-      } catch (err) {
-        console.error('Smart player error:', err);
-        setVideoId(null);
-      } finally {
-        if (isMounted) setSkyflixerReady(true);
-      }
-    };
-
-    loadStream();
-
-    return () => {
-      isMounted = false;
-    };
-  }, [releaseStatus, title, contentYear, type, tmdbId, season, episode]);
 
   useEffect(() => {
     if (releaseStatus !== 'released') return;
@@ -390,30 +295,25 @@ export const Player: React.FC<PlayerProps> = ({
     setFallbackMessage('');
   }, [tmdbId, type, season, episode]);
 
-  /** After Player 1 (all sub-streams) and Player 2 loads settle: pick first available 1 → 2 → 3 (then user can open 4–5). */
+  /** After Player 1 loads settle: pick first available 1 → 2 (then user can switch). */
   useEffect(() => {
     if (releaseStatus !== 'released') return;
-    if (!localApiLoadDone || !skyflixerReady) return;
+    if (!localApiLoadDone) return;
 
     const hasP1 = Object.keys(localApiStreams).length > 0;
-    const hasP2 = !!videoId;
 
-    let next: 'localApi' | 'moonflix' | 'videasy' | 'vsEmbed' | 'peachify';
+    let next: 'localApi' | 'peachify';
     let msg = '';
 
     if (hasP1) {
       next = 'localApi';
-    } else if (hasP2) {
-      next = 'moonflix';
-      msg = 'Player 1 unavailable. Using Player 2.';
     } else {
       next = 'peachify';
-      msg = 'Players 1–2 unavailable. Using Player 3.';
+      msg = 'Player 1 unavailable. Using Player 2.';
     }
 
     setActivePlayer((prev) => {
-      // Keep Players 3–5 if the user already chose an embed backup.
-      if (prev === 'peachify' || prev === 'videasy' || prev === 'vsEmbed') return prev;
+      if (prev === 'peachify') return prev;
       return next;
     });
 
@@ -422,21 +322,15 @@ export const Player: React.FC<PlayerProps> = ({
       const t = window.setTimeout(() => setFallbackMessage(''), 4000);
       return () => window.clearTimeout(t);
     }
-  }, [
-    releaseStatus,
-    localApiLoadDone,
-    skyflixerReady,
-    localApiStreams,
-    videoId,
-  ]);
+  }, [releaseStatus, localApiLoadDone, localApiStreams]);
 
-  /** Hide loading overlay only after both Player 1 and Player 2 attempts have finished. */
+  /** Hide loading overlay only after Player 1 attempt has finished. */
   useEffect(() => {
     if (releaseStatus !== 'released') return;
-    if (localApiLoadDone && skyflixerReady) {
+    if (localApiLoadDone) {
       setLoading(false);
     }
-  }, [releaseStatus, localApiLoadDone, skyflixerReady]);
+  }, [releaseStatus, localApiLoadDone]);
 
   useEffect(() => {
     const handlePopState = (event: PopStateEvent) => {
@@ -445,7 +339,6 @@ export const Player: React.FC<PlayerProps> = ({
     };
 
     window.history.pushState({ playerOpen: true }, '', window.location.href);
-
     window.addEventListener('popstate', handlePopState);
 
     return () => {
@@ -456,21 +349,6 @@ export const Player: React.FC<PlayerProps> = ({
   useEffect(() => {
     watchStartTimeRef.current = Date.now();
   }, []);
-
-  // Continue watching progress save disabled
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     if (watchStartTimeRef.current && contentDuration > 0) {
-  //       const currentTime = Date.now();
-  //       const watchedMinutes = (currentTime - watchStartTimeRef.current) / (1000 * 60);
-  //       const progressPercentage = Math.min((watchedMinutes / contentDuration) * 100, 100);
-  //       if (progressPercentage > 1) {
-  //         updateProgress(tmdbId, type, progressPercentage, episode, season);
-  //       }
-  //     }
-  //   }, 10000);
-  //   return () => clearInterval(interval);
-  // }, [tmdbId, type, episode, season, contentDuration, updateProgress]);
 
   useEffect(() => {
     let isMounted = true;
@@ -517,7 +395,6 @@ export const Player: React.FC<PlayerProps> = ({
         ].slice(0, 30);
 
         localStorage.setItem('recentlyWatched', JSON.stringify(updated));
-        // addToContinueWatching(data, type, 1, episode, season);
 
         if (YANDEX_METRICA_ID && window.ym) {
           window.ym(YANDEX_METRICA_ID, 'reachGoal', 'Views', { title: name });
@@ -548,9 +425,7 @@ export const Player: React.FC<PlayerProps> = ({
     try {
       const response = await fetch(CONTENT_REQUEST_API_URL, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           title,
           tmdbId,
@@ -625,12 +500,12 @@ export const Player: React.FC<PlayerProps> = ({
     );
   }
 
-  if (error?.includes('No matching stream found') && activePlayer === 'vsEmbed') {
+  if (error?.includes('No matching stream found') && activePlayer === 'peachify') {
     return (
       <div className="fixed inset-0 bg-black z-[999999] flex flex-col">
         <iframe
-          src={buildVidsrcEmbedUrl(tmdbId, type, season, episode)}
-          title="Player 5"
+          src={buildPeachifyEmbedUrl(tmdbId, type, season, episode)}
+          title="Player 2"
           frameBorder="0"
           allow="autoplay; fullscreen"
           allowFullScreen
@@ -663,7 +538,6 @@ export const Player: React.FC<PlayerProps> = ({
                 </p>
               </div>
             )}
-
             {requestStatus === 'already_requested' && (
               <div className="text-center">
                 <div className="text-yellow-400 text-lg font-semibold mb-2">Already Requested</div>
@@ -679,14 +553,8 @@ export const Player: React.FC<PlayerProps> = ({
     );
   }
 
-  const vidsrcEmbedUrl = buildVidsrcEmbedUrl(tmdbId, type, season, episode);
   const peachifyEmbedUrl = buildPeachifyEmbedUrl(tmdbId, type, season, episode);
-  const videasyUrl =
-    type === 'movie'
-      ? `https://player.videasy.net/movie/${tmdbId}`
-      : `https://player.videasy.net/tv/${tmdbId}/${season}/${episode}`;
   const player1Url = activeLocalProvider ? localApiStreams[activeLocalProvider] ?? null : null;
-  const player2Url = videoId;
   const localProviderButtons = LOCAL_PROVIDER_PRIORITY.filter((provider) => localApiStreams[provider]);
   const mobileIframeProps = isMobile
     ? { referrerPolicy: 'no-referrer' as const, loading: 'eager' as const }
@@ -703,6 +571,7 @@ export const Player: React.FC<PlayerProps> = ({
           </span>
         )}
 
+        {/* Player 1 — localApi */}
         <button
           type="button"
           className={`
@@ -721,24 +590,8 @@ export const Player: React.FC<PlayerProps> = ({
         >
           <span className="hidden md:inline">Player&nbsp;</span>1
         </button>
-        <button
-          type="button"
-          className={`
-            flex items-center justify-center
-            ${isTV ? 'min-h-11 min-w-11' : 'w-10 h-10'} md:w-auto md:h-auto md:px-4 md:py-2
-            rounded-full font-semibold border-2 tv-focus-ring
-            transition-all duration-300 ease-in-out text-xs md:text-sm
-            ${
-              activePlayer === 'moonflix'
-                ? 'bg-blue-600 text-white border-blue-400 shadow-lg shadow-blue-500/75 scale-105'
-                : 'bg-black/50 text-gray-300 backdrop-blur-sm border-transparent hover:bg-black/70 hover:border-gray-500'
-            }
-            disabled:opacity-50 disabled:cursor-not-allowed disabled:scale-100 disabled:shadow-none disabled:hover:border-transparent`}
-          onClick={() => setActivePlayer('moonflix')}
-          disabled={!player2Url}
-        >
-          <span className="hidden md:inline">Player&nbsp;</span>2
-        </button>
+
+        {/* Player 2 — peachify (was Player 3) */}
         <button
           type="button"
           className={`
@@ -754,42 +607,10 @@ export const Player: React.FC<PlayerProps> = ({
           `}
           onClick={() => setActivePlayer('peachify')}
         >
-          <span className="hidden md:inline">Player&nbsp;</span>3
-        </button>
-        <button
-          type="button"
-          className={`
-            flex items-center justify-center
-            ${isTV ? 'min-h-11 min-w-11' : 'w-10 h-10'} md:w-auto md:h-auto md:px-4 md:py-2
-            rounded-full font-semibold border-2 tv-focus-ring
-            transition-all duration-300 ease-in-out text-xs md:text-sm
-            ${
-              activePlayer === 'videasy'
-                ? 'bg-blue-600 text-white border-blue-400 shadow-lg shadow-blue-500/75 scale-105'
-                : 'bg-black/50 text-gray-300 backdrop-blur-sm border-transparent hover:bg-black/70 hover:border-gray-500'
-            }`}
-          onClick={() => setActivePlayer('videasy')}
-        >
-          <span className="hidden md:inline">Player&nbsp;</span>4
-        </button>
-        <button
-          type="button"
-          className={`
-            flex items-center justify-center
-            ${isTV ? 'min-h-11 min-w-11' : 'w-10 h-10'} md:w-auto md:h-auto md:px-4 md:py-2
-            rounded-full font-semibold border-2 tv-focus-ring
-            transition-all duration-300 ease-in-out text-xs md:text-sm
-            ${
-              activePlayer === 'vsEmbed'
-                ? 'bg-blue-600 text-white border-blue-400 shadow-lg shadow-blue-500/75 scale-105'
-                : 'bg-black/50 text-gray-300 backdrop-blur-sm border-transparent hover:bg-black/70 hover:border-gray-500'
-            }
-          `}
-          onClick={() => setActivePlayer('vsEmbed')}
-        >
-          <span className="hidden md:inline">Player&nbsp;</span>5
+          <span className="hidden md:inline">Player&nbsp;</span>2
         </button>
       </div>
+
       {activePlayer === 'localApi' && localProviderButtons.length > 1 && (
         <div
           className="absolute right-4 md:right-6 z-50 flex gap-2 items-center pb-safe"
@@ -828,50 +649,11 @@ export const Player: React.FC<PlayerProps> = ({
             {...mobileIframeProps}
           />
         )}
-        {activePlayer === 'moonflix' && (
-          <iframe
-            key="player-2"
-            src={player2Url || 'about:blank'}
-            title="Player 2"
-            frameBorder="0"
-            allow="autoplay; fullscreen"
-            allowFullScreen
-            scrolling="no"
-            className="w-full h-full border-none block"
-            {...mobileIframeProps}
-          />
-        )}
         {activePlayer === 'peachify' && (
           <iframe
-            key="player-3"
+            key="player-2"
             src={peachifyEmbedUrl}
-            title="Player 3"
-            frameBorder="0"
-            allow="autoplay; fullscreen"
-            allowFullScreen
-            scrolling="no"
-            className="w-full h-full border-none block"
-            {...mobileIframeProps}
-          />
-        )}
-        {activePlayer === 'videasy' && (
-          <iframe
-            key="player-4"
-            src={videasyUrl}
-            title="Player 4"
-            frameBorder="0"
-            allow="autoplay; fullscreen"
-            allowFullScreen
-            scrolling="no"
-            className="w-full h-full border-none block"
-            {...mobileIframeProps}
-          />
-        )}
-        {activePlayer === 'vsEmbed' && (
-          <iframe
-            key="player-5"
-            src={vidsrcEmbedUrl}
-            title="Player 5"
+            title="Player 2"
             frameBorder="0"
             allow="autoplay; fullscreen"
             allowFullScreen
