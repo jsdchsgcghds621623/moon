@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Play, Info, Download, ChevronDown, ChevronUp } from 'lucide-react';
+import { Play, Info, ChevronDown, ChevronUp } from 'lucide-react';
 import { getImageUrl, Episode } from '@/lib/tmdb';
 import { useIsMobile } from '@/hooks/use-mobile';
 
@@ -7,16 +7,12 @@ interface EpisodeListProps {
   episodes: Episode[];
   onPlayEpisode: (episode: Episode) => void;
   onEpisodeInfo: (episode: Episode) => void;
-  onDownloadEpisode?: (episode: Episode) => void;
-  showDownload?: boolean;
 }
 
 export const EpisodeList = ({
   episodes,
   onPlayEpisode,
   onEpisodeInfo,
-  onDownloadEpisode,
-  showDownload = false,
 }: EpisodeListProps) => {
   const [hoveredId, setHoveredId] = useState<number | null>(null);
   const [expandedId, setExpandedId] = useState<number | null>(null);
@@ -118,17 +114,6 @@ export const EpisodeList = ({
                     <span className="text-[12px] text-white/50 font-medium whitespace-nowrap">
                       {formatRuntime(episode.runtime)}
                     </span>
-                  )}
-
-                  {/* Download */}
-                  {showDownload && onDownloadEpisode && (
-                    <button
-                      className="w-8 h-8 flex items-center justify-center rounded-full text-white/60 hover:text-white hover:bg-white/10 transition-colors"
-                      onClick={(e) => { e.stopPropagation(); onDownloadEpisode(episode); }}
-                      aria-label="Download episode"
-                    >
-                      <Download className="h-4 w-4" />
-                    </button>
                   )}
 
                   {/* Info (desktop) */}

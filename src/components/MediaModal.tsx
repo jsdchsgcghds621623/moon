@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo, useCallback, useRef } from 'react';
-import { X, Play, Plus, ThumbsUp, Volume2, VolumeX, Info, Star, Calendar, Globe, Users, Clock, Award, Download, ExternalLink, ChevronDown } from 'lucide-react';
+import { X, Play, Plus, ThumbsUp, Volume2, VolumeX, Info, Star, Calendar, Globe, Users, Clock, Award, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
@@ -14,11 +14,9 @@ import {
   TVShowDetails,
   TMDB_IMAGE_URL 
 } from '@/lib/tmdb';
-import { resolveSkyflixerDownloadUrl, SKYFLIXER_VIDEOHOSTING_API } from '@/lib/skyflixerHosting';
 import { useMyList } from '@/hooks/useMyList';
 // import { useContinueWatching } from '@/hooks/useContinueWatching';
 import { useLikes } from '@/hooks/useLikes';
-import { useToast } from '@/hooks/use-toast';
 import { useMovieDetails, useTVShowDetails, useTVShowSeasonDetails } from '@/hooks/useTMDBQuery';
 import { useSimilarContent } from '@/hooks/useSimilarContent';
 import { useIsMobile } from '@/hooks/use-mobile';
@@ -72,11 +70,10 @@ const Top10Badge = ({ rank }: { rank?: number }) => {
 };
 
 // Netflix episode row (desktop only)
-const NetflixEpisodeRow = ({ episode, index, onPlay, onDownload }: {
+const NetflixEpisodeRow = ({ episode, index, onPlay }: {
   episode: Episode;
   index: number;
   onPlay: (ep: Episode) => void;
-  onDownload?: (ep: Episode) => void;
 }) => {
   const [expanded, setExpanded] = useState(false);
   return (
@@ -139,15 +136,6 @@ const NetflixEpisodeRow = ({ episode, index, onPlay, onDownload }: {
         )}
       </div>
 
-      {/* Download icon */}
-      {onDownload && (
-        <button
-          className="self-center opacity-0 group-hover:opacity-100 transition-opacity text-[#808080] hover:text-white"
-          onClick={() => onDownload(episode)}
-        >
-          <Download className="h-4 w-4" />
-        </button>
-      )}
     </div>
   );
 };
@@ -160,7 +148,6 @@ export const MediaModal = ({ isOpen, onClose, item, mediaType, onPlay, onMoreInf
   const [hasUserSelectedSeason, setHasUserSelectedSeason] = useState(false);
   const [showPlayer, setShowPlayer] = useState(false);
   const [playbackInfo, setPlaybackInfo] = useState<any>(null);
-  const [showDownloadDialog, setShowDownloadDialog] = useState(false);
   const [showTrailer, setShowTrailer] = useState(false);
   // Desktop tab state (Netflix-style)
   const [activeTab, setActiveTab] = useState<'episodes' | 'more-like-this' | 'details'>('episodes');
@@ -170,7 +157,6 @@ export const MediaModal = ({ isOpen, onClose, item, mediaType, onPlay, onMoreInf
   const { isInMyList, toggleMyList } = useMyList();
   // const { getResumeData } = useContinueWatching();
   const { likes, isLiked, toggleLike } = useLikes(item?.id || 0);
-  const { toast } = useToast();
   
   // Use React Query hooks for data fetching with optimized stale time
   const { data: movieDetails, isLoading: isMovieLoading } = useMovieDetails(
@@ -335,66 +321,6 @@ export const MediaModal = ({ isOpen, onClose, item, mediaType, onPlay, onMoreInf
     return Number.isFinite(y) && y > 1900 ? y : new Date().getFullYear();
   }, [item]);
 
-  const handleDownload = useCallback(async () => {
-    if (!SKYFLIXER_VIDEOHOSTING_API) {
-      toast({
-        title: 'Download unavailable',
-        description: 'Set VITE_SKYFLIXER_VIDEOHOSTING_API to your Skyflixer backend URL.',
-        variant: 'destructive',
-        duration: 5000,
-      });
-      return;
-    }
-    const displayTitle = 'title' in item ? item.title : item.name;
-    const year = getContentYear();
-    try {
-      const url = await resolveSkyflixerDownloadUrl({
-        title: displayTitle,
-        year,
-        tmdbId: item.id,
-        mediaType: mediaType === 'tv' ? 'tv' : 'movie',
-        ...(mediaType === 'tv' ? { season: selectedSeason, episode: 1 } : {}),
-      });
-      window.location.href = url;
-    } catch {
-      setShowDownloadDialog(true);
-    }
-  }, [item, mediaType, selectedSeason, toast, getContentYear]);
-
-  const handleEpisodeDownload = useCallback(
-    async (episode: Episode) => {
-      if (!SKYFLIXER_VIDEOHOSTING_API) {
-        toast({
-          title: 'Download unavailable',
-          description: 'Set VITE_SKYFLIXER_VIDEOHOSTING_API to your Skyflixer backend URL.',
-          variant: 'destructive',
-          duration: 5000,
-        });
-        return;
-      }
-      const displayTitle = 'title' in item ? item.title : item.name;
-      const year = getContentYear();
-      try {
-        const url = await resolveSkyflixerDownloadUrl({
-          title: displayTitle,
-          year,
-          tmdbId: item.id,
-          mediaType: 'tv',
-          season: selectedSeason,
-          episode: episode.episode_number,
-        });
-        window.location.href = url;
-        toast({
-          title: 'Download Started',
-          description: `S${selectedSeason}E${episode.episode_number} - ${episode.name}`,
-        });
-      } catch {
-        setShowDownloadDialog(true);
-      }
-    },
-    [item, selectedSeason, toast, getContentYear]
-  );
-
   const handleEpisodeInfo = (episode: Episode) => {
     console.log('Episode info:', episode);
   };
@@ -501,7 +427,7 @@ export const MediaModal = ({ isOpen, onClose, item, mediaType, onPlay, onMoreInf
            Desktop → Netflix-style max-w-[900px], bg-[#141414], rounded-md
       */}
       <DialogContent
-        className="max-w-[900px] max-h-[100vh] sm:max-h-[90vh] overflow-hidden p-0 bg-background sm:bg-[#141414] border-none [&>button]:hidden backdrop-blur-none w-full sm:mx-2 sm:mx-auto h-full sm:h-auto sm:rounded-md"
+        className="w-[min(100vw-1rem,920px)] max-w-[920px] h-[100dvh] sm:h-[min(90dvh,920px)] max-h-[100dvh] sm:max-h-[90dvh] overflow-hidden p-0 bg-[#141414] border-none [&>button]:hidden backdrop-blur-none rounded-none sm:rounded-xl shadow-2xl"
         onInteractOutside={(e) => {
           const target = e.target as HTMLElement;
           if (target.closest('[role="menu"]') || target.closest('[data-radix-popper-content-wrapper]')) {
@@ -521,11 +447,8 @@ export const MediaModal = ({ isOpen, onClose, item, mediaType, onPlay, onMoreInf
             {mediaType === 'movie' ? 'Movie' : 'TV Show'} details and streaming options
           </DialogDescription>
         </DialogHeader>
-        {isOpen && (
-          <div className="fixed inset-0 bg-black/50 backdrop-blur-md -z-10" />
-        )}
         <motion.div 
-          className="relative h-full sm:max-h-[90vh] overflow-y-auto scroll-container font-netflix"
+          className="relative h-full w-full overflow-y-auto overflow-x-hidden overscroll-contain touch-pan-y scroll-container font-netflix"
           style={{ scrollbarWidth: 'thin', scrollbarColor: '#333 transparent' }}
           initial={{ opacity: 0, scale: 0.97 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -540,7 +463,7 @@ export const MediaModal = ({ isOpen, onClose, item, mediaType, onPlay, onMoreInf
           ════════════════════════════════════════════════════════════════ */}
 
           {/* ── MOBILE HERO (hidden on sm+) ── */}
-          <div className="relative h-[50vh] overflow-hidden mt-0 sm:hidden">
+          <div className="relative h-[56dvh] min-h-[320px] overflow-hidden mt-0 sm:hidden">
             {backdropUrl ? (
               <motion.div className="relative w-full h-full">
                 <motion.img
@@ -605,7 +528,7 @@ export const MediaModal = ({ isOpen, onClose, item, mediaType, onPlay, onMoreInf
           </div>
 
           {/* ── DESKTOP HERO (hidden on mobile) ── */}
-          <div className="relative hidden sm:block w-full" style={{ aspectRatio: '16/9', maxHeight: '50vh' }}>
+          <div className="relative hidden sm:block w-full" style={{ aspectRatio: '16/9', maxHeight: 'min(50dvh, 480px)' }}>
             {backdropUrl ? (
               <>
                 <img src={backdropUrl} alt={title} className="w-full h-full object-cover" />
@@ -681,15 +604,6 @@ export const MediaModal = ({ isOpen, onClose, item, mediaType, onPlay, onMoreInf
                   <ThumbsUp className={`h-5 w-5 ${isLiked ? 'fill-white' : ''}`} />
                 </button>
 
-                {/* Download */}
-                <button
-                  onClick={handleDownload}
-                  className="w-10 h-10 rounded-full border-2 border-white/70 flex items-center justify-center text-white hover:border-white hover:bg-white/10 transition-colors"
-                  title="Download"
-                >
-                  <Download className="h-5 w-5" />
-                </button>
-
                 {/* Mute toggle — right aligned */}
                 <button
                   onClick={() => setIsMuted(!isMuted)}
@@ -739,14 +653,6 @@ export const MediaModal = ({ isOpen, onClose, item, mediaType, onPlay, onMoreInf
               >
                 <Play className="h-5 w-5 fill-current" />
                 {source === 'continue-watching' ? 'Play' : (resumeData.progress > 5 ? 'Play' : 'Play')}
-              </Button>
-              
-              <Button
-                onClick={handleDownload}
-                className="w-full flex items-center justify-center gap-2 text-lg px-6 py-4 rounded-md bg-gray-600/80 backdrop-blur-sm text-white font-semibold hover:bg-gray-500/80 transition-colors"
-              >
-                <Download className="h-5 w-5" />
-                Download
               </Button>
               
               {/* Trailer button */}
@@ -865,8 +771,6 @@ export const MediaModal = ({ isOpen, onClose, item, mediaType, onPlay, onMoreInf
                           episodes={seasonDetails.episodes}
                           onPlayEpisode={handlePlayEpisode}
                           onEpisodeInfo={handleEpisodeInfo}
-                          onDownloadEpisode={handleEpisodeDownload}
-                          showDownload={true}
                         />
                       ) : (
                         <p className="text-muted-foreground text-sm">No episodes available for this season.</p>
@@ -976,7 +880,7 @@ export const MediaModal = ({ isOpen, onClose, item, mediaType, onPlay, onMoreInf
           {/* ════════════════════════════════════════════════════════════════
               DESKTOP CONTENT (hidden on mobile) — Netflix-style from file 2
           ════════════════════════════════════════════════════════════════ */}
-          <div className="hidden sm:block px-6 md:px-8 pb-8">
+          <div className="hidden sm:block px-4 sm:px-6 md:px-8 lg:px-10 pb-6 sm:pb-8">
             {/* Info section — Netflix 2-column */}
             <div className="grid grid-cols-3 gap-8 pt-4">
               {/* Left col (2/3) */}
@@ -1117,7 +1021,6 @@ export const MediaModal = ({ isOpen, onClose, item, mediaType, onPlay, onMoreInf
                             episode={ep}
                             index={i}
                             onPlay={handlePlayEpisode}
-                            onDownload={handleEpisodeDownload}
                           />
                         ))}
                       </div>
@@ -1261,48 +1164,6 @@ export const MediaModal = ({ isOpen, onClose, item, mediaType, onPlay, onMoreInf
         </motion.div>
       </DialogContent>
 
-      {/* Download Request Dialog */}
-      <Dialog open={showDownloadDialog} onOpenChange={setShowDownloadDialog}>
-        <DialogContent className="sm:max-w-md bg-[#1f1f1f] border border-white/10">
-          <DialogHeader>
-            <DialogTitle className="text-white text-xl font-bold">
-              Download Not Available
-            </DialogTitle>
-            <DialogDescription className="text-white/60 text-base">
-              This {mediaType === 'movie' ? 'movie' : 'series'} is not available for download right now.
-            </DialogDescription>
-          </DialogHeader>
-          
-          <div className="space-y-3 pt-2">
-            <div className="text-white/60 text-sm">
-              To request this {mediaType === 'movie' ? 'movie' : 'series'} for download, please join our Telegram channel and send your request.
-            </div>
-            
-            <a
-              href="https://t.me/Moonflix_official_Channel"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block w-full"
-            >
-              <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="text-white">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.11.02-1.91 1.21-5.41 3.56-.51.35-.98.52-1.4.51-.46-.01-1.35-.26-2.01-.47-.81-.26-1.46-.4-1.4-.85.03-.23.36-.47.98-.72 3.85-1.68 6.43-2.79 7.73-3.34 3.68-1.54 4.45-1.8 4.95-1.81.11 0 .35.03.51.17.13.12.17.27.19.38-.01.06-.01.24-.03.42z" />
-                </svg>
-                Join Telegram Channel
-                <ExternalLink className="w-4 h-4" />
-              </Button>
-            </a>
-            
-            <Button
-              onClick={() => setShowDownloadDialog(false)}
-              variant="outline"
-              className="w-full border-white/20 text-white/70 hover:bg-white/5"
-            >
-              Close
-            </Button>
-          </div>
-        </DialogContent>
-      </Dialog>
     </Dialog>
     
     {/* Trailer Modal */}
