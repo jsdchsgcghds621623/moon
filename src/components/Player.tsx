@@ -412,4 +412,15 @@ export const Player: React.FC<PlayerProps> = ({
             key="player-2"
             src={peachifyEmbedUrl}
             title="Player 2 – peachify"
-6629dafd3f4285259c
+            frameBorder="0"
+            allow="autoplay; fullscreen"
+            allowFullScreen
+            scrolling="no"
+            className="w-full h-full border-none block"
+            {...mobileIframeProps}
+          />
+        )}
+      </div>
+    </div>
+  );
+};
