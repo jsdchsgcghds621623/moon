@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
-  <title>Moonflix.site — Watch Free Movies, Web Series & Anime Online in HD</title>
+  <title>Moonflix.website — Watch Free Movies, Web Series & Anime Online in HD</title>
 
   <meta
     name="description"
@@ -23,9 +23,9 @@
   />
 
   <meta name="theme-color" content="#000000" />
-  <meta name="author" content="Moonflix.site" />
-  <meta name="application-name" content="Moonflix.site" />
-  <meta name="apple-mobile-web-app-title" content="Moonflix.site" />
+  <meta name="author" content="Moonflix.website" />
+  <meta name="application-name" content="Moonflix.website" />
+  <meta name="apple-mobile-web-app-title" content="Moonflix.website" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta
     name="apple-mobile-web-app-status-bar-style"
@@ -33,13 +33,13 @@
   />
 
   <!-- Canonical -->
-  <link rel="canonical" href="https://moonflix.site/" />
+  <link rel="canonical" href="https://moonflix.website/" />
 
   <!-- Favicon -->
   <link
     rel="icon"
     type="image/png"
-    href="https://moonflix.site/lovable-uploads/Moonflix.png"
+    href="https://moonflix.website/lovable-uploads/Moonflix.png"
   />
 
   <!-- Performance -->
@@ -66,12 +66,12 @@
   />
 
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://moonflix.site/" />
-  <meta property="og:site_name" content="Moonflix.site" />
+  <meta property="og:url" content="https://moonflix.website/" />
+  <meta property="og:site_name" content="Moonflix.website" />
 
   <meta
     property="og:image"
-    content="https://moonflix.site/lovable-uploads/Moonflix.png"
+    content="https://moonflix.website/lovable-uploads/Moonflix.png"
   />
 
   <!-- Twitter -->
@@ -79,7 +79,7 @@
 
   <meta
     name="twitter:title"
-    content="Moonflix.site — Watch Movies & TV Shows Online"
+    content="Moonflix.website — Watch Movies & TV Shows Online"
   />
 
   <meta
@@ -89,7 +89,7 @@
 
   <meta
     name="twitter:image"
-    content="https://moonflix.site/lovable-uploads/Moonflix.png"
+    content="https://moonflix.website/lovable-uploads/Moonflix.png"
   />
 
   <!-- Structured Data - Website -->
@@ -97,11 +97,11 @@
   {
     "@context":"https://schema.org",
     "@type":"WebSite",
-    "name":"Moonflix.site",
-    "url":"https://moonflix.site/",
+    "name":"Moonflix.website",
+    "url":"https://moonflix.website/",
     "potentialAction":{
       "@type":"SearchAction",
-      "target":"https://moonflix.site/search?q={search_term_string}",
+      "target":"https://moonflix.website/search?q={search_term_string}",
       "query-input":"required name=search_term_string"
     }
   }
@@ -112,11 +112,11 @@
   {
     "@context":"https://schema.org",
     "@type":"Organization",
-    "name":"Moonflix.site",
-    "url":"https://moonflix.site",
-    "logo":"https://moonflix.site/lovable-uploads/Moonflix.png",
+    "name":"Moonflix.website",
+    "url":"https://moonflix.website",
+    "logo":"https://moonflix.website/lovable-uploads/Moonflix.png",
     "sameAs":[
-      "https://moonflix.site"
+      "https://moonflix.website"
     ]
   }
   </script>
@@ -184,12 +184,37 @@
   </script>
 
   <!-- Ads -->
-  <script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
   <script type="text/javascript">
-    aclib.runPop({
-        zoneId: '11351366',
-    });
-</script>
+    (function () {
+      let adsEnabled = true;
+
+      try {
+        adsEnabled = localStorage.getItem('moonflix_ads_enabled') !== 'false';
+      } catch (error) {
+        adsEnabled = true;
+      }
+
+      if (!adsEnabled) {
+        return;
+      }
+
+      const script = document.createElement('script');
+      script.id = 'aclib';
+      script.type = 'text/javascript';
+      script.src = '//acscdn.com/script/aclib.js';
+
+      script.onload = function () {
+        if (window.aclib && typeof window.aclib.runAutoTag === 'function') {
+          window.aclib.runAutoTag({
+            zoneId: 'ou75jahjw6',
+          });
+        }
+      };
+
+      document.body.appendChild(script);
+    })();
+  </script>
+
 
   <!-- NoScript -->
   <noscript>
@@ -214,6 +239,8 @@
   window.heapReadyCb=window.heapReadyCb||[],window.heap=window.heap||[],heap.load=function(e,t){window.heap.envId=e,window.heap.clientConfig=t=t||{},window.heap.clientConfig.shouldFetchServerConfig=!1;var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src="https://cdn.us.heap-api.com/config/"+e+"/heap_config.js";var r=document.getElementsByTagName("script")[0];r.parentNode.insertBefore(a,r);var n=["init","startTracking","stopTracking","track","resetIdentity","identify","getSessionId","getUserId","getIdentity","addUserProperties","addEventProperties","removeEventProperty","clearEventProperties","addAccountProperties","addAdapter","addTransformer","addTransformerFn","onReady","addPageviewProperties","removePageviewProperty","clearPageviewProperties","trackPageview"],i=function(e){return function(){var t=Array.prototype.slice.call(arguments,0);window.heapReadyCb.push({name:e,fn:function(){heap[e]&&heap[e].apply(heap,t)}})}};for(var p=0;p<n.length;p++)heap[n[p]]=i(n[p])};
   heap.load("466671115");
 </script>
+
+<script defer src="https://cloud.umami.is/script.js" data-website-id="c5ec2ec1-f7dd-4f26-ab49-15d82c2393e9"></script>
 
 </body>
 </html>

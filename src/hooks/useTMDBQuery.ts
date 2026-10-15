@@ -5,10 +5,12 @@ import {
   getUpcoming,
   getUpcomingMoviesFiltered,
   getNowPlaying,
+  getFranchiseCollectionMovies,
   getMoviesByGenre,
   getTVShowsByGenre,
   getMovieDetails,
   getTVShowDetails,
+  getRecommendations,
   searchMulti,
   getTVShowSeasonDetails,
   getGenres,
@@ -20,6 +22,105 @@ import {
   TVShowSeasonDetails,
   TMDB_API_KEY,
 } from '@/lib/tmdb';
+import {
+  getFranchiseCollectionCards,
+  getFranchiseCollectionBySlug,
+  FranchiseCollectionDetail,
+} from '@/lib/franchise';
+
+const AI_RECOMMENDED_BASE_URL = 'https://meticulous-analysis-production-2ee6.up.railway.app';
+
+const mapGenresToIds = (genres: string[] = []) => {
+  const genreMap: Record<string, number> = {
+    action: 28,
+    adventure: 12,
+    animation: 16,
+    comedy: 35,
+    crime: 80,
+    documentary: 99,
+    drama: 18,
+    family: 10751,
+    fantasy: 14,
+    history: 36,
+    horror: 27,
+    music: 10402,
+    mystery: 9648,
+    romance: 10749,
+    'sci-fi': 878,
+    'sci-fi & fantasy': 10765,
+    thriller: 53,
+    war: 10752,
+    'war & politics': 10768,
+    western: 37,
+  };
+
+  return genres
+    .map((genre) => genreMap[genre.toLowerCase()])
+    .filter((genre): genre is number => Boolean(genre));
+};
+
+const normalizeExternalId = (id: string | number | undefined) => {
+  if (typeof id === 'number') return id;
+
+  if (typeof id === 'string') {
+    const numeric = id.replace(/\D/g, '');
+    if (numeric) return Number.parseInt(numeric, 10);
+
+    let hash = 0;
+    for (let i = 0; i < id.length; i += 1) {
+      hash = (hash << 5) - hash + id.charCodeAt(i);
+      hash |= 0;
+    }
+
+    return Math.abs(hash);
+  }
+
+  return 0;
+};
+
+const buildMovieFromApiMeta = (item: any): Movie => ({
+  id: item.tmdbId ? Number(item.tmdbId) : normalizeExternalId(item.id),
+  title: item.name ?? item.title ?? 'Untitled Movie',
+  overview: item.description ?? item.overview ?? '',
+  poster_path: item.poster ?? '',
+  backdrop_path: item.background ?? item.poster ?? '',
+  release_date: item.year ? `${item.year}-01-01` : item.releaseInfo ?? '',
+  vote_average: 0,
+  genre_ids: mapGenresToIds(item.genres ?? []),
+  adult: false,
+  original_language: 'en',
+  original_title: item.name ?? item.title ?? 'Untitled Movie',
+  popularity: 0,
+  video: false,
+  vote_count: 0,
+});
+
+const buildTVShowFromApiMeta = (item: any): TVShow => ({
+  id: item.tmdbId ? Number(item.tmdbId) : normalizeExternalId(item.id),
+  name: item.name ?? 'Untitled Series',
+  overview: item.description ?? item.overview ?? '',
+  poster_path: item.poster ?? '',
+  backdrop_path: item.background ?? item.poster ?? '',
+  first_air_date: item.year ? `${item.year}-01-01` : item.releaseInfo ?? '',
+  vote_average: 0,
+  genre_ids: mapGenresToIds(item.genres ?? []),
+  origin_country: ['US'],
+  original_language: 'en',
+  original_name: item.name ?? 'Untitled Series',
+  popularity: 0,
+  vote_count: 0,
+});
+
+const fetchAiRecommendedContent = async (endpoint: 'movies' | 'series') => {
+  const response = await fetch(`${AI_RECOMMENDED_BASE_URL}/${endpoint}`);
+
+  if (!response.ok) {
+    throw new Error(`Failed to load AI recommendations from ${endpoint}`);
+  }
+
+  const data = await response.json();
+  return data.metas ?? [];
+};
 
 // Trending content hook - using discover movies for better variety
 export const useTrending = (mediaType: 'all' | 'movie' | 'tv' = 'all', timeWindow: 'day' | 'week' = 'week') => {
@@ -158,10 +259,60 @@ export const useNetflixMovies = () => {
   });
 };
 
+export const useFranchiseCollectionCards = (enabled = true) => {
+  return useQuery({
+    queryKey: ['franchiseCollectionCards'],
+    enabled,
+    queryFn: () => getFranchiseCollectionCards(),
+  });
+};
+
+export const useAiRecommendedMovies = (enabled = true) => {
+  return useQuery({
+    queryKey: ['aiRecommendedMovies'],
+    enabled,
+    queryFn: () => fetchAiRecommendedContent('movies'),
+    select: (data) => data.map(buildMovieFromApiMeta),
+  });
+};
+
+export const useAiRecommendedSeries = (enabled = true) => {
+  return useQuery({
+    queryKey: ['aiRecommendedSeries'],
+    enabled,
+    queryFn: () => fetchAiRecommendedContent('series'),
+    select: (data) => data.map(buildTVShowFromApiMeta),
+  });
+};
+
+export const useFranchiseCollectionDetail = (slug: string | undefined, enabled = true) => {
+  return useQuery<FranchiseCollectionDetail>({
+    queryKey: ['franchiseCollectionDetail', slug],
+    enabled: enabled && Boolean(slug),
+    queryFn: async () => {
+      if (!slug) {
+        throw new Error('Franchise slug is required');
+      }
+      return getFranchiseCollectionBySlug(slug);
+    },
+    staleTime: 24 * 60 * 60 * 1000,
+    cacheTime: 30 * 60 * 1000,
+  });
+};
+
 export const useNowPlayingMovies = () => {
   return useQuery({
     queryKey: ['nowPlaying'],
     queryFn: getNowPlaying,
+    select: (data) => data.results,
+  });
+};
+
+export const useFranchiseCollectionMovies = (enabled = true) => {
+  return useQuery({
+    queryKey: ['franchiseCollectionMovies'],
+    enabled,
+    queryFn: () => getFranchiseCollectionMovies(),
     select: (data) => data.results,
   });
 };
@@ -229,6 +380,26 @@ export const useTVShowSeasonDetails = (tvId: number, seasonNumber: number, enabl
     enabled,
     staleTime: 10 * 60 * 1000, // 10 minutes
     gcTime: 15 * 60 * 1000, // 15 minutes
+  });
+};
+
+export const useRecommendationsForItem = (mediaType: 'movie' | 'tv' | null, itemId: number | null, enabled = true) => {
+  return useQuery({
+    queryKey: ['recommendations', mediaType, itemId],
+    enabled: Boolean(enabled && mediaType && itemId),
+    staleTime: 24 * 60 * 60 * 1000,
+    gcTime: 24 * 60 * 60 * 1000,
+    queryFn: async () => {
+      if (!mediaType || !itemId) return [];
+
+      const response = await fetch(`/api/recommendations?mediaType=${mediaType}&id=${itemId}`);
+      if (!response.ok) {
+        throw new Error('Failed to load recommendations');
+      }
+
+      const data = await response.json();
+      return (data.results ?? []).slice(0, 12);
+    },
   });
 };
 

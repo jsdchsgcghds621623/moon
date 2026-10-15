@@ -4,6 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { SearchBar } from '@/components/SearchBar';
+import { AiSearchPanel } from '@/components/AiSearchPanel';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import {
   DropdownMenu,
@@ -16,11 +17,34 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from '@/components/ui/popover';
+import { Switch } from '@/components/ui/switch';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { useDevice } from '@/context/DeviceContext';
+import { useNavbarSearchRegistry } from '@/context/NavbarSearchContext';
 
 const MOBILE_MENU_ID = 'mobile-nav-menu';
+const ADS_ENABLED_KEY = 'moonflix_ads_enabled';
+const ADS_DISABLED_UNTIL_KEY = 'moonflix_ads_disabled_until';
+const ADS_DISABLE_DURATION_MS = 12 * 60 * 60 * 1000;
+
+const getAdsStateFromStorage = () => {
+  if (typeof window === 'undefined') {
+    return { enabled: true, disabledUntil: null as number | null };
+  }
+
+  const storedValue = localStorage.getItem(ADS_ENABLED_KEY);
+  const disabledUntilRaw = localStorage.getItem(ADS_DISABLED_UNTIL_KEY);
+  const disabledUntil = disabledUntilRaw ? Number(disabledUntilRaw) : null;
+
+  if (storedValue === 'false' && disabledUntil && Date.now() >= disabledUntil) {
+    localStorage.removeItem(ADS_ENABLED_KEY);
+    localStorage.removeItem(ADS_DISABLED_UNTIL_KEY);
+    return { enabled: true, disabledUntil: null };
+  }
+
+  return { enabled: storedValue !== 'false', disabledUntil };
+};
 
 export const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -28,9 +52,11 @@ export const Navbar = () => {
   const [profileName, setProfileName] = useState('ME');
   const [profileAvatar, setProfileAvatar] = useState('/lovable-uploads/a8918201-a815-4479-ae74-1fce99787310.png');
   const [isNotificationOpen, setIsNotificationOpen] = useState(false);
+  const [adsEnabled, setAdsEnabled] = useState(() => getAdsStateFromStorage().enabled);
   const location = useLocation();
   const isMobile = useIsMobile();
   const { isTV } = useDevice();
+  const { onMoreInfo } = useNavbarSearchRegistry();
   const mobileMenuRef = useRef<HTMLDivElement>(null);
   const mobileMenuButtonRef = useRef<HTMLButtonElement>(null);
 
@@ -40,6 +66,31 @@ export const Navbar = () => {
       const profile = JSON.parse(savedProfile);
       setProfileName(profile.name);
       setProfileAvatar(profile.avatar);
+    }
+  }, []);
+
+  useEffect(() => {
+    const { enabled, disabledUntil } = getAdsStateFromStorage();
+
+    if (!enabled && disabledUntil) {
+      const delay = disabledUntil - Date.now();
+
+      if (delay <= 0) {
+        setAdsEnabled(true);
+        localStorage.removeItem(ADS_ENABLED_KEY);
+        localStorage.removeItem(ADS_DISABLED_UNTIL_KEY);
+        window.location.reload();
+        return;
+      }
+
+      const timer = window.setTimeout(() => {
+        setAdsEnabled(true);
+        localStorage.setItem(ADS_ENABLED_KEY, 'true');
+        localStorage.removeItem(ADS_DISABLED_UNTIL_KEY);
+        window.location.reload();
+      }, delay);
+
+      return () => window.clearTimeout(timer);
     }
   }, []);
 
@@ -116,6 +167,22 @@ export const Navbar = () => {
     }
   };
 
+  const handleAdsToggle = (checked: boolean) => {
+    if (checked) {
+      setAdsEnabled(true);
+      localStorage.setItem(ADS_ENABLED_KEY, 'true');
+      localStorage.removeItem(ADS_DISABLED_UNTIL_KEY);
+      window.location.reload();
+      return;
+    }
+
+    setAdsEnabled(false);
+    const disabledUntil = Date.now() + ADS_DISABLE_DURATION_MS;
+    localStorage.setItem(ADS_ENABLED_KEY, 'false');
+    localStorage.setItem(ADS_DISABLED_UNTIL_KEY, String(disabledUntil));
+    window.location.reload();
+  };
+
   return (
     <motion.header 
       className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-background to-transparent font-netflix pt-safe"
@@ -170,6 +237,17 @@ export const Navbar = () => {
         {/* Right Side */}
         <div className="flex items-center space-x-2 sm:space-x-3 lg:space-x-4">
           <SearchBar />
+          <AiSearchPanel />
+
+          <Button
+            type="button"
+            variant="outline"
+            size="sm"
+            className="hidden sm:inline-flex h-8 sm:h-10 px-3 text-xs sm:text-sm font-medium"
+            onClick={() => window.open('https://player.moonflix.website', '_blank', 'noopener,noreferrer')}
+          >
+            API
+          </Button>
 
           {/* Notifications */}
           <Popover open={isNotificationOpen} onOpenChange={setIsNotificationOpen}>
@@ -303,6 +381,16 @@ export const Navbar = () => {
                   Join Channel
                   <ExternalLink className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </a>
+              </div>
+
+              <div className="p-4 sm:p-5 border-t border-border/50">
+                <div className="flex items-center justify-between gap-3">
+                  <div className="min-w-0">
+                    <h3 className="font-semibold text-foreground">Ads help Moonflix</h3>
+                    <p className="text-sm text-muted-foreground">Ads help Moonflix website to keep working.</p>
+                  </div>
+                  <Switch checked={adsEnabled} onCheckedChange={handleAdsToggle} />
+                </div>
               </div>
             </PopoverContent>
           </Popover>

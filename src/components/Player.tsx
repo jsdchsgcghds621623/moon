@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useCallback, useRef } from 'react';
 // import { useContinueWatching } from '@/hooks/useContinueWatching';
 import { useIsMobile } from '@/hooks/use-mobile';
-import { useDevice } from '@/context/DeviceContext';
 import { useToast } from '@/hooks/use-toast';
 
 /** Player env-only credentials / endpoints (set in `.env` with `VITE_` prefix). */
@@ -18,11 +17,9 @@ interface PlayerProps {
   onClose?: () => void;
 }
 
-const PEACHIFY_EMBED_MOVIE = 'https://peachify.top/embed/movie';
-const PEACHIFY_EMBED_TV = 'https://peachify.top/embed/tv';
-const MOONFLIX_EMBED_BASE = 'https://player.moonflix.site';
+const MOONFLIX_EMBED_BASE = 'https://player.moonflix.website';
 
-/** Build embed URL for Player 1 (moonflix) */
+/** Build embed URL for the Moonflix player */
 const buildMoonflixEmbedUrl = (
   tmdbId: number,
   type: 'movie' | 'tv',
@@ -35,21 +32,6 @@ const buildMoonflixEmbedUrl = (
   const s = season ?? 1;
   const e = episode ?? 1;
   return `${MOONFLIX_EMBED_BASE}/tv/${tmdbId}/${s}/${e}`;
-};
-
-/** Build embed URL for Player 2 (peachify) */
-const buildPeachifyEmbedUrl = (
-  tmdbId: number,
-  type: 'movie' | 'tv',
-  season?: number,
-  episode?: number
-): string => {
-  if (type === 'movie') {
-    return `${PEACHIFY_EMBED_MOVIE}/${tmdbId}`;
-  }
-  const s = season ?? 1;
-  const e = episode ?? 1;
-  return `${PEACHIFY_EMBED_TV}/${tmdbId}/${s}/${e}`;
 };
 
 /** Simple fetch with retry – kept for release‑date and content‑info calls */
@@ -77,7 +59,6 @@ export const Player: React.FC<PlayerProps> = ({
   const [contentYear, setContentYear] = useState<number>(new Date().getFullYear());
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(true);
-  const [activePlayer, setActivePlayer] = useState<'moonflix' | 'peachify'>('moonflix');
   const [contentDuration, setContentDuration] = useState<number>(0);
   const [isRequesting, setIsRequesting] = useState(false);
   const [requestStatus, setRequestStatus] = useState<'none' | 'success' | 'already_requested'>('none');
@@ -86,7 +67,6 @@ export const Player: React.FC<PlayerProps> = ({
   const watchStartTimeRef = useRef<number>(0);
   const tmdbSaveKeyRef = useRef<string | null>(null);
   const isMobile = useIsMobile();
-  const { isTV } = useDevice();
   const { toast } = useToast();
 
   const handlePlayerClose = useCallback(() => {
@@ -340,7 +320,6 @@ export const Player: React.FC<PlayerProps> = ({
 
   // --- Build embed URLs ---
   const moonflixEmbedUrl = buildMoonflixEmbedUrl(tmdbId, type, season, episode);
-  const peachifyEmbedUrl = buildPeachifyEmbedUrl(tmdbId, type, season, episode);
 
   // --- Mobile iframe props (only for mobile) ---
   const mobileIframeProps = isMobile
@@ -351,75 +330,17 @@ export const Player: React.FC<PlayerProps> = ({
     <div className="fixed inset-0 bg-black z-[999999] flex flex-col">
       {onClose && <CloseButton />}
 
-      {/* Player toggle buttons – bottom right */}
-      <div className="absolute right-4 md:right-6 z-50 flex gap-2 md:gap-3 items-center pb-safe" style={{ bottom: 'max(5rem, calc(5rem + env(safe-area-inset-bottom)))' }}>
-        {/* Player 1 – moonflix */}
-        <button
-          type="button"
-          className={`
-            flex items-center justify-center
-            ${isTV ? 'min-h-11 min-w-11' : 'w-10 h-10'} md:w-auto md:h-auto md:px-4 md:py-2
-            rounded-full font-semibold border-2 tv-focus-ring
-            transition-all duration-300 ease-in-out text-xs md:text-sm
-            ${
-              activePlayer === 'moonflix'
-                ? 'bg-blue-600 text-white border-blue-400 shadow-lg shadow-blue-500/75 scale-105'
-                : 'bg-black/50 text-gray-300 backdrop-blur-sm border-transparent hover:bg-black/70 hover:border-gray-500'
-            }
-          `}
-          onClick={() => setActivePlayer('moonflix')}
-        >
-          <span className="hidden md:inline">Moonflix</span>1
-        </button>
-
-        {/* Player 2 – peachify */}
-        <button
-          type="button"
-          className={`
-            flex items-center justify-center
-            ${isTV ? 'min-h-11 min-w-11' : 'w-10 h-10'} md:w-auto md:h-auto md:px-4 md:py-2
-            rounded-full font-semibold border-2 tv-focus-ring
-            transition-all duration-300 ease-in-out text-xs md:text-sm
-            ${
-              activePlayer === 'peachify'
-                ? 'bg-blue-600 text-white border-blue-400 shadow-lg shadow-blue-500/75 scale-105'
-                : 'bg-black/50 text-gray-300 backdrop-blur-sm border-transparent hover:bg-black/70 hover:border-gray-500'
-            }
-          `}
-          onClick={() => setActivePlayer('peachify')}
-        >
-          <span className="hidden md:inline">Backup</span>2
-        </button>
-      </div>
-
-      {/* Main iframe area */}
       <div className="w-full h-full">
-        {activePlayer === 'moonflix' && (
-          <iframe
-            key="player-1"
-            src={moonflixEmbedUrl}
-            title="Player 1 – moonflix"
-            frameBorder="0"
-            allow="autoplay; fullscreen"
-            allowFullScreen
-            scrolling="no"
-            className="w-full h-full border-none block"
-            {...mobileIframeProps}
-          />
-        )}
-        {activePlayer === 'peachify' && (
-          <iframe
-            key="player-2"
-            src={peachifyEmbedUrl}
-            title="Player 2 – peachify"
-            frameBorder="0"
-            allow="autoplay; fullscreen"
-            allowFullScreen
-            scrolling="no"
-            className="w-full h-full border-none block"
-            {...mobileIframeProps}
-          />
-        )}
+        <iframe
+          src={moonflixEmbedUrl}
+          title="Moonflix player"
+          frameBorder="0"
+          allow="autoplay; fullscreen"
+          allowFullScreen
+          scrolling="no"
+          className="w-full h-full border-none block"
+          {...mobileIframeProps}
+        />
       </div>
     </div>
   );

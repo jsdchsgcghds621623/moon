@@ -1,0 +1,3289 @@
+{
+  "description": "Top 20 highest-grossing film franchises of all time, with expanded details including poster concepts and complete movie lists for each universe/series.",
+  "data_source": "Based on Box Office Mojo and Wikipedia highest-grossing film franchise rankings (as of 2024)",
+  "note": "Poster descriptions are conceptual art-style prompts meant to visually represent each franchise. Movie lists include all theatrical releases within each universe, including spin-offs and crossover films.",
+  "franchises": [
+    {
+      "rank": 1,
+      "name": "Marvel Cinematic Universe",
+      "total_box_office_billions": 31.3,
+      "number_of_movies": 34,
+      "poster": "A dynamic ensemble collage featuring Iron Man, Captain America, Thor, and Thanos, with the Infinity Gauntlet at the center. Dark cosmic background with Avengers 'A' logo in gold.",
+      "movies": [
+        {
+          "title": "Iron Man (2008)",
+          "tmdb": {
+            "id": 1726,
+            "poster_path": "/78lPtwv72eTNqFW9COBYI0dWDJa.jpg",
+            "overview": "After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.",
+            "release_date": "2008-04-30",
+            "vote_average": 7.663,
+            "popularity": 32.9558,
+            "backdrop_path": "/cyecB7godJ6kNHGONFjUyVN9OX5.jpg",
+            "original_title": "Iron Man"
+          }
+        },
+        {
+          "title": "The Incredible Hulk (2008)",
+          "tmdb": {
+            "id": 1724,
+            "poster_path": "/gKzYx79y0AQTL4UAk1cBQJ3nvrm.jpg",
+            "overview": "Scientist Bruce Banner scours the planet for an antidote to the unbridled force of rage within him: the Hulk. But when the military masterminds who dream of exploiting his powers force him back to civilization, he finds himself coming face to face with a new, deadly foe.",
+            "release_date": "2008-06-12",
+            "vote_average": 6.248,
+            "popularity": 20.0157,
+            "backdrop_path": "/jPu8yiadqgzwFPGKJmGo637ASVP.jpg",
+            "original_title": "The Incredible Hulk"
+          }
+        },
+        {
+          "title": "Iron Man 2 (2010)",
+          "tmdb": {
+            "id": 10138,
+            "poster_path": "/6WBeq4fCfn7AN0o21W9qNcRF2l9.jpg",
+            "overview": "With the world now aware of his dual life as the armored superhero Iron Man, billionaire inventor Tony Stark faces pressure from the government, the press and the public to share his technology with the military. Unwilling to let go of his invention, Stark, with Pepper Potts and James 'Rhodey' Rhodes at his side, must forge new alliances – and confront powerful enemies.",
+            "release_date": "2010-04-28",
+            "vote_average": 6.855,
+            "popularity": 24.6811,
+            "backdrop_path": "/7lmBufEG7P7Y1HClYK3gCxYrkgS.jpg",
+            "original_title": "Iron Man 2"
+          }
+        },
+        {
+          "title": "Thor (2011)",
+          "tmdb": {
+            "id": 10195,
+            "poster_path": "/prSfAi1xGrhLQNxVSUFh61xQ4Qy.jpg",
+            "overview": "Against his father Odin's will, The Mighty Thor - a powerful but arrogant warrior god - recklessly reignites an ancient war. Thor is cast down to Earth and forced to live among humans as punishment. Once here, Thor learns what it takes to be a true hero when the most dangerous villain of his world sends the darkest forces of Asgard to invade Earth.",
+            "release_date": "2011-04-21",
+            "vote_average": 6.771,
+            "popularity": 23.3253,
+            "backdrop_path": "/cDJ61O1STtbWNBwefuqVrRe3d7l.jpg",
+            "original_title": "Thor"
+          }
+        },
+        {
+          "title": "Captain America: The First Avenger (2011)",
+          "tmdb": {
+            "id": 1771,
+            "poster_path": "/vSNxAJTlD0r02V9sPYpOjqDZXUK.jpg",
+            "overview": "During World War II, Steve Rogers is a sickly man from Brooklyn who's transformed into super-soldier Captain America to aid in the war effort. Rogers must stop the Red Skull – Adolf Hitler's ruthless head of weaponry, and the leader of an organization that intends to use a mysterious device of untold powers for world domination.",
+            "release_date": "2011-07-22",
+            "vote_average": 7,
+            "popularity": 14.2254,
+            "backdrop_path": "/yFuKvT4Vm3sKHdFY4eG6I4ldAnn.jpg",
+            "original_title": "Captain America: The First Avenger"
+          }
+        },
+        {
+          "title": "The Avengers (2012)",
+          "tmdb": {
+            "id": 24428,
+            "poster_path": "/RYMX2wcKCBAr24UyPD7xwmjaTn.jpg",
+            "overview": "When an unexpected enemy emerges and threatens global safety and security, Nick Fury, director of the international peacekeeping agency known as S.H.I.E.L.D., finds himself in need of a team to pull the world back from the brink of disaster. Spanning the globe, a daring recruitment effort begins!",
+            "release_date": "2012-04-25",
+            "vote_average": 8.059,
+            "popularity": 55.3432,
+            "backdrop_path": "/9BBTo63ANSmhC4e6r62OJFuK2GL.jpg",
+            "original_title": "The Avengers"
+          }
+        },
+        {
+          "title": "Iron Man 3 (2013)",
+          "tmdb": {
+            "id": 68721,
+            "poster_path": "/qqs43fx570zvp04qu6mcjf70v4xjfh0pxynf52dq46.jpg",
+            "overview": "When Tony Stark's world is torn apart by a formidable terrorist called the Mandarin, he starts an odyssey of rebuilding and retribution.",
+            "release_date": "2013-04-18",
+            "vote_average": 6.933,
+            "popularity": 18.3508,
+            "backdrop_path": "/iVped1djsF0tvGkvnHbzsE3ZPTF.jpg",
+            "original_title": "Iron Man 3"
+          }
+        },
+        {
+          "title": "Thor: The Dark World (2013)",
+          "tmdb": {
+            "id": 76338,
+            "poster_path": "/wp6OxE4poJ4G7c0U2ZIXasTSMR7.jpg",
+            "overview": "Thor fights to restore order across the cosmos… but an ancient race led by the vengeful Malekith returns to plunge the universe back into darkness. Faced with an enemy that even Odin and Asgard cannot withstand, Thor must embark on his most perilous and personal journey yet, one that will reunite him with Jane Foster and force him to sacrifice everything to save us all.",
+            "release_date": "2013-10-30",
+            "vote_average": 6.512,
+            "popularity": 21.4637,
+            "backdrop_path": "/5QEOy0QEpad9QsXeMxuGHPXMale.jpg",
+            "original_title": "Thor: The Dark World"
+          }
+        },
+        {
+          "title": "Captain America: The Winter Soldier (2014)",
+          "tmdb": {
+            "id": 100402,
+            "poster_path": "/tVFRpFw3xTedgPGqxW0AOI8Qhh0.jpg",
+            "overview": "After the cataclysmic events in New York with The Avengers, Steve Rogers, aka Captain America is living quietly in Washington, D.C. and trying to adjust to the modern world. But when a S.H.I.E.L.D. colleague comes under attack, Steve becomes embroiled in a web of intrigue that threatens to put the world at risk. Joining forces with the Black Widow, Captain America struggles to expose the ever-widening conspiracy while fighting off professional assassins sent to silence him at every turn. When the full scope of the villainous plot is revealed, Captain America and the Black Widow enlist the help of a new ally, the Falcon. However, they soon find themselves up against an unexpected and formidable enemy—the Winter Soldier.",
+            "release_date": "2014-03-20",
+            "vote_average": 7.7,
+            "popularity": 13.2428,
+            "backdrop_path": "/1PkzvhQvq3KpG4EQUjWNYsDX3CdBGvMGzr.jpg",
+            "original_title": "Captain America: The Winter Soldier"
+          }
+        },
+        {
+          "title": "Guardians of the Galaxy (2014)",
+          "tmdb": {
+            "id": 118340,
+            "poster_path": "/r7vmZjiyZw9rpJMQJdXpjgiCOk9.jpg",
+            "overview": "Light years from Earth, 26 years after being abducted, Peter Quill finds himself the prime target of a manhunt after discovering an orb wanted by Ronan the Accuser.",
+            "release_date": "2014-07-30",
+            "vote_average": 7.907,
+            "popularity": 15.1428,
+            "backdrop_path": "/uLtVbjvS1O7gXL8lUOwsFOH4man.jpg",
+            "original_title": "Guardians of the Galaxy"
+          }
+        },
+        {
+          "title": "Avengers: Age of Ultron (2015)",
+          "tmdb": {
+            "id": 99861,
+            "poster_path": "/4ssDuvEDkSArWEdyBl2X5EHvYKU.jpg",
+            "overview": "When Tony Stark tries to jumpstart a dormant peacekeeping program, things go awry and Earth’s Mightiest Heroes are put to the ultimate test as the fate of the planet hangs in the balance. As the villainous Ultron emerges, it is up to The Avengers to stop him from enacting his terrible plans, and soon uneasy alliances and unexpected action pave the way for an epic and unique global adventure.",
+            "release_date": "2015-04-22",
+            "vote_average": 7.276,
+            "popularity": 32.2323,
+            "backdrop_path": "/kIBK5SKwgqIIuRKhhWrJn3XkbPq.jpg",
+            "original_title": "Avengers: Age of Ultron"
+          }
+        },
+        {
+          "title": "Ant-Man (2015)",
+          "tmdb": {
+            "id": 102899,
+            "poster_path": "/rQRnQfUl3kfp78nCWq8Ks04vnq1.jpg",
+            "overview": "Armed with the astonishing ability to shrink in scale but increase in strength, master thief Scott Lang must embrace his inner-hero and help his mentor, Doctor Hank Pym, protect the secret behind his spectacular Ant-Man suit from a new generation of towering threats. Against seemingly insurmountable obstacles, Pym and Lang must plan and pull off a heist that will save the world.",
+            "release_date": "2015-07-14",
+            "vote_average": 7.1,
+            "popularity": 20.7845,
+            "backdrop_path": "/1KGJeNMrBb1itZgSDPgK5KtsTyvqUwX22b.jpg",
+            "original_title": "Ant-Man"
+          }
+        },
+        {
+          "title": "Captain America: Civil War (2016)",
+          "tmdb": {
+            "id": 271110,
+            "poster_path": "/rAGiXaUfPzY7CDEyNKUofk3Kw2e.jpg",
+            "overview": "Following the events of Age of Ultron, the collective governments of the world pass an act designed to regulate all superhuman activity. This polarizes opinion amongst the Avengers, causing two factions to side with Iron Man or Captain America, which causes an epic battle between former allies.",
+            "release_date": "2016-04-27",
+            "vote_average": 7.45,
+            "popularity": 35.128,
+            "backdrop_path": "/wdwcOBMkt3zmPQuEMxB3FUtMio2.jpg",
+            "original_title": "Captain America: Civil War"
+          }
+        },
+        {
+          "title": "Doctor Strange (2016)",
+          "tmdb": {
+            "id": 284052,
+            "poster_path": "/uGBVj3bEbCoZbDjjl9wTxcygko1.jpg",
+            "overview": "After his career is destroyed, a brilliant but arrogant surgeon gets a new lease on life when a sorcerer takes him under her wing and trains him to defend the world against evil.",
+            "release_date": "2016-10-25",
+            "vote_average": 7.424,
+            "popularity": 23.9248,
+            "backdrop_path": "/kkoiH8ZWxJ9WSAjOadGtuHUQxbm.jpg",
+            "original_title": "Doctor Strange"
+          }
+        },
+        {
+          "title": "Guardians of the Galaxy Vol. 2 (2017)",
+          "tmdb": {
+            "id": 283995,
+            "poster_path": "/y4MBh0EjBlMuOzv9axM4qJlmhzz.jpg",
+            "overview": "The Guardians must fight to keep their newfound family together as they unravel the mysteries of Peter Quill's true parentage.",
+            "release_date": "2017-04-25",
+            "vote_average": 7.61,
+            "popularity": 23.6714,
+            "backdrop_path": "/bW93ycPSSi3Hxx1NvlMX5qm2mQu.jpg",
+            "original_title": "Guardians of the Galaxy Vol. 2"
+          }
+        },
+        {
+          "title": "Spider-Man: Homecoming (2017)",
+          "tmdb": {
+            "id": 315635,
+            "poster_path": "/c24sv2weTHPsmDa7jEMN0m2P3RT.jpg",
+            "overview": "Following the events of Captain America: Civil War, Peter Parker, with the help of his mentor Tony Stark, tries to balance his life as an ordinary high school student in Queens, New York City, with fighting crime as his superhero alter ego Spider-Man as a new threat, the Vulture, emerges.",
+            "release_date": "2017-07-05",
+            "vote_average": 7.331,
+            "popularity": 45.265,
+            "backdrop_path": "/tPpYGm2mVecue7Bk3gNVoSPA5qn.jpg",
+            "original_title": "Spider-Man: Homecoming"
+          }
+        },
+        {
+          "title": "Thor: Ragnarok (2017)",
+          "tmdb": {
+            "id": 284053,
+            "poster_path": "/rzRwTcFvttcN1ZpX2xv4j3tSdJu.jpg",
+            "overview": "Thor is imprisoned on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the destruction of his home-world and the end of Asgardian civilization, at the hands of a powerful new threat, the ruthless Hela.",
+            "release_date": "2017-10-02",
+            "vote_average": 7.583,
+            "popularity": 25.3216,
+            "backdrop_path": "/vLmHH8jAy8Jq8uBsLucd3592WGh.jpg",
+            "original_title": "Thor: Ragnarok"
+          }
+        },
+        {
+          "title": "Black Panther (2018)",
+          "tmdb": {
+            "id": 284054,
+            "poster_path": "/uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
+            "overview": "King T'Challa returns home to the reclusive, technologically advanced African nation of Wakanda to serve as his country's new leader. However, T'Challa soon finds that he is challenged for the throne by factions within his own country as well as without. Using powers reserved to Wakandan kings, T'Challa assumes the Black Panther mantle to join with ex-girlfriend Nakia, the queen-mother, his princess-kid sister, members of the Dora Milaje (the Wakandan 'special forces') and an American secret agent, to prevent Wakanda from being dragged into a world war.",
+            "release_date": "2018-02-13",
+            "vote_average": 7.364,
+            "popularity": 25.8607,
+            "backdrop_path": "/sIwFcU1pql5a3LdZGxsRKi9JfTL.jpg",
+            "original_title": "Black Panther"
+          }
+        },
+        {
+          "title": "Avengers: Infinity War (2018)",
+          "tmdb": {
+            "id": 299536,
+            "poster_path": "/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg",
+            "overview": "As the Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos. A despot of intergalactic infamy, his goal is to collect all six Infinity Stones, artifacts of unimaginable power, and use them to inflict his twisted will on all of reality. Everything the Avengers have fought for has led up to this moment - the fate of Earth and existence itself has never been more uncertain.",
+            "release_date": "2018-04-25",
+            "vote_average": 8.24,
+            "popularity": 63.4298,
+            "backdrop_path": "/mDfJG3LC3Dqb67AZ52x3Z0jU0uB.jpg",
+            "original_title": "Avengers: Infinity War"
+          }
+        },
+        {
+          "title": "Ant-Man and the Wasp (2018)",
+          "tmdb": {
+            "id": 363088,
+            "poster_path": "/cFQEO687n1K6umXbInzocxcnAQz.jpg",
+            "overview": "Just when his time under house arrest is about to end, Scott Lang once again puts his freedom at risk to help Hope van Dyne and Dr. Hank Pym dive into the quantum realm and try to accomplish, against time and any chance of success, a very dangerous rescue mission.",
+            "release_date": "2018-07-04",
+            "vote_average": 6.9,
+            "popularity": 18.0025,
+            "backdrop_path": "/iYdgEUE2W2aJkgqfSjf1x3gFfuV.jpg",
+            "original_title": "Ant-Man and the Wasp"
+          }
+        },
+        {
+          "title": "Captain Marvel (2019)",
+          "tmdb": {
+            "id": 299537,
+            "poster_path": "/AcbXX3KgvqD7B8Y4WjCu6yNx1Prfu5cNHz.jpg",
+            "overview": "The story follows Carol Danvers as she becomes one of the universe’s most powerful heroes when Earth is caught in the middle of a galactic war between two alien races. Set in the 1990s, Captain Marvel is an all-new adventure from a previously unseen period in the history of the Marvel Cinematic Universe.",
+            "release_date": "2019-03-06",
+            "vote_average": 6.778,
+            "popularity": 19.2497,
+            "backdrop_path": "/qqs43fx570zvp04qu6mcjf70v4xjfh0pxynf52dq46.jpg",
+            "original_title": "Captain Marvel"
+          }
+        },
+        {
+          "title": "Avengers: Endgame (2019)",
+          "tmdb": {
+            "id": 299534,
+            "poster_path": "/ulzhLuWrPK07P1YkdWQLZnQh1JL.jpg",
+            "overview": "After the devastating events of Avengers: Infinity War, the universe is in ruins due to the efforts of the Mad Titan, Thanos. With the help of remaining allies, the Avengers must assemble once more in order to undo Thanos' actions and restore order to the universe once and for all, no matter what consequences may be in store.",
+            "release_date": "2019-04-24",
+            "vote_average": 8.239,
+            "popularity": 38.9066,
+            "backdrop_path": "/7RyHsO4yDXtBv1zUU3mTpHeQ0d5.jpg",
+            "original_title": "Avengers: Endgame"
+          }
+        },
+        {
+          "title": "Spider-Man: Far From Home (2019)",
+          "tmdb": {
+            "id": 429617,
+            "poster_path": "/4q2NNj4S5dG2RLF9CpXsej7yXl.jpg",
+            "overview": "Peter Parker and his friends go on a summer trip to Europe. However, they will hardly be able to rest - Peter will have to agree to help Nick Fury uncover the mystery of creatures that cause natural disasters and destruction throughout the continent.",
+            "release_date": "2019-06-28",
+            "vote_average": 7.395,
+            "popularity": 37.3826,
+            "backdrop_path": "/vamhMTvh9m9zFHDoR0v1nRtf6T4.jpg",
+            "original_title": "Spider-Man: Far From Home"
+          }
+        },
+        {
+          "title": "Black Widow (2021)",
+          "tmdb": {
+            "id": 497698,
+            "poster_path": "/qqs43fx570zvp04qu6mcjf70v4xjfh0pxynf52dq46.jpg",
+            "overview": "Natasha Romanoff, also known as Black Widow, confronts the darker parts of her ledger when a dangerous conspiracy with ties to her past arises. Pursued by a force that will stop at nothing to bring her down, Natasha must deal with her history as a spy and the broken relationships left in her wake long before she became an Avenger.",
+            "release_date": "2021-07-07",
+            "vote_average": 7.162,
+            "popularity": 19.8027,
+            "backdrop_path": "/6azpBJGcLx9SKif8h9VMnflBfa.jpg",
+            "original_title": "Black Widow"
+          }
+        },
+        {
+          "title": "Shang-Chi and the Legend of the Ten Rings (2021)",
+          "tmdb": {
+            "id": 566525,
+            "poster_path": "/9f2Q0U3IOsLgrI2HkvldwSABZy5.jpg",
+            "overview": "Shang-Chi must confront the past he thought he left behind when he is drawn into the web of the mysterious Ten Rings organization.",
+            "release_date": "2021-09-01",
+            "vote_average": 7.493,
+            "popularity": 19.8226,
+            "backdrop_path": "/r7K6Xt0RX4Mw0cAbZVw5cyb1Tux.jpg",
+            "original_title": "Shang-Chi and the Legend of the Ten Rings"
+          }
+        },
+        {
+          "title": "Eternals (2021)",
+          "tmdb": {
+            "id": 524434,
+            "poster_path": "/lFByFSLV5WDJEv3KabbdAF959F2.jpg",
+            "overview": "The Eternals are a team of ancient aliens who have been living on Earth in secret for thousands of years. When an unexpected tragedy forces them out of the shadows, they are forced to reunite against mankind’s most ancient enemy, the Deviants.",
+            "release_date": "2021-11-03",
+            "vote_average": 6.766,
+            "popularity": 13.3791,
+            "backdrop_path": "/c6H7Z4u73ir3cIoCteuhJh7UCAR.jpg",
+            "original_title": "Eternals"
+          }
+        },
+        {
+          "title": "Spider-Man: No Way Home (2021)",
+          "tmdb": {
+            "id": 634649,
+            "poster_path": "/1ZA3ZKWnVYUMHtF3zYJDQMg3MxiPUUfjm.jpg",
+            "overview": "Peter Parker is unmasked and no longer able to separate his normal life from the high-stakes of being a super-hero. When he asks for help from Doctor Strange the stakes become even more dangerous, forcing him to discover what it truly means to be Spider-Man.",
+            "release_date": "2021-12-15",
+            "vote_average": 7.9,
+            "popularity": 131.093,
+            "backdrop_path": "/zD5v1E4joAzFvmAEytt7fM3ivyT.jpg",
+            "original_title": "Spider-Man: No Way Home"
+          }
+        },
+        {
+          "title": "Doctor Strange in the Multiverse of Madness (2022)",
+          "tmdb": {
+            "id": 453395,
+            "poster_path": "/ddJcSKbcp4rKZTmuyWaMhuwcfMz.jpg",
+            "overview": "Doctor Strange, with the help of mystical allies both old and new, traverses the mind-bending and dangerous alternate realities of the Multiverse to confront a mysterious new adversary.",
+            "release_date": "2022-05-04",
+            "vote_average": 7.231,
+            "popularity": 30.5722,
+            "backdrop_path": "/lv3TXqhpaIxkclIHbhN2MRMOemQ.jpg",
+            "original_title": "Doctor Strange in the Multiverse of Madness"
+          }
+        },
+        {
+          "title": "Thor: Love and Thunder (2022)",
+          "tmdb": {
+            "id": 616037,
+            "poster_path": "/pIkRyD18kl4FhoCNQuWxWu5cBLM.jpg",
+            "overview": "After his retirement is interrupted by Gorr the God Butcher, a galactic killer who seeks the extinction of the gods, Thor Odinson enlists the help of King Valkyrie, Korg, and ex-girlfriend Jane Foster, who now wields Mjolnir as the Mighty Thor. Together they embark upon a harrowing cosmic adventure to uncover the mystery of the God Butcher’s vengeance and stop him before it’s too late.",
+            "release_date": "2022-07-06",
+            "vote_average": 6.367,
+            "popularity": 22.4775,
+            "backdrop_path": "/jsoz1HlxczSuTx0mDl2h0lxy36l.jpg",
+            "original_title": "Thor: Love and Thunder"
+          }
+        },
+        {
+          "title": "Black Panther: Wakanda Forever (2022)",
+          "tmdb": {
+            "id": 505642,
+            "poster_path": "/sv1xJUazXeYqALzczSZ3O6nkH75.jpg",
+            "overview": "Queen Ramonda, Shuri, M’Baku, Okoye and the Dora Milaje fight to protect their nation from intervening world powers in the wake of King T’Challa’s death.  As the Wakandans strive to embrace their next chapter, the heroes must band together with the help of War Dog Nakia and Everett Ross and forge a new path for the kingdom of Wakanda.",
+            "release_date": "2022-11-09",
+            "vote_average": 7.004,
+            "popularity": 22.0602,
+            "backdrop_path": "/83H0C66AcvkwpG2738VCTHMY9uv.jpg",
+            "original_title": "Black Panther: Wakanda Forever"
+          }
+        },
+        {
+          "title": "Ant-Man and the Wasp: Quantumania (2023)",
+          "tmdb": {
+            "id": 640146,
+            "poster_path": "/qqs43fx570zvp04qu6mcjf70v4xjfh0pxynf52dq46.jpg",
+            "overview": "Super-Hero partners Scott Lang and Hope van Dyne, along with with Hope's parents Janet van Dyne and Hank Pym, and Scott's daughter Cassie Lang, find themselves exploring the Quantum Realm, interacting with strange new creatures and embarking on an adventure that will push them beyond the limits of what they thought possible.",
+            "release_date": "2023-02-15",
+            "vote_average": 6.225,
+            "popularity": 12.7091,
+            "backdrop_path": "/m8JTwHFwX7I7JY5fPe4SjqejWag.jpg",
+            "original_title": "Ant-Man and the Wasp: Quantumania"
+          }
+        },
+        {
+          "title": "Guardians of the Galaxy Vol. 3 (2023)",
+          "tmdb": {
+            "id": 447365,
+            "poster_path": "/r2J02Z2OpNTctfOSN1Ydgii51I3.jpg",
+            "overview": "Peter Quill, still reeling from the loss of Gamora, must rally his team around him to defend the universe along with protecting one of their own. A mission that, if not completed successfully, could quite possibly lead to the end of the Guardians as we know them.",
+            "release_date": "2023-05-03",
+            "vote_average": 7.931,
+            "popularity": 23.5025,
+            "backdrop_path": "/5YZbUmjbMa3ClvSW1Wj3D6XGolb.jpg",
+            "original_title": "Guardians of the Galaxy Vol. 3"
+          }
+        },
+        {
+          "title": "The Marvels (2023)",
+          "tmdb": {
+            "id": 609681,
+            "poster_path": "/9GBhzXMFjgcZ3FdR9w3bUMMTps5.jpg",
+            "overview": "When her duties send her to an anomalous wormhole linked to a Kree revolutionary, Carol's powers become entangled with that of Jersey City super-fan Kamala Khan, aka Ms. Marvel, and Carol's estranged niece, now S.A.B.E.R. astronaut Captain Monica Rambeau. Together, this unlikely trio must team up and learn to work in concert to save the universe.",
+            "release_date": "2023-11-08",
+            "vote_average": 5.932,
+            "popularity": 13.6282,
+            "backdrop_path": "/feSiISwgEpVzR1v3zv2n2AU4ANJ.jpg",
+            "original_title": "The Marvels"
+          }
+        },
+        {
+          "title": "Deadpool & Wolverine (2024)",
+          "tmdb": {
+            "id": 533535,
+            "poster_path": "/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg",
+            "overview": "A listless Wade Wilson toils away in civilian life with his days as the morally flexible mercenary, Deadpool, behind him. But when his homeworld faces an existential threat, Wade must reluctantly suit-up again with an even more reluctant Wolverine.",
+            "release_date": "2024-07-24",
+            "vote_average": 7.581,
+            "popularity": 48.0445,
+            "backdrop_path": "/by8z9Fe8y7p4jo2YlW2SZDnptyT.jpg",
+            "original_title": "Deadpool & Wolverine"
+          }
+        }
+      ],
+      "tv_series": [
+        {
+          "name": "WandaVision",
+          "tmdb": {
+            "id": 85271,
+            "poster_path": "/ijWWwINc8h71NQ8j1LTJMFSj5wr.jpg",
+            "overview": "Wanda Maximoff and Vision—two super-powered beings living idealized suburban lives—begin to suspect that everything is not as it seems.",
+            "first_air_date": "2021-01-15",
+            "vote_average": 8.185,
+            "popularity": 27.2416,
+            "backdrop_path": "/lOr9NKxh4vMweufMOUDJjJhCRHW.jpg",
+            "original_name": "WandaVision"
+          }
+        },
+        {
+          "name": "Loki",
+          "tmdb": {
+            "id": 84958,
+            "poster_path": "/rX1wQMTKFqF0gvZyS0DDQqgnQPB.jpg",
+            "overview": "After stealing the Tesseract during the events of “Avengers: Endgame,” an alternate version of Loki is brought to the mysterious Time Variance Authority, a bureaucratic organization that exists outside of time and space and monitors the timeline. They give Loki a choice: face being erased from existence due to being a “time variant” or help fix the timeline and stop a greater threat.",
+            "first_air_date": "2021-06-09",
+            "vote_average": 8.17,
+            "popularity": 59.3012,
+            "backdrop_path": "/qqs43fx570zvp04qu6mcjf70v4xjfh0pxynf52dq46.jpg",
+            "original_name": "Loki"
+          }
+        },
+        {
+          "name": "The Falcon and the Winter Soldier",
+          "tmdb": {
+            "id": 88396,
+            "poster_path": "/6kbAMLteGO8yyewYau6bJ683sw7.jpg",
+            "overview": "Following the events of “Avengers: Endgame”, the Falcon, Sam Wilson and the Winter Soldier, Bucky Barnes team up in a global adventure that tests their abilities, and their patience.",
+            "first_air_date": "2021-03-19",
+            "vote_average": 7.591,
+            "popularity": 18.017,
+            "backdrop_path": "/aTjbqMONy77fHJrIYu14g1F0d5h.jpg",
+            "original_name": "The Falcon and the Winter Soldier"
+          }
+        },
+        {
+          "name": "Hawkeye",
+          "tmdb": {
+            "id": 88329,
+            "poster_path": "/ct5pNE5dDHryHLDnxyZPYcqO1sz.jpg",
+            "overview": "Former Avenger Clint Barton has a seemingly simple mission: get back to his family for Christmas. Possible? Maybe with the help of Kate Bishop, a 22-year-old archer with dreams of becoming a superhero. The two are forced to work together when a presence from Barton’s past threatens to derail far more than the festive spirit.",
+            "first_air_date": "2021-11-24",
+            "vote_average": 7.779,
+            "popularity": 21.2866,
+            "backdrop_path": "/17qPukLrA4tCxC5i8wsF1bwhNPhN8UrZqS.jpg",
+            "original_name": "Hawkeye"
+          }
+        },
+        {
+          "name": "Moon Knight",
+          "tmdb": {
+            "id": 92749,
+            "poster_path": "/x6FsYvt33846IQnDSFxla9j0RX8.jpg",
+            "overview": "When Steven Grant, a mild-mannered gift-shop employee, becomes plagued with blackouts and memories of another life, he discovers he has dissociative identity disorder and shares a body with mercenary Marc Spector. As Steven/Marc’s enemies converge upon them, they must navigate their complex identities while thrust into a deadly mystery among the powerful gods of Egypt.",
+            "first_air_date": "2022-03-30",
+            "vote_average": 7.637,
+            "popularity": 25.1557,
+            "backdrop_path": "/iux1vKPT7Vw1AzetZb4Jz6wfYsm.jpg",
+            "original_name": "Moon Knight"
+          }
+        },
+        {
+          "name": "Ms. Marvel",
+          "tmdb": {
+            "id": 92782,
+            "poster_path": "/3HbTUJVv2B7Jkhha3pKm2wmYebYGPcXKAo.jpg",
+            "overview": "A great student, avid gamer, and voracious fan-fic scribe, Kamala Khan has a special affinity for superheroes, particularly Captain Marvel. However, she struggles to fit in at home and at school — that is, until she gets superpowers like the heroes she’s always looked up to. Life is easier with superpowers, right?",
+            "first_air_date": "2022-06-08",
+            "vote_average": 6.273,
+            "popularity": 16.1867,
+            "backdrop_path": "/mfcLUWASJghU8MTNK38eYktfE83.jpg",
+            "original_name": "Ms. Marvel"
+          }
+        },
+        {
+          "name": "She-Hulk: Attorney at Law",
+          "tmdb": {
+            "id": 92783,
+            "poster_path": "/5xz2orV8f0usyrfGNshcoXHmiaV.jpg",
+            "overview": "Jennifer Walters navigates the complicated life of a single, 30-something attorney who also happens to be a green 6-foot-7-inch superpowered hulk.",
+            "first_air_date": "2022-08-18",
+            "vote_average": 6.091,
+            "popularity": 14.0597,
+            "backdrop_path": "/eljErfkQUcFUgQkI4I1soZcH8MW.jpg",
+            "original_name": "She-Hulk: Attorney at Law"
+          }
+        },
+        {
+          "name": "Secret Invasion",
+          "tmdb": {
+            "id": 114472,
+            "poster_path": "/3By44Vb6mHaN3GHRPBY2FM7PEqgGaT2bZd.jpg",
+            "overview": "Nick Fury and Talos discover a faction of shapeshifting Skrulls who have been infiltrating Earth for years.",
+            "first_air_date": "2023-06-21",
+            "vote_average": 6.5,
+            "popularity": 17.3102,
+            "backdrop_path": "/6mOK9j99OFlxGc3ird2jWUeUha9.jpg",
+            "original_name": "Secret Invasion"
+          }
+        },
+        {
+          "name": "What If...?",
+          "tmdb": {
+            "id": 91363,
+            "poster_path": "/lztz5XBMG1x6Y5ubz7CxfPFsAcW.jpg",
+            "overview": "Taking inspiration from the comic books of the same name, each episode of this animated anthology series questions, revisits and twists classic Marvel Cinematic moments.",
+            "first_air_date": "2021-08-11",
+            "vote_average": 8.039,
+            "popularity": 38.7212,
+            "backdrop_path": "/jnzoh5qoxRLFRIQAxnl6D3RStPC.jpg",
+            "original_name": "What If...?"
+          }
+        },
+        {
+          "name": "Agatha All Along",
+          "tmdb": {
+            "id": 138501,
+            "poster_path": "/mGsxKwXUjojitRv2E9qMTbxbBRd.jpg",
+            "overview": "Agatha Harkness gathers a coven of witches and sets off down, down, down The Witches' Road.",
+            "first_air_date": "2024-09-18",
+            "vote_average": 7.431,
+            "popularity": 23.4282,
+            "backdrop_path": "/tYLXJW1sZQU09VWY1BhSVPKGIwc.jpg",
+            "original_name": "Agatha All Along"
+          }
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "name": "Star Wars",
+      "total_box_office_billions": 17.2,
+      "number_of_movies": 12,
+      "poster": "A massive space battle with X-wings and TIE fighters, featuring Darth Vader, Luke Skywalker, and Rey. The Millennium Falcon flies prominently in the foreground with the Star Wars logo in yellow.",
+      "movies": [
+        {
+          "title": "Star Wars: Episode I – The Phantom Menace (1999)",
+          "tmdb": {
+            "id": 1893,
+            "poster_path": "/6wkfovpn7Eq8dYNKaG5PY3q2oq6.jpg",
+            "overview": "Anakin Skywalker, a young slave strong with the Force, is discovered on Tatooine. Meanwhile, the evil Sith have returned, enacting their plot for revenge against the Jedi.",
+            "release_date": "1999-05-19",
+            "vote_average": 6.582,
+            "popularity": 15.8329,
+            "backdrop_path": "/3Fv2VFEdXEYxnqE63Tqcbg2jPrS2c1KS9c.jpg",
+            "original_title": "Star Wars: Episode I - The Phantom Menace"
+          }
+        },
+        {
+          "title": "Star Wars: Episode II – Attack of the Clones (2002)",
+          "tmdb": {
+            "id": 1894,
+            "poster_path": "/oZNPzxqM2s5DyVWab09NTQScDQt.jpg",
+            "overview": "Following an assassination attempt on Senator Padmé Amidala, Jedi Knights Anakin Skywalker and Obi-Wan Kenobi investigate a mysterious plot into the heart of the Separatist movement and the beginning of the Clone Wars.",
+            "release_date": "2002-05-15",
+            "vote_average": 6.597,
+            "popularity": 12.5933,
+            "backdrop_path": "/abwxHfymXGAbbH3lo9PDEJEfvtW.jpg",
+            "original_title": "Star Wars: Episode II - Attack of the Clones"
+          }
+        },
+        {
+          "title": "Star Wars: Episode III – Revenge of the Sith (2005)",
+          "tmdb": {
+            "id": 1895,
+            "poster_path": "/xfSAoBEm9MNBjmlNcDYLvLSMlnq.jpg",
+            "overview": "When the sinister Sith unveil a thousand-year-old plot to rule the galaxy, the Republic crumbles and from its ashes rises the evil Galactic Empire. Jedi hero Anakin Skywalker must choose a side.",
+            "release_date": "2005-05-17",
+            "vote_average": 7.473,
+            "popularity": 15.2373,
+            "backdrop_path": "/jniabJVBSW3EqLlyhjxWCZjVkiE.jpg",
+            "original_title": "Star Wars: Episode III - Revenge of the Sith"
+          }
+        },
+        {
+          "title": "Star Wars: Episode IV – A New Hope (1977)",
+          "tmdb": {
+            "id": 11,
+            "poster_path": "/6FfCtAuVAW8XJjZ7eWeLibRLWTw.jpg",
+            "overview": "Princess Leia is captured and held hostage by the evil Imperial forces in their effort to take over the galactic Empire. Venturesome Luke Skywalker and dashing captain Han Solo team together with the loveable robot duo R2-D2 and C-3PO to rescue the beautiful princess and restore peace and justice in the Empire.",
+            "release_date": "1977-05-25",
+            "vote_average": 8.206,
+            "popularity": 36.0566,
+            "backdrop_path": "/yUiXA68FfQeA8cRBhd0Ao0jIRZt.jpg",
+            "original_title": "Star Wars"
+          }
+        },
+        {
+          "title": "Star Wars: Episode V – The Empire Strikes Back (1980)",
+          "tmdb": {
+            "id": 1891,
+            "poster_path": "/nNAeTmF4CtdSgMDplXTDPOpYzsX.jpg",
+            "overview": "The epic saga continues as Luke Skywalker, in hopes of defeating the evil Galactic Empire, learns the ways of the Jedi from aging master Yoda. But Darth Vader is more determined than ever to capture Luke. Meanwhile, rebel leader Princess Leia, cocky Han Solo, Chewbacca, and droids C-3PO and R2-D2 are thrown into various stages of capture, betrayal and despair.",
+            "release_date": "1980-05-20",
+            "vote_average": 8.392,
+            "popularity": 20.7272,
+            "backdrop_path": "/k9pshruhCpJAdH9RaGJO6jaWQ4X.jpg",
+            "original_title": "The Empire Strikes Back"
+          }
+        },
+        {
+          "title": "Star Wars: Episode VI – Return of the Jedi (1983)",
+          "tmdb": {
+            "id": 1892,
+            "poster_path": "/jQYlydvHm3kUix1f8prMucrplhm.jpg",
+            "overview": "Luke Skywalker leads a mission to rescue his friend Han Solo from the clutches of Jabba the Hutt, the Emperor prepares to crush the Rebellion with a more powerful Death Star, and the Rebel fleet mounts a massive attack on the space station. Luke Skywalker confronts Darth Vader in a final climactic duel before the evil Emperor.",
+            "release_date": "1983-05-25",
+            "vote_average": 7.91,
+            "popularity": 15.3841,
+            "backdrop_path": "/ziECpBRIyclmBNaFSWlvCfsKbMD.jpg",
+            "original_title": "Return of the Jedi"
+          }
+        },
+        {
+          "title": "Star Wars: Episode VII – The Force Awakens (2015)",
+          "tmdb": {
+            "id": 140607,
+            "poster_path": "/wqnLdwVXoBjKibFRR5U3y0aDUhs.jpg",
+            "overview": "Thirty years after defeating the Galactic Empire, Han Solo and his allies face a new threat from the evil Kylo Ren and his army of Stormtroopers.",
+            "release_date": "2015-12-15",
+            "vote_average": 7.247,
+            "popularity": 20.3809,
+            "backdrop_path": "/k6EOrckWFuz7I4z4wiRwz8zsj4H.jpg",
+            "original_title": "Star Wars: The Force Awakens"
+          }
+        },
+        {
+          "title": "Star Wars: Episode VIII – The Last Jedi (2017)",
+          "tmdb": {
+            "id": 181808,
+            "poster_path": "/kOVEVeg59E0wsnXmF9nrh6OmWII.jpg",
+            "overview": "Rey develops her newly discovered abilities with the guidance of Luke Skywalker, who is unsettled by the strength of her powers. Meanwhile, the Resistance prepares to do battle with the First Order.",
+            "release_date": "2017-12-13",
+            "vote_average": 6.747,
+            "popularity": 24.3806,
+            "backdrop_path": "/bIUaCtWaRgd78SnoHJDI8TNf7Sd.jpg",
+            "original_title": "Star Wars: The Last Jedi"
+          }
+        },
+        {
+          "title": "Star Wars: Episode IX – The Rise of Skywalker (2019)",
+          "tmdb": {
+            "id": 181812,
+            "poster_path": "/db32LaOibwEliAmSL2jjDF6oDdj.jpg",
+            "overview": "The surviving Resistance faces the First Order once again as the journey of Rey, Finn and Poe Dameron continues. With the power and knowledge of generations behind them, the final battle begins.",
+            "release_date": "2019-12-18",
+            "vote_average": 6.3,
+            "popularity": 19.3734,
+            "backdrop_path": "/jOzrELAzFxtMx2I4uDGHOotdfsS.jpg",
+            "original_title": "Star Wars: The Rise of Skywalker"
+          }
+        },
+        {
+          "title": "Rogue One: A Star Wars Story (2016)",
+          "tmdb": {
+            "id": 330459,
+            "poster_path": "/i0yw1mFbB7sNGHCs7EXZPzFkdA1.jpg",
+            "overview": "A rogue band of resistance fighters unite for a mission to steal the Death Star plans and bring a new hope to the galaxy.",
+            "release_date": "2016-12-14",
+            "vote_average": 7.509,
+            "popularity": 10.6475,
+            "backdrop_path": "/6t8ES1d12OzWyCGxBeDYLHoaDrT.jpg",
+            "original_title": "Rogue One: A Star Wars Story"
+          }
+        },
+        {
+          "title": "Solo: A Star Wars Story (2018)",
+          "tmdb": {
+            "id": 348350,
+            "poster_path": "/4oD6VEccFkorEBTEDXtpLAaz0Rl.jpg",
+            "overview": "Through a series of daring escapades deep within a dark and dangerous criminal underworld, Han Solo meets his mighty future copilot Chewbacca and encounters the notorious gambler Lando Calrissian.",
+            "release_date": "2018-05-15",
+            "vote_average": 6.557,
+            "popularity": 9.2228,
+            "backdrop_path": "/7LZ0K4FsALrt7OeNIGOVLNuKQRU.jpg",
+            "original_title": "Solo: A Star Wars Story"
+          }
+        },
+        {
+          "title": "The Clone Wars (2008)",
+          "tmdb": {
+            "id": 12180,
+            "poster_path": "/iJQfixW818LUdSXlCDL3JZm0S0g.jpg",
+            "overview": "As the Clone Wars sweep through the galaxy, Anakin Skywalker and his new Padawan learner Ahsoka Tano plunge into a dangerous mission to rescue the kidnapped son of crime lord Jabba the Hutt.",
+            "release_date": "2008-08-05",
+            "vote_average": 6.151,
+            "popularity": 5.2765,
+            "backdrop_path": "/eVA4ztLIuPEsokkgQ3NRt9rTRVh.jpg",
+            "original_title": "Star Wars: The Clone Wars"
+          }
+        }
+      ],
+      "tv_series": [
+        {
+          "name": "The Mandalorian",
+          "tmdb": {
+            "id": 82856,
+            "poster_path": "/sWgBv7LV2PRoQgkxwlibdGXKz1S.jpg",
+            "overview": "After the fall of the Galactic Empire, lawlessness has spread throughout the galaxy. A lone gunfighter makes his way through the outer reaches, earning his keep as a bounty hunter.",
+            "first_air_date": "2019-11-12",
+            "vote_average": 8.407,
+            "popularity": 48.9532,
+            "backdrop_path": "/9zcbqSxdsRMZWHYtyCd1nXPr2xq.jpg",
+            "original_name": "The Mandalorian"
+          }
+        },
+        {
+          "name": "Andor",
+          "tmdb": {
+            "id": 83867,
+            "poster_path": "/khZqmwHQicTYoS7Flreb9EddFZC.jpg",
+            "overview": "In an era filled with danger, deception and intrigue, Cassian Andor will discover the difference he can make in the struggle against the tyrannical Galactic Empire. He embarks on a path that is destined to turn him into a rebel hero.",
+            "first_air_date": "2022-09-21",
+            "vote_average": 8.294,
+            "popularity": 39.9413,
+            "backdrop_path": "/qqs43fx570zvp04qu6mcjf70v4xjfh0pxynf52dq46.jpg",
+            "original_name": "Andor"
+          }
+        },
+        {
+          "name": "Ahsoka",
+          "tmdb": {
+            "id": 114461,
+            "poster_path": "/eiJeWeCAEZAmRppnXHiTWDcCd3Q.jpg",
+            "overview": "Former Jedi Knight Ahsoka Tano investigates an emerging threat to a vulnerable galaxy.",
+            "first_air_date": "2023-08-22",
+            "vote_average": 7.42,
+            "popularity": 16.3299,
+            "backdrop_path": "/loDy1LWCkPjECjVTRmyKtOoUpNN.jpg",
+            "original_name": "Ahsoka"
+          }
+        },
+        {
+          "name": "Obi-Wan Kenobi",
+          "tmdb": {
+            "id": 92830,
+            "poster_path": "/qqs43fx570zvp04qu6mcjf70v4xjfh0pxynf52dq46.jpg",
+            "overview": "During the reign of the Galactic Empire, former Jedi Master, Obi-Wan Kenobi, embarks on a crucial mission to confront allies turned enemies and face the wrath of the Empire.",
+            "first_air_date": "2022-05-26",
+            "vote_average": 7.002,
+            "popularity": 11.0333,
+            "backdrop_path": "/p3Jmm6d1ShUrJEuU3DYD2K19c66.jpg",
+            "original_name": "Obi-Wan Kenobi"
+          }
+        },
+        {
+          "name": "Star Wars: The Clone Wars",
+          "tmdb": {
+            "id": 4194,
+            "poster_path": "/e1nWfnnCVqxS2LeTO3dwGyAsG2V.jpg",
+            "overview": "Yoda, Obi-Wan Kenobi, Anakin Skywalker, Mace Windu and other Jedi Knights lead the Grand Army of the Republic against the droid army of the Separatists.",
+            "first_air_date": "2008-10-03",
+            "vote_average": 8.469,
+            "popularity": 47.154,
+            "backdrop_path": "/m6eRgkR1KC6Mr6gKx6gKCzSn6vD.jpg",
+            "original_name": "Star Wars: The Clone Wars"
+          }
+        },
+        {
+          "name": "Star Wars Rebels",
+          "tmdb": {
+            "id": 60554,
+            "poster_path": "/eLrScs6Bs26JMcS8hiZhf7YRROr.jpg",
+            "overview": "Set between the events of Star Wars: Episodes III and IV, the story unfolds during a dark time when the evil Galactic Empire is tightening its grip of power on the galaxy. Imperial forces have occupied a remote planet and are ruining the lives of its people. The motley but clever crew of the starship Ghost — cowboy Jedi Kanan, ace pilot Hera, street-smart teenager Ezra, the “muscle” Zeb, warrior firebrand Sabine, and cantankerous old astromech droid Chopper — is among a select few who are brave enough to stand against the Empire. Together, they will face threatening new villains, encounter colorful adversaries, embark on thrilling adventures, and become heroes with the power to ignite a rebellion.",
+            "first_air_date": "2014-10-13",
+            "vote_average": 7.726,
+            "popularity": 23.1722,
+            "backdrop_path": "/8BNjxMJMFp0BgqMh4PyuwZMXxh1.jpg",
+            "original_name": "Star Wars Rebels"
+          }
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "name": "Wizarding World (Harry Potter)",
+      "total_box_office_billions": 16.4,
+      "number_of_movies": 11,
+      "poster": "Hogwarts Castle at night with a glowing wand and flying broomstick silhouette. The Golden Trio (Harry, Ron, Hermione) stand in the foreground with the iconic lightning bolt scar above the title.",
+      "movies": [
+        {
+          "title": "Harry Potter and the Philosopher's Stone (2001)",
+          "tmdb": {
+            "id": 671,
+            "poster_path": "/wuMc08IPKEatf9rnMNXvIDxqP4W.jpg",
+            "overview": "Harry Potter has lived under the stairs at his aunt and uncle's house his whole life. But on his 11th birthday, he learns he's a powerful wizard—with a place waiting for him at the Hogwarts School of Witchcraft and Wizardry. As he learns to harness his newfound powers with the help of the school's kindly headmaster, Harry uncovers the truth about his parents' deaths—and about the villain who's to blame.",
+            "release_date": "2001-11-16",
+            "vote_average": 7.901,
+            "popularity": 48.4158,
+            "backdrop_path": "/1P2ziyLiEifr3G6SfGxXCSFF3JWUCoKQgy.jpg",
+            "original_title": "Harry Potter and the Philosopher's Stone"
+          }
+        },
+        {
+          "title": "Harry Potter and the Chamber of Secrets (2002)",
+          "tmdb": {
+            "id": 672,
+            "poster_path": "/sdEOH0992YZ0QSxgXNIGLq1ToUi.jpg",
+            "overview": "Cars fly, trees fight back, and a mysterious house-elf comes to warn Harry Potter at the start of his second year at Hogwarts. Adventure and danger await when bloody writing on a wall announces: The Chamber Of Secrets Has Been Opened. To save Hogwarts will require all of Harry, Ron and Hermione's magical abilities and courage.",
+            "release_date": "2002-11-13",
+            "vote_average": 7.707,
+            "popularity": 31.3337,
+            "backdrop_path": "/1sVDeSjQ6owV2VK1BHXzXrCLyRmSDevrC.jpg",
+            "original_title": "Harry Potter and the Chamber of Secrets"
+          }
+        },
+        {
+          "title": "Harry Potter and the Prisoner of Azkaban (2004)",
+          "tmdb": {
+            "id": 673,
+            "poster_path": "/aWxwnYoe8p2d2fcxOqtvAtJ72Rw.jpg",
+            "overview": "Harry Potter's life is in danger once more as dangerous wizard Sirius Black has escaped from Azkaban Prison and is heading to Hogwarts.",
+            "release_date": "2004-05-31",
+            "vote_average": 8.01,
+            "popularity": 29.2344,
+            "backdrop_path": "/htmYEfH7TQgzsXHCnNXxmoYKQtL.jpg",
+            "original_title": "Harry Potter and the Prisoner of Azkaban"
+          }
+        },
+        {
+          "title": "Harry Potter and the Goblet of Fire (2005)",
+          "tmdb": {
+            "id": 674,
+            "poster_path": "/fECBtHlr0RB3foNHDiCBXeg9Bv9.jpg",
+            "overview": "When his name emerges from the Goblet of Fire, Harry Potter becomes a competitor in a grueling battle for glory among three wizarding schools. Signs of Voldemort's return emerge as Harry's friends help him prepare for the Triwizard Tournament.",
+            "release_date": "2005-11-16",
+            "vote_average": 7.8,
+            "popularity": 30.5653,
+            "backdrop_path": "/1OV7hau4D3rWGS5bu8sqBYeVpe.jpg",
+            "original_title": "Harry Potter and the Goblet of Fire"
+          }
+        },
+        {
+          "title": "Harry Potter and the Order of the Phoenix (2007)",
+          "tmdb": {
+            "id": 675,
+            "poster_path": "/5aOyriWkPec0zUDxmHFP9qMmBaj.jpg",
+            "overview": "When a new professor's methods leave Hogwarts unprepared to fight the rising tide of evil, Harry teaches students how to defend against the dark arts.",
+            "release_date": "2007-07-08",
+            "vote_average": 7.673,
+            "popularity": 25.1076,
+            "backdrop_path": "/pkxPkHOPJjOvzfQOclANEBT8OfK.jpg",
+            "original_title": "Harry Potter and the Order of the Phoenix"
+          }
+        },
+        {
+          "title": "Harry Potter and the Half-Blood Prince (2009)",
+          "tmdb": {
+            "id": 767,
+            "poster_path": "/z7uo9zmQdQwU5ZJHFpv2Upl30i1.jpg",
+            "overview": "Dumbledore tries to prepare Harry for the final battle with Voldemort while Death Eaters wreak havoc in both Muggle and Wizard worlds.",
+            "release_date": "2009-07-15",
+            "vote_average": 7.682,
+            "popularity": 26.4965,
+            "backdrop_path": "/ze6Mx4QE5mQVXRYmG2flncqqle4.jpg",
+            "original_title": "Harry Potter and the Half-Blood Prince"
+          }
+        },
+        {
+          "title": "Harry Potter and the Deathly Hallows – Part 1 (2010)",
+          "tmdb": {
+            "id": 12444,
+            "poster_path": "/iGoXIpQb7Pot00EEdwpwPajheZ5.jpg",
+            "overview": "Harry, Ron and Hermione walk away from their last year at Hogwarts to find and destroy the remaining Horcruxes, putting an end to Voldemort's bid for immortality. But with Harry's beloved Dumbledore dead and Voldemort's unscrupulous Death Eaters on the loose, the world is more dangerous than ever.",
+            "release_date": "2010-11-17",
+            "vote_average": 7.7,
+            "popularity": 31.7006,
+            "backdrop_path": "/vcrgU0KaNj5mKUCIQSUdiQwTE9y.jpg",
+            "original_title": "Harry Potter and the Deathly Hallows: Part 1"
+          }
+        },
+        {
+          "title": "Harry Potter and the Deathly Hallows – Part 2 (2011)",
+          "tmdb": {
+            "id": 12445,
+            "poster_path": "/c54HpQmuwXjHq2C9wmoACjxoom3.jpg",
+            "overview": "Harry, Ron and Hermione continue their quest to vanquish the evil Voldemort once and for all. Just as things begin to look hopeless for the young wizards, Harry discovers a trio of magical objects that endow him with powers to rival Voldemort's formidable skills.",
+            "release_date": "2011-07-12",
+            "vote_average": 8.081,
+            "popularity": 31.5195,
+            "backdrop_path": "/cbcpDn6XJaIGoOil1bKuskU8ds4.jpg",
+            "original_title": "Harry Potter and the Deathly Hallows: Part 2"
+          }
+        },
+        {
+          "title": "Fantastic Beasts and Where to Find Them (2016)",
+          "tmdb": {
+            "id": 259316,
+            "poster_path": "/fLsaFKExQt05yqjoAvKsmOMYvJR.jpg",
+            "overview": "In 1926, Newt Scamander arrives at the Magical Congress of the United States of America with a magically expanded briefcase, which houses a number of dangerous creatures and their habitats. When the creatures escape from the briefcase, it sends the American wizarding authorities after Newt, and threatens to strain even further the state of magical and non-magical relations.",
+            "release_date": "2016-11-16",
+            "vote_average": 7.309,
+            "popularity": 17.9055,
+            "backdrop_path": "/8Qsr8pvDL3s1jNZQ4HK1d1Xlvnh.jpg",
+            "original_title": "Fantastic Beasts and Where to Find Them"
+          }
+        },
+        {
+          "title": "Fantastic Beasts: The Crimes of Grindelwald (2018)",
+          "tmdb": {
+            "id": 338952,
+            "poster_path": "/fMMrl8fD9gRCFJvsx0SuFwkEOop.jpg",
+            "overview": "Gellert Grindelwald has escaped imprisonment and has begun gathering followers to his cause—elevating wizards above all non-magical beings. The only one capable of putting a stop to him is the wizard he once called his closest friend, Albus Dumbledore. However, Dumbledore will need to seek help from the wizard who had thwarted Grindelwald once before, his former student Newt Scamander, who agrees to help, unaware of the dangers that lie ahead. Lines are drawn as love and loyalty are tested, even among the truest friends and family, in an increasingly divided wizarding world.",
+            "release_date": "2018-11-14",
+            "vote_average": 6.833,
+            "popularity": 11.0673,
+            "backdrop_path": "/i3rRY0EKYhSpyOLRAQ7iB05zhAp.jpg",
+            "original_title": "Fantastic Beasts: The Crimes of Grindelwald"
+          }
+        },
+        {
+          "title": "Fantastic Beasts: The Secrets of Dumbledore (2022)",
+          "tmdb": {
+            "id": 338953,
+            "poster_path": "/34VzJDBKqQ1Gkyrj3yKNR8fRk975oZSKMQ.jpg",
+            "overview": "Professor Albus Dumbledore knows the powerful, dark wizard Gellert Grindelwald is moving to seize control of the wizarding world. Unable to stop him alone, he entrusts magizoologist Newt Scamander to lead an intrepid team of wizards and witches. They soon encounter an array of old and new beasts as they clash with Grindelwald's growing legion of followers.",
+            "release_date": "2022-04-06",
+            "vote_average": 6.627,
+            "popularity": 16.5176,
+            "backdrop_path": "/zGLHX92Gk96O1DJvLil7ObJTbaL.jpg",
+            "original_title": "Fantastic Beasts: The Secrets of Dumbledore"
+          }
+        }
+      ],
+      "tv_series": []
+    },
+    {
+      "rank": 5,
+      "name": "James Bond",
+      "total_box_office_billions": 16.1,
+      "number_of_movies": 27,
+      "poster": "A classic gun barrel sequence design with James Bond in a tuxedo, holding a Walther PPK. The background features a swirling Union Jack and silhouettes of Bond girls and villains.",
+      "movies": [
+        {
+          "title": "Dr. No (1962)",
+          "tmdb": {
+            "id": 646,
+            "poster_path": "/f9HsemSsBEHN5eoMble1bj6fDxs.jpg",
+            "overview": "Agent 007 battles mysterious Dr. No, a scientific genius bent on destroying the U.S. space program. As the countdown to disaster begins, Bond must go to Jamaica, where he encounters beautiful Honey Ryder, to confront a megalomaniacal villain in his massive island headquarters.",
+            "release_date": "1962-10-07",
+            "vote_average": 6.985,
+            "popularity": 11.6437,
+            "backdrop_path": "/srgq7bzZsuDw7NoGXdazRXp7Hl6.jpg",
+            "original_title": "Dr. No"
+          }
+        },
+        {
+          "title": "From Russia with Love (1963)",
+          "tmdb": {
+            "id": 657,
+            "poster_path": "/zx4V17FP8oclNvOpTgs2iCCtiYk.jpg",
+            "overview": "Agent 007 is back in the second installment of the James Bond series, this time battling a secret crime organization known as SPECTRE. Russians Rosa Klebb and Kronsteen are out to snatch a decoding device known as the Lektor, using the ravishing Tatiana to lure Bond into helping them. Bond willingly travels to meet Tatiana in Istanbul, where he must rely on his wits to escape with his life in a series of deadly encounters with the enemy.",
+            "release_date": "1963-10-10",
+            "vote_average": 7.063,
+            "popularity": 7.6849,
+            "backdrop_path": "/8JMiQa0OqsCYvbNUrQIrMzwV7g2.jpg",
+            "original_title": "From Russia with Love"
+          }
+        },
+        {
+          "title": "Goldfinger (1964)",
+          "tmdb": {
+            "id": 658,
+            "poster_path": "/aKNFzaqQgPzsGXnsMc4kJH5hFIV.jpg",
+            "overview": "Special agent 007 comes face to face with one of the most notorious villains of all time, and now he must outwit and outgun the powerful tycoon to prevent him from cashing in on a devious scheme to raid Fort Knox -- and obliterate the world's economy.",
+            "release_date": "1964-09-20",
+            "vote_average": 7.361,
+            "popularity": 8.1557,
+            "backdrop_path": "/f1Is9VLQZSRpeLMU7mIcj5aXclt.jpg",
+            "original_title": "Goldfinger"
+          }
+        },
+        {
+          "title": "Thunderball (1965)",
+          "tmdb": {
+            "id": 660,
+            "poster_path": "/wCc4qllaTDsQN8zgGkAgQrKO6N9.jpg",
+            "overview": "A criminal organization has obtained two nuclear bombs and are asking for a 100 million pound ransom in the form of diamonds in seven days or they will use the weapons. The secret service sends James Bond to the Bahamas to once again save the world.",
+            "release_date": "1965-12-11",
+            "vote_average": 6.668,
+            "popularity": 7.3794,
+            "backdrop_path": "/7DLCXCQx52YLle1qTokrjROTwVV.jpg",
+            "original_title": "Thunderball"
+          }
+        },
+        {
+          "title": "You Only Live Twice (1967)",
+          "tmdb": {
+            "id": 667,
+            "poster_path": "/9mvNd43HgTkbfPwX6MF6EoPIMIa.jpg",
+            "overview": "A mysterious spacecraft captures Russian and American space capsules and brings the two superpowers to the brink of war. James Bond investigates the case in Japan and comes face to face with his archenemy Blofeld.",
+            "release_date": "1967-06-13",
+            "vote_average": 6.6,
+            "popularity": 6.1041,
+            "backdrop_path": "/cpZAXIYA0lkZMpAt7d1MmH8ojNV.jpg",
+            "original_title": "You Only Live Twice"
+          }
+        },
+        {
+          "title": "On Her Majesty's Secret Service (1969)",
+          "tmdb": {
+            "id": 668,
+            "poster_path": "/m3KfbxvqaiAvRJ6MpguA3GuLdDQ.jpg",
+            "overview": "With the help of Marc-Ange Draco, head of the Unione Corse crime syndicate, and Draco's troubled daughter Tracy, James Bond tracks his archnemesis, Ernst Stravro Blofeld, to a mountaintop retreat in the Swiss Alps, where he is training an army of beautiful, lethal women.",
+            "release_date": "1969-12-18",
+            "vote_average": 6.555,
+            "popularity": 6.4779,
+            "backdrop_path": "/58pMrmwwcKamJIdjUlinE6QX1Fs.jpg",
+            "original_title": "On Her Majesty's Secret Service"
+          }
+        },
+        {
+          "title": "Diamonds Are Forever (1971)",
+          "tmdb": {
+            "id": 681,
+            "poster_path": "/ooDT0eKrWCxJCsn9JehPkD0QYNj.jpg",
+            "overview": "Diamonds are stolen only to be sold again in the international market. James Bond infiltrates a smuggling mission to find out who's guilty. The mission takes him to Las Vegas where Bond meets his archenemy Blofeld.",
+            "release_date": "1971-12-14",
+            "vote_average": 6.407,
+            "popularity": 6.4928,
+            "backdrop_path": "/pyTDtQCn5sG8gi2zkM5ZylSNmtJ.jpg",
+            "original_title": "Diamonds Are Forever"
+          }
+        },
+        {
+          "title": "Live and Let Die (1973)",
+          "tmdb": {
+            "id": 253,
+            "poster_path": "/39KAsxEDH2nesDU9iNdS4sqHajeC36VKCs.jpg",
+            "overview": "James Bond must investigate a mysterious murder case of a British agent in New Orleans. Soon he finds himself up against a gangster boss named Mr. Big.",
+            "release_date": "1973-06-27",
+            "vote_average": 6.506,
+            "popularity": 8.8758,
+            "backdrop_path": "/hzmmXx6UeYQeylioNbliFKjSbV7.jpg",
+            "original_title": "Live and Let Die"
+          }
+        },
+        {
+          "title": "The Man with the Golden Gun (1974)",
+          "tmdb": {
+            "id": 682,
+            "poster_path": "/xVkbKwGnBVNQ122GN5bCTMyPbWz.jpg",
+            "overview": "Cool government operative James Bond searches for a stolen invention that can turn the sun's heat into a destructive weapon. He soon crosses paths with the menacing Francisco Scaramanga, a hitman so skilled he has a seven-figure working fee. Bond then joins forces with the swimsuit-clad Mary Goodnight, and together they track Scaramanga to a Thai tropical isle hideout where the killer-for-hire lures the slick spy into a deadly maze for a final duel.",
+            "release_date": "1974-12-04",
+            "vote_average": 6.457,
+            "popularity": 5.9772,
+            "backdrop_path": "/3KzobodYcRjYGD27c4fgXbWvCRkju3QzGv.jpg",
+            "original_title": "The Man with the Golden Gun"
+          }
+        },
+        {
+          "title": "The Spy Who Loved Me (1977)",
+          "tmdb": {
+            "id": 691,
+            "poster_path": "/3KW3zdDQ6psENueGpKdAhADmxsDZpjZnzi.jpg",
+            "overview": "Russian and British submarines with nuclear missiles on board both vanish from sight without a trace. England and Russia both blame each other as James Bond tries to solve the riddle of the disappearing ships. But the KGB also has an agent on the case.",
+            "release_date": "1977-07-07",
+            "vote_average": 6.822,
+            "popularity": 6.2985,
+            "backdrop_path": "/8lRdfsmJjUXQU3DMOOB3vVIhJxP.jpg",
+            "original_title": "The Spy Who Loved Me"
+          }
+        },
+        {
+          "title": "Moonraker (1979)",
+          "tmdb": {
+            "id": 698,
+            "poster_path": "/6LrJdXNmu5uHOVALZxVYd44Lva0.jpg",
+            "overview": "After Drax Industries' Moonraker space shuttle is hijacked, secret agent James Bond is assigned to investigate, traveling to California to meet the company's owner, the mysterious Hugo Drax. With the help of scientist Dr. Holly Goodhead, Bond soon uncovers Drax's nefarious plans for humanity, all the while fending off an old nemesis, Jaws, and venturing to Venice, Rio, the Amazon...and even outer space.",
+            "release_date": "1979-06-26",
+            "vote_average": 6.19,
+            "popularity": 5.656,
+            "backdrop_path": "/mrDC5DLx2wljt4HZGwgkmqlzfcF.jpg",
+            "original_title": "Moonraker"
+          }
+        },
+        {
+          "title": "For Your Eyes Only (1981)",
+          "tmdb": {
+            "id": 699,
+            "poster_path": "/xV4Nnr6DjjERlqNikqDQX8LUgua.jpg",
+            "overview": "A British spy ship has sunk and on board was a hi-tech encryption device. James Bond is sent to find the device that holds British launching instructions before the enemy Soviets get to it first.",
+            "release_date": "1981-06-24",
+            "vote_average": 6.5,
+            "popularity": 4.9772,
+            "backdrop_path": "/z7Jp7HAsY7MqXzPYzTjJnmOQk2r.jpg",
+            "original_title": "For Your Eyes Only"
+          }
+        },
+        {
+          "title": "Octopussy (1983)",
+          "tmdb": {
+            "id": 700,
+            "poster_path": "/yoosZitM9igSk3Sd0sBXIhKlAh1.jpg",
+            "overview": "James Bond is sent to investigate after a fellow “00” agent is found dead with a priceless Indian Fabergé egg. Bond follows the mystery and uncovers a smuggling scandal and a Russian General who wants to provoke a new World War.",
+            "release_date": "1983-06-05",
+            "vote_average": 6.4,
+            "popularity": 5.292,
+            "backdrop_path": "/xTS1qCmhzH3vq7cuextO5vQA6eW.jpg",
+            "original_title": "Octopussy"
+          }
+        },
+        {
+          "title": "A View to a Kill (1985)",
+          "tmdb": {
+            "id": 707,
+            "poster_path": "/arJF829RP9cYvh0NU70dC5TtXSa.jpg",
+            "overview": "A newly-developed microchip designed by Zorin Industries for the British Government that can survive the electromagnetic radiation caused by a nuclear explosion has landed in the hands of the KGB. James Bond must find out how and why. His suspicions soon lead him to big industry leader Max Zorin who forms a plan to destroy his only competition in Silicon Valley by triggering a massive earthquake in the San Francisco Bay.",
+            "release_date": "1985-05-24",
+            "vote_average": 6.255,
+            "popularity": 5.5614,
+            "backdrop_path": "/hvGWyyC8wER1I8ExSXNtFBs7Mgd.jpg",
+            "original_title": "A View to a Kill"
+          }
+        },
+        {
+          "title": "The Living Daylights (1987)",
+          "tmdb": {
+            "id": 708,
+            "poster_path": "/18uNMU2ryDmn1YYKUaB4sdhJpN9V8AMGdx.jpg",
+            "overview": "After a defecting Russian general reveals a plot to assassinate foreign spies, James Bond is assigned a secret mission to dispatch the new head of the KGB to prevent an escalation of tensions between the Soviet Union and the West.",
+            "release_date": "1987-06-29",
+            "vote_average": 6.543,
+            "popularity": 5.2364,
+            "backdrop_path": "/ebaq0ecL1Tu39rIExfHwE4ToFl2.jpg",
+            "original_title": "The Living Daylights"
+          }
+        },
+        {
+          "title": "Licence to Kill (1989)",
+          "tmdb": {
+            "id": 709,
+            "poster_path": "/8nzJve63EXA79HGAyidZwivZrQ2.jpg",
+            "overview": "After capturing the notorious drug lord Franz Sanchez, Bond's close friend and former CIA agent Felix Leiter is left for dead and his wife is murdered. Bond goes rogue and seeks vengeance on those responsible, as he infiltrates Sanchez's organization from the inside.",
+            "release_date": "1989-06-13",
+            "vote_average": 6.435,
+            "popularity": 5.6066,
+            "backdrop_path": "/542y97Wv0i01MVpzzaNNHUAvplA.jpg",
+            "original_title": "Licence to Kill"
+          }
+        },
+        {
+          "title": "GoldenEye (1995)",
+          "tmdb": {
+            "id": 710,
+            "poster_path": "/z0ljRnNxIO7CRBhLEO0DvLgAFPR.jpg",
+            "overview": "When a powerful secret defense system is stolen, James Bond is assigned to stop a Russian crime syndicate from using it.",
+            "release_date": "1995-11-16",
+            "vote_average": 6.906,
+            "popularity": 8.1895,
+            "backdrop_path": "/fIWsCpYR9iGDMSbMTSAzy8L7Kg5.jpg",
+            "original_title": "GoldenEye"
+          }
+        },
+        {
+          "title": "Tomorrow Never Dies (1997)",
+          "tmdb": {
+            "id": 714,
+            "poster_path": "/gZm002w7q9yLOkltxT76TWGfdZX.jpg",
+            "overview": "A deranged media mogul is staging international incidents to pit the world's superpowers against each other. Now James Bond must take on this evil mastermind in an adrenaline-charged battle to end his reign of terror and prevent global pandemonium.",
+            "release_date": "1997-12-11",
+            "vote_average": 6.383,
+            "popularity": 7.823,
+            "backdrop_path": "/fesAgiKA0pc04vScDTAQe1f9nd4.jpg",
+            "original_title": "Tomorrow Never Dies"
+          }
+        },
+        {
+          "title": "The World Is Not Enough (1999)",
+          "tmdb": {
+            "id": 36643,
+            "poster_path": "/wCb2msgoZPK01WIqry24M4xsM73.jpg",
+            "overview": "Greed, revenge, world dominance and high-tech terrorism – it's all in a day's work for Bond, who's on a mission to protect a beautiful oil heiress from a notorious terrorist. In a race against time that culminates in a dramatic submarine showdown, Bond works to defuse the international power struggle that has the world's oil supply hanging in the balance.",
+            "release_date": "1999-11-17",
+            "vote_average": 6.292,
+            "popularity": 7.1811,
+            "backdrop_path": "/n2jVDMcBEWsLFooO7W1ZkcMUtWS.jpg",
+            "original_title": "The World Is Not Enough"
+          }
+        },
+        {
+          "title": "Die Another Day (2002)",
+          "tmdb": {
+            "id": 36669,
+            "poster_path": "/bZmGqOhMhaLn8AoFMvFDct4tbrL.jpg",
+            "overview": "James Bond is sent to investigate the connection between a North Korean terrorist and a diamond mogul, who is funding the development of an international space weapon.",
+            "release_date": "2002-11-17",
+            "vote_average": 6,
+            "popularity": 6.4007,
+            "backdrop_path": "/ibJEhfV4CudcL3iaUgvhkBrfMCO.jpg",
+            "original_title": "Die Another Day"
+          }
+        },
+        {
+          "title": "Casino Royale (2006)",
+          "tmdb": {
+            "id": 36557,
+            "poster_path": "/lMrxYKKhd4lqRzwUHAy5gcx9PSO.jpg",
+            "overview": "Le Chiffre, a banker to the world's terrorists, is scheduled to participate in a high-stakes poker game in Montenegro, where he intends to use his winnings to establish his financial grip on the terrorist market. M sends Bond—on his maiden mission as a 00 Agent—to attend this game and prevent Le Chiffre from winning. With the help of Vesper Lynd and Felix Leiter, Bond enters the most important poker game in his already dangerous career.",
+            "release_date": "2006-11-14",
+            "vote_average": 7.575,
+            "popularity": 13.1924,
+            "backdrop_path": "/klJMCIblHLFwCuGjKz7tyOpekIC.jpg",
+            "original_title": "Casino Royale"
+          }
+        },
+        {
+          "title": "Quantum of Solace (2008)",
+          "tmdb": {
+            "id": 10764,
+            "poster_path": "/e3DXXLJHGqMx9yYpXsql1XNljmM.jpg",
+            "overview": "Betrayed by Vesper, the woman he loved, 007 fights the urge to make his latest mission personal. Pursuing his determination to uncover the truth, Bond and M interrogate Mr. White, who reveals that the organization that blackmailed Vesper is far more complex and dangerous than anyone had imagined.",
+            "release_date": "2008-10-29",
+            "vote_average": 6.339,
+            "popularity": 9.762,
+            "backdrop_path": "/uGs5Z7dMguf7kxWubGFcp9EhKcy.jpg",
+            "original_title": "Quantum of Solace"
+          }
+        },
+        {
+          "title": "Skyfall (2012)",
+          "tmdb": {
+            "id": 37724,
+            "poster_path": "/d0IVecFQvsGdSbnMAHqiYsNYaJT.jpg",
+            "overview": "When Bond's latest assignment goes gravely wrong, agents around the world are exposed and MI6 headquarters is attacked. While M faces challenges to her authority and position from Gareth Mallory, the new Chairman of the Intelligence and Security Committee, it's up to Bond, aided only by field agent Eve, to locate the mastermind behind the attack.",
+            "release_date": "2012-10-24",
+            "vote_average": 7.264,
+            "popularity": 11.0989,
+            "backdrop_path": "/wkA622CCN2X0uwpgqYEOnUYEDf5.jpg",
+            "original_title": "Skyfall"
+          }
+        },
+        {
+          "title": "Spectre (2015)",
+          "tmdb": {
+            "id": 206647,
+            "poster_path": "/zj8ongFhtWNsVlfjOGo8pSr7PQg.jpg",
+            "overview": "A cryptic message from Bond’s past sends him on a trail to uncover a sinister organization. While M battles political forces to keep the secret service alive, Bond peels back the layers of deceit to reveal the terrible truth behind SPECTRE.",
+            "release_date": "2015-10-26",
+            "vote_average": 6.571,
+            "popularity": 9.6635,
+            "backdrop_path": "/8lBViysvNJBPkl6zG1LVAaW3qhj.jpg",
+            "original_title": "Spectre"
+          }
+        },
+        {
+          "title": "No Time to Die (2021)",
+          "tmdb": {
+            "id": 370172,
+            "poster_path": "/iUgygt3fscRoKWCV1d0C7FbM9TP.jpg",
+            "overview": "Bond has left active service and is enjoying a tranquil life in Jamaica. His peace is short-lived when his old friend Felix Leiter from the CIA turns up asking for help. The mission to rescue a kidnapped scientist turns out to be far more treacherous than expected, leading Bond onto the trail of a mysterious villain armed with dangerous new technology.",
+            "release_date": "2021-09-29",
+            "vote_average": 7.34,
+            "popularity": 16.6819,
+            "backdrop_path": "/bz7pwNGCbV576COsDcYN9MbEACC.jpg",
+            "original_title": "No Time to Die"
+          }
+        },
+        {
+          "title": "Casino Royale (1967) [non-Eon]",
+          "tmdb": null
+        },
+        {
+          "title": "Never Say Never Again (1983) [non-Eon]",
+          "tmdb": null
+        }
+      ],
+      "tv_series": [
+        {
+          "name": "James Bond Jr. (animated series)",
+          "tmdb": null
+        }
+      ]
+    },
+    {
+      "rank": 6,
+      "name": "Fast & Furious",
+      "total_box_office_billions": 14.8,
+      "number_of_movies": 11,
+      "poster": "A lineup of muscle cars and sports cars speeding down a desert highway at sunset. Dom Toretto and Brian O'Conner are in the foreground, with flames and smoke billowing behind.",
+      "movies": [
+        {
+          "title": "The Fast and the Furious (2001)",
+          "tmdb": {
+            "id": 9799,
+            "poster_path": "/gqY0ITBgT7A82poL9jv851qdnIb.jpg",
+            "overview": "Dominic Toretto is a Los Angeles street racer suspected of masterminding a series of big-rig hijackings. When undercover cop Brian O'Conner infiltrates Toretto's iconoclastic crew, he falls for Toretto's sister and must choose a side: the gang or the LAPD.",
+            "release_date": "2001-06-22",
+            "vote_average": 7.012,
+            "popularity": 1.4782,
+            "backdrop_path": "/jY9ef5nqY4xIIMu3yzW3qamUCoi.jpg",
+            "original_title": "The Fast and the Furious"
+          }
+        },
+        {
+          "title": "2 Fast 2 Furious (2003)",
+          "tmdb": {
+            "id": 584,
+            "poster_path": "/6nDZExrDKIXvSAghsFKVFRVJuSf.jpg",
+            "overview": "It's a major double-cross when former police officer Brian O'Conner teams up with his ex-con buddy Roman Pearce to transport a shipment of \"dirty\" money for shady Miami-based import-export dealer Carter Verone. But the guys are actually working with undercover agent Monica Fuentes to bring Verone down.",
+            "release_date": "2003-06-05",
+            "vote_average": 6.522,
+            "popularity": 1.9611,
+            "backdrop_path": "/90ooE5SbUEO0OVJHewNO7pgySb6.jpg",
+            "original_title": "2 Fast 2 Furious"
+          }
+        },
+        {
+          "title": "The Fast and the Furious: Tokyo Drift (2006)",
+          "tmdb": {
+            "id": 9615,
+            "poster_path": "/46xqGOwHbh2TH2avWSw3SMXph4E.jpg",
+            "overview": "In order to avoid a jail sentence, Sean Boswell heads to Tokyo to live with his military father. In a low-rent section of the city, Sean gets caught up in the underground world of drift racing",
+            "release_date": "2006-06-03",
+            "vote_average": 6.55,
+            "popularity": 3.1395,
+            "backdrop_path": "/dMARcKLrv0T7kVJ4iQR3vqTTdtT.jpg",
+            "original_title": "The Fast and the Furious: Tokyo Drift"
+          }
+        },
+        {
+          "title": "Fast & Furious (2009)",
+          "tmdb": {
+            "id": 13804,
+            "poster_path": "/lUtVoRukW7WNtUySwd8hWlByBds.jpg",
+            "overview": "When a crime brings them back to L.A., fugitive ex-con Dom Toretto reignites his feud with agent Brian O'Conner. But as they are forced to confront a shared enemy, Dom and Brian must give in to an uncertain new trust if they hope to outmaneuver him. And the two men will find the best way to get revenge: push the limits of what's possible behind the wheel.",
+            "release_date": "2009-04-02",
+            "vote_average": 6.691,
+            "popularity": 1.261,
+            "backdrop_path": "/25HepicRtrzZ3MVCqhfoxGDbHjw.jpg",
+            "original_title": "Fast & Furious"
+          }
+        },
+        {
+          "title": "Fast Five (2011)",
+          "tmdb": {
+            "id": 51497,
+            "poster_path": "/gEfQjjQwY7fh5bI4GlG0RrBu7Pz.jpg",
+            "overview": "Former cop Brian O'Conner partners with ex-con Dom Toretto on the opposite side of the law. Since Brian and Mia Toretto broke Dom out of custody, they've blown across many borders to elude authorities. Now backed into a corner in Rio de Janeiro, they must pull one last job in order to gain their freedom.",
+            "release_date": "2011-04-20",
+            "vote_average": 7.245,
+            "popularity": 1.4762,
+            "backdrop_path": "/c1Q8jLoaruQ9m5lCrVlXOaJJtu7.jpg",
+            "original_title": "Fast Five"
+          }
+        },
+        {
+          "title": "Fast & Furious 6 (2013)",
+          "tmdb": {
+            "id": 82992,
+            "poster_path": "/thSmnRdrzPBBospIOJjLZBReqzo.jpg",
+            "overview": "Hobbs has Dominic and Brian reassemble their crew to take down a team of mercenaries; Dominic unexpectedly gets sidetracked with facing his presumed deceased girlfriend, Letty.",
+            "release_date": "2013-05-21",
+            "vote_average": 6.817,
+            "popularity": 1.1503,
+            "backdrop_path": "/xDp29MSWa7O3ROC13r6dPTFnREJ.jpg",
+            "original_title": "Fast & Furious 6"
+          }
+        },
+        {
+          "title": "Furious 7 (2015)",
+          "tmdb": {
+            "id": 168259,
+            "poster_path": "/ktofZ9Htrjiy0P6LEowsDaxd3Ri.jpg",
+            "overview": "Deckard Shaw seeks revenge against Dominic Toretto and his family for his comatose brother.",
+            "release_date": "2015-04-01",
+            "vote_average": 7.216,
+            "popularity": 13.5557,
+            "backdrop_path": "/ehzI1mVcnHqB58NqPyQwpMqcVoz.jpg",
+            "original_title": "Furious 7"
+          }
+        },
+        {
+          "title": "The Fate of the Furious (2017)",
+          "tmdb": {
+            "id": 337339,
+            "poster_path": "/dImWM7GJqryWJO9LHa3XQ8DD5NH.jpg",
+            "overview": "When a mysterious woman seduces Dom into the world of crime and a betrayal of those closest to him, the crew face trials that will test them as never before.",
+            "release_date": "2017-04-12",
+            "vote_average": 6.852,
+            "popularity": 9.5984,
+            "backdrop_path": "/3HsA2EG9HnKPfWBeBa5uZFPkb28nGck2jM.jpg",
+            "original_title": "The Fate of the Furious"
+          }
+        },
+        {
+          "title": "F9 (2021)",
+          "tmdb": {
+            "id": 385128,
+            "poster_path": "/deEmLILTPejEb6OGsXRJ5MCvyDW.jpg",
+            "overview": "Dominic Toretto and his crew battle the most skilled assassin and high-performance driver they've ever encountered: his forsaken brother.",
+            "release_date": "2021-05-19",
+            "vote_average": 6.991,
+            "popularity": 7.3921,
+            "backdrop_path": "/xXHZeb1yhJvnSHPzZDqee0zfMb6.jpg",
+            "original_title": "F9"
+          }
+        },
+        {
+          "title": "Fast X (2023)",
+          "tmdb": {
+            "id": 385687,
+            "poster_path": "/fiVW06jE7z9YnO4trhaMEdclSiC.jpg",
+            "overview": "Over many missions and against impossible odds, Dom Toretto and his family have outsmarted, out-nerved and outdriven every foe in their path. Now, they confront the most lethal opponent they've ever faced: A terrifying threat emerging from the shadows of the past who's fueled by blood revenge, and who is determined to shatter this family and destroy everything—and everyone—that Dom loves, forever.",
+            "release_date": "2023-05-17",
+            "vote_average": 6.988,
+            "popularity": 35.0978,
+            "backdrop_path": "/4XM8DUTQb3lhLemJC51Jx4a2EuA.jpg",
+            "original_title": "Fast X"
+          }
+        },
+        {
+          "title": "Fast & Furious Presents: Hobbs & Shaw (2019)",
+          "tmdb": {
+            "id": 384018,
+            "poster_path": "/qqs43fx570zvp04qu6mcjf70v4xjfh0pxynf52dq46.jpg",
+            "overview": "Ever since US Diplomatic Security Service Agent Hobbs and lawless outcast Shaw first faced off, they just have traded smack talk and body blows. But when cyber-genetically enhanced anarchist Brixton's ruthless actions threaten the future of humanity, they join forces to defeat him.",
+            "release_date": "2019-07-31",
+            "vote_average": 6.827,
+            "popularity": 13.7317,
+            "backdrop_path": "/hpgda6P9GutvdkDX5MUJ92QG9aj.jpg",
+            "original_title": "Fast & Furious Presents: Hobbs & Shaw"
+          }
+        }
+      ],
+      "tv_series": [
+        {
+          "name": "Fast & Furious: Spy Racers",
+          "tmdb": {
+            "id": 95594,
+            "poster_path": "/cI7zYWuYTmKEdXITcUKPzjc2EW5.jpg",
+            "overview": "A government agency recruits teen driver Tony Toretto and his thrill-seeking friends to infiltrate a criminal street racing circuit as undercover spies.",
+            "first_air_date": "2019-12-26",
+            "vote_average": 6.982,
+            "popularity": 11.4585,
+            "backdrop_path": "/9aWSpBqMrlrr8yaydSEgNJjIruG.jpg",
+            "original_name": "Fast & Furious Spy Racers"
+          }
+        }
+      ]
+    },
+    {
+      "rank": 7,
+      "name": "Batman",
+      "total_box_office_billions": 14.1,
+      "number_of_movies": 13,
+      "poster": "Gothic Gotham City with the Bat-Signal lighting up the clouds. A silhouette of Batman stands on a gargoyle, with the Joker's menacing smile faintly visible in the shadows below.",
+      "movies": [
+        {
+          "title": "Batman (1989)",
+          "tmdb": {
+            "id": 268,
+            "poster_path": "/cij4dd21v2Rk2YtUQbV5kW69WB2.jpg",
+            "overview": "Having witnessed his parents' brutal murder as a child, millionaire philanthropist Bruce Wayne fights crime in Gotham City disguised as Batman, a costumed hero who strikes fear into the hearts of villains. But when a deformed madman known as 'The Joker' seizes control of Gotham's criminal underworld, Batman must face his most ruthless nemesis ever while protecting both his identity and his love interest, reporter Vicki Vale.",
+            "release_date": "1989-06-21",
+            "vote_average": 7.234,
+            "popularity": 9.4692,
+            "backdrop_path": "/rBN6GPKUDZ6ZKAQiEZegZ0DZb6V.jpg",
+            "original_title": "Batman"
+          }
+        },
+        {
+          "title": "Batman Returns (1992)",
+          "tmdb": {
+            "id": 364,
+            "poster_path": "/jKBjeXM7iBBV9UkUcOXx3m7FSHY.jpg",
+            "overview": "The monstrous Penguin, who dwells in the sewers beneath Gotham, joins up with corrupt mayoral candidate Max Shreck to topple the Batman once and for all. But when Shreck's timid assistant Selina Kyle finds out, and Shreck tries to kill her, she's transformed into the sexy Catwoman. She teams up with the Penguin and Shreck to destroy Batman, but sparks fly unexpectedly when she confronts the caped crusader.",
+            "release_date": "1992-06-19",
+            "vote_average": 6.9,
+            "popularity": 9.555,
+            "backdrop_path": "/7x4SNxO5HWArighxxFeet5sn3il.jpg",
+            "original_title": "Batman Returns"
+          }
+        },
+        {
+          "title": "Batman Forever (1995)",
+          "tmdb": {
+            "id": 414,
+            "poster_path": "/i0fJS8M5UKoETjjJ0zwUiKaR8tr.jpg",
+            "overview": "Batman faces off against two foes: the schizophrenic, horribly scarred former District Attorney Harvey Dent, aka Two-Face, and the Riddler, a disgruntled ex-Wayne Enterprises inventor seeking revenge against his former employer by unleashing his brain-sucking weapon on Gotham City's residents. As the caped crusader also copes with tortured memories of his parents' murder, he has a new romance, with psychologist Chase Meridian.",
+            "release_date": "1995-06-16",
+            "vote_average": 5.458,
+            "popularity": 7.4965,
+            "backdrop_path": "/snlu32RmjldF9b068UURJg8sQtn.jpg",
+            "original_title": "Batman Forever"
+          }
+        },
+        {
+          "title": "Batman & Robin (1997)",
+          "tmdb": {
+            "id": 415,
+            "poster_path": "/i7hEUpDuMN2LOrCEifFyGSHZQSY.jpg",
+            "overview": "Batman and his sidekick Robin attempt to the foil the sinister schemes of a deranged set of new villains, most notably the melancholy Mr. Freeze, who wants to make Gotham City into an arctic region, and the sultry Poison Ivy, a botanical femme fatale. As the Dynamic Duo contend with these bad guys, a third hero, Batgirl, joins the ranks of the city's crime-fighters.",
+            "release_date": "1997-06-20",
+            "vote_average": 4.396,
+            "popularity": 7.7015,
+            "backdrop_path": "/kEuQWHte2erRpAICrYqkAZaZAAY.jpg",
+            "original_title": "Batman & Robin"
+          }
+        },
+        {
+          "title": "Batman Begins (2005)",
+          "tmdb": {
+            "id": 272,
+            "poster_path": "/sPX89Td70IDDjVr85jdSBb4rWGr.jpg",
+            "overview": "Driven by tragedy, billionaire Bruce Wayne dedicates his life to uncovering and defeating the corruption that plagues his home, Gotham City.  Unable to work within the system, he instead creates a new identity, a symbol of fear for the criminal underworld - The Batman.",
+            "release_date": "2005-06-10",
+            "vote_average": 7.729,
+            "popularity": 23.2134,
+            "backdrop_path": "/9IIBboV7MCT0bTxzXHmWK1Hq558.jpg",
+            "original_title": "Batman Begins"
+          }
+        },
+        {
+          "title": "The Dark Knight (2008)",
+          "tmdb": {
+            "id": 155,
+            "poster_path": "/qqs43fx570zvp04qu6mcjf70v4xjfh0pxynf52dq46.jpg",
+            "overview": "Batman raises the stakes in his war on crime. With the help of Lt. Jim Gordon and District Attorney Harvey Dent, Batman sets out to dismantle the remaining criminal organizations that plague the streets. The partnership proves to be effective, but they soon find themselves prey to a reign of chaos unleashed by a rising criminal mastermind known to the terrified citizens of Gotham as the Joker.",
+            "release_date": "2008-07-16",
+            "vote_average": 8.534,
+            "popularity": 55.7773,
+            "backdrop_path": "/dqK9Hag1054tghRQSqLSfrkvQnA.jpg",
+            "original_title": "The Dark Knight"
+          }
+        },
+        {
+          "title": "The Dark Knight Rises (2012)",
+          "tmdb": {
+            "id": 49026,
+            "poster_path": "/hr0L2aueqlP2BYUblTTjmtn0hw4.jpg",
+            "overview": "Following the death of District Attorney Harvey Dent, Batman assumes responsibility for Dent's crimes to protect the late attorney's reputation and is subsequently hunted by the Gotham City Police Department. Eight years later, Batman encounters the mysterious Selina Kyle and the villainous Bane, a new terrorist leader who overwhelms Gotham's finest. The Dark Knight resurfaces to protect a city that has branded him an enemy.",
+            "release_date": "2012-07-17",
+            "vote_average": 7.797,
+            "popularity": 28.5742,
+            "backdrop_path": "/y2DB71C4nyIdMrANijz8mzvQtk6.jpg",
+            "original_title": "The Dark Knight Rises"
+          }
+        },
+        {
+          "title": "Batman v Superman: Dawn of Justice (2016)",
+          "tmdb": {
+            "id": 209112,
+            "poster_path": "/5UsK3grJvtQrtzEgqNlDljJW96w.jpg",
+            "overview": "Fearing the actions of a god-like Super Hero left unchecked, Gotham City’s own formidable, forceful vigilante takes on Metropolis’s most revered, modern-day savior, while the world wrestles with what sort of hero it really needs. And with Batman and Superman at war with one another, a new threat quickly arises, putting mankind in greater danger than it’s ever known before.",
+            "release_date": "2016-03-23",
+            "vote_average": 6.006,
+            "popularity": 16.1203,
+            "backdrop_path": "/5fX1oSGuYdKgwWmUTAN5MNSQGzr.jpg",
+            "original_title": "Batman v Superman: Dawn of Justice"
+          }
+        },
+        {
+          "title": "Justice League (2017)",
+          "tmdb": {
+            "id": 141052,
+            "poster_path": "/eifGNCSDuxJeS1loAXil5bIGgvC.jpg",
+            "overview": "Fuelled by his restored faith in humanity and inspired by Superman's selfless act, Bruce Wayne and Diana Prince assemble a team of metahumans consisting of Barry Allen, Arthur Curry and Victor Stone to face the catastrophic threat of Steppenwolf and the Parademons who are on the hunt for three Mother Boxes on Earth.",
+            "release_date": "2017-11-15",
+            "vote_average": 6.07,
+            "popularity": 12.3746,
+            "backdrop_path": "/2nyaeISu2xIxIgZYNpX4UayY8PN.jpg",
+            "original_title": "Justice League"
+          }
+        },
+        {
+          "title": "Zack Snyder's Justice League (2021)",
+          "tmdb": {
+            "id": 791373,
+            "poster_path": "/tnAuB8q5vv7Ax9UAEje5Xi4BXik.jpg",
+            "overview": "Determined to ensure Superman's ultimate sacrifice was not in vain, Bruce Wayne aligns forces with Diana Prince with plans to recruit a team of metahumans to protect the world from an approaching threat of catastrophic proportions.",
+            "release_date": "2021-03-18",
+            "vote_average": 8.084,
+            "popularity": 18.2301,
+            "backdrop_path": "/13SnfHM8VPa1tP8iCQsa71YspZEkJaYm42.jpg",
+            "original_title": "Zack Snyder's Justice League"
+          }
+        },
+        {
+          "title": "The Batman (2022)",
+          "tmdb": {
+            "id": 414906,
+            "poster_path": "/74xTEgt7R36Fpooo50r9T25onhq.jpg",
+            "overview": "In his second year of fighting crime, Batman uncovers corruption in Gotham City that connects to his own family while facing a serial killer known as the Riddler.",
+            "release_date": "2022-03-01",
+            "vote_average": 7.664,
+            "popularity": 31.6996,
+            "backdrop_path": "/IYUD7rAIXzBM91TT3Z5fILUS7n.jpg",
+            "original_title": "The Batman"
+          }
+        },
+        {
+          "title": "Batman: Mask of the Phantasm (1993)",
+          "tmdb": {
+            "id": 14919,
+            "poster_path": "/hT4ehUteagUrhUOHAtmYiY7mp5l.jpg",
+            "overview": "Andrea Beaumont leaves her father to return to Gotham, rekindling an old romance with Bruce Wayne. At the same time, a mysterious figure begins to hunt down Gotham's criminals, wrongly implicating Batman in the murders. Now on the run from the law, Batman must find and stop the culprit, while also navigating his relationship with Andrea.",
+            "release_date": "1993-12-25",
+            "vote_average": 7.5,
+            "popularity": 4.5631,
+            "backdrop_path": "/cMUuAgVsMWOCawXonZ4D1dSMd6h.jpg",
+            "original_title": "Batman: Mask of the Phantasm"
+          }
+        },
+        {
+          "title": "The Lego Batman Movie (2017)",
+          "tmdb": {
+            "id": 324849,
+            "poster_path": "/e1TliRWOdXQ73pRunbpFiGst6Kd.jpg",
+            "overview": "A cooler-than-ever Bruce Wayne must deal with the usual suspects as they plan to rule Gotham City, while discovering that he has accidentally adopted a teenage orphan who wishes to become his sidekick.",
+            "release_date": "2017-02-08",
+            "vote_average": 7.253,
+            "popularity": 10.0743,
+            "backdrop_path": "/rWYtghaUJSDvQm4jmXiCPXBHUdQ.jpg",
+            "original_title": "The Lego Batman Movie"
+          }
+        }
+      ],
+      "tv_series": [
+        {
+          "name": "Batman: The Animated Series",
+          "tmdb": {
+            "id": 2098,
+            "poster_path": "/lBomQFW1vlm1yUYMNSbFZ45R4Ox.jpg",
+            "overview": "Vowing to avenge the murder of his parents, Bruce Wayne devotes his life to wiping out crime in Gotham City as the masked vigilante \"Batman\".",
+            "first_air_date": "1992-09-05",
+            "vote_average": 8.582,
+            "popularity": 37.7476,
+            "backdrop_path": "/4QnFxk03yAn7U2ZTL5oMCCqxlPc.jpg",
+            "original_name": "Batman: The Animated Series"
+          }
+        },
+        {
+          "name": "Gotham",
+          "tmdb": {
+            "id": 60708,
+            "poster_path": "/zLpSNnVoL2bjQdc1PcaHUPUzttP.jpg",
+            "overview": "Everyone knows the name Commissioner Gordon. He is one of the crime world's greatest foes, a man whose reputation is synonymous with law and order. But what is known of Gordon's story and his rise from rookie detective to Police Commissioner? What did it take to navigate the multiple layers of corruption that secretly ruled Gotham City, the spawning ground of the world's most iconic villains? And what circumstances created them – the larger-than-life personas who would become Catwoman, The Penguin, The Riddler, Two-Face and The Joker?",
+            "first_air_date": "2014-09-22",
+            "vote_average": 7.599,
+            "popularity": 49.4813,
+            "backdrop_path": "/rbDFI2I1nMyJtX4Y3jJ4H1QRdRX.jpg",
+            "original_name": "Gotham"
+          }
+        },
+        {
+          "name": "Batman Beyond",
+          "tmdb": {
+            "id": 513,
+            "poster_path": "/rpbHPyhLstNd5qgtjaDMdPtyPeQ.jpg",
+            "overview": "As new villains overrun Gotham City of the future, the aging Bruce Wayne hangs up the cape of the once invincible Batman. But when troubled teenager Terry McGinnis stumbles upon the Dark Knight's secret, a new alliance is forged. And a triumphant new Batman is born.",
+            "first_air_date": "1999-01-10",
+            "vote_average": 8.2,
+            "popularity": 87.8687,
+            "backdrop_path": "/AcbXX3KgvqD7B8Y4WjCu6yNx1Prfu5cNHz.jpg",
+            "original_name": "Batman Beyond"
+          }
+        },
+        {
+          "name": "The Batman (2004)",
+          "tmdb": {
+            "id": 2022,
+            "poster_path": "/3QuT3rnrrcWS8p9hTw4FaZN7XYmHmpRdxt.jpg",
+            "overview": "A young billionaire Bruce Wayne fights crime and evil as the mysterious vigilante, The Batman.",
+            "first_air_date": "2004-09-11",
+            "vote_average": 8.036,
+            "popularity": 15.4404,
+            "backdrop_path": "/k5r2N22yTSIlLZBraf9792MK1gN.jpg",
+            "original_name": "The Batman"
+          }
+        }
+      ]
+    },
+    {
+      "rank": 8,
+      "name": "DC Extended Universe",
+      "total_box_office_billions": 12.7,
+      "number_of_movies": 16,
+      "poster": "A dramatic team shot of Superman, Wonder Woman, Aquaman, The Flash, and Cyborg standing together against a stormy sky with the DC logo emblazoned at the top.",
+      "movies": [
+        {
+          "title": "Man of Steel (2013)",
+          "tmdb": {
+            "id": 49521,
+            "poster_path": "/8GFtkImmK0K1VaUChR0n9O61CFU.jpg",
+            "overview": "A young boy learns that he has extraordinary powers and is not of this earth. As a young man, he journeys to discover where he came from and what he was sent here to do. But the hero in him must emerge if he is to save the world from annihilation and become the symbol of hope for all mankind.",
+            "release_date": "2013-06-12",
+            "vote_average": 6.654,
+            "popularity": 17.8844,
+            "backdrop_path": "/j2MlEEpA3wgwQiJB6p1UHC50oiw.jpg",
+            "original_title": "Man of Steel"
+          }
+        },
+        {
+          "title": "Batman v Superman: Dawn of Justice (2016)",
+          "tmdb": {
+            "id": 209112,
+            "poster_path": "/5UsK3grJvtQrtzEgqNlDljJW96w.jpg",
+            "overview": "Fearing the actions of a god-like Super Hero left unchecked, Gotham City’s own formidable, forceful vigilante takes on Metropolis’s most revered, modern-day savior, while the world wrestles with what sort of hero it really needs. And with Batman and Superman at war with one another, a new threat quickly arises, putting mankind in greater danger than it’s ever known before.",
+            "release_date": "2016-03-23",
+            "vote_average": 6.006,
+            "popularity": 16.1203,
+            "backdrop_path": "/5fX1oSGuYdKgwWmUTAN5MNSQGzr.jpg",
+            "original_title": "Batman v Superman: Dawn of Justice"
+          }
+        },
+        {
+          "title": "Suicide Squad (2016)",
+          "tmdb": {
+            "id": 297761,
+            "poster_path": "/sk3FZgh3sRrmr8vyhaitNobMcfh.jpg",
+            "overview": "From DC Comics comes the Suicide Squad, an antihero team of incarcerated supervillains who act as deniable assets for the United States government, undertaking high-risk black ops missions in exchange for commuted prison sentences.",
+            "release_date": "2016-08-03",
+            "vote_average": 5.917,
+            "popularity": 11.0636,
+            "backdrop_path": "/8XyX5Us7uzwQdXtAdnhCB9Gquek.jpg",
+            "original_title": "Suicide Squad"
+          }
+        },
+        {
+          "title": "Wonder Woman (2017)",
+          "tmdb": {
+            "id": 297762,
+            "poster_path": "/v4ncgZjG2Zu8ZW5al1vIZTsSjqX.jpg",
+            "overview": "An Amazon princess comes to the world of Man in the grips of the First World War to confront the forces of evil and bring an end to human conflict.",
+            "release_date": "2017-05-30",
+            "vote_average": 7.208,
+            "popularity": 12.4717,
+            "backdrop_path": "/AcbXX3KgvqD7B8Y4WjCu6yNx1Prfu5cNHz.jpg",
+            "original_title": "Wonder Woman"
+          }
+        },
+        {
+          "title": "Justice League (2017)",
+          "tmdb": {
+            "id": 141052,
+            "poster_path": "/eifGNCSDuxJeS1loAXil5bIGgvC.jpg",
+            "overview": "Fuelled by his restored faith in humanity and inspired by Superman's selfless act, Bruce Wayne and Diana Prince assemble a team of metahumans consisting of Barry Allen, Arthur Curry and Victor Stone to face the catastrophic threat of Steppenwolf and the Parademons who are on the hunt for three Mother Boxes on Earth.",
+            "release_date": "2017-11-15",
+            "vote_average": 6.07,
+            "popularity": 12.3746,
+            "backdrop_path": "/2nyaeISu2xIxIgZYNpX4UayY8PN.jpg",
+            "original_title": "Justice League"
+          }
+        },
+        {
+          "title": "Aquaman (2018)",
+          "tmdb": {
+            "id": 297802,
+            "poster_path": "/ufl63EFcc5XpByEV2Ecdw6WJZAI.jpg",
+            "overview": "Half-human, half-Atlantean Arthur Curry is taken on the journey of his lifetime to discover if he is worth of being a king.",
+            "release_date": "2018-12-07",
+            "vote_average": 6.867,
+            "popularity": 16.5585,
+            "backdrop_path": "/9QusGjxcYvfPD1THg6oW3RLeNn7.jpg",
+            "original_title": "Aquaman"
+          }
+        },
+        {
+          "title": "Shazam! (2019)",
+          "tmdb": {
+            "id": 287947,
+            "poster_path": "/xnopI5Xtky18MPhK40cZAGAOVeV.jpg",
+            "overview": "A boy is given the ability to become an adult superhero in times of need with a single magic word.",
+            "release_date": "2019-03-29",
+            "vote_average": 6.974,
+            "popularity": 9.6832,
+            "backdrop_path": "/o7JVhqMmrex1TPbmuxl8YXVlcfl.jpg",
+            "original_title": "Shazam!"
+          }
+        },
+        {
+          "title": "Birds of Prey (2020)",
+          "tmdb": {
+            "id": 495764,
+            "poster_path": "/h4VB6m0RwcicVEZvzftYZyKXs6K.jpg",
+            "overview": "Harley Quinn joins forces with a singer, an assassin and a police detective to help a young girl who had a hit placed on her after she stole a rare diamond from a crime lord.",
+            "release_date": "2020-02-05",
+            "vote_average": 6.869,
+            "popularity": 9.4518,
+            "backdrop_path": "/uozb2VeD87YmhoUP1RrGWfzuCrr.jpg",
+            "original_title": "Birds of Prey (and the Fantabulous Emancipation of One Harley Quinn)"
+          }
+        },
+        {
+          "title": "Wonder Woman 1984 (2020)",
+          "tmdb": {
+            "id": 464052,
+            "poster_path": "/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg",
+            "overview": "A botched store robbery places Wonder Woman in a global battle against a powerful and mysterious ancient force that puts her powers in jeopardy.",
+            "release_date": "2020-12-16",
+            "vote_average": 6.364,
+            "popularity": 9.2914,
+            "backdrop_path": "/egg7KFi18TSQc1s24RMmR9i2zO6.jpg",
+            "original_title": "Wonder Woman 1984"
+          }
+        },
+        {
+          "title": "Zack Snyder's Justice League (2021)",
+          "tmdb": {
+            "id": 791373,
+            "poster_path": "/tnAuB8q5vv7Ax9UAEje5Xi4BXik.jpg",
+            "overview": "Determined to ensure Superman's ultimate sacrifice was not in vain, Bruce Wayne aligns forces with Diana Prince with plans to recruit a team of metahumans to protect the world from an approaching threat of catastrophic proportions.",
+            "release_date": "2021-03-18",
+            "vote_average": 8.084,
+            "popularity": 18.2301,
+            "backdrop_path": "/13SnfHM8VPa1tP8iCQsa71YspZEkJaYm42.jpg",
+            "original_title": "Zack Snyder's Justice League"
+          }
+        },
+        {
+          "title": "The Suicide Squad (2021)",
+          "tmdb": {
+            "id": 436969,
+            "poster_path": "/qqs43fx570zvp04qu6mcjf70v4xjfh0pxynf52dq46.jpg",
+            "overview": "Supervillains Harley Quinn, Bloodsport, Peacemaker and a collection of nutty cons at Belle Reve prison join the super-secret, super-shady Task Force X as they are dropped off at the remote, enemy-infused island of Corto Maltese.",
+            "release_date": "2021-07-28",
+            "vote_average": 7.457,
+            "popularity": 16.7908,
+            "backdrop_path": "/jlGmlFOcfo8n5tURmhC7YVd4Iyy.jpg",
+            "original_title": "The Suicide Squad"
+          }
+        },
+        {
+          "title": "Black Adam (2022)",
+          "tmdb": {
+            "id": 436270,
+            "poster_path": "/rCtreCr4xiYEWDQTebybolIh6Xe.jpg",
+            "overview": "Nearly 5,000 years after he was bestowed with the almighty powers of the Egyptian gods—and imprisoned just as quickly—Black Adam is freed from his earthly tomb, ready to unleash his unique form of justice on the modern world.",
+            "release_date": "2022-10-19",
+            "vote_average": 6.787,
+            "popularity": 20.3314,
+            "backdrop_path": "/bQXAqRx2Fgc46uCVWgoPz5L5Dtr.jpg",
+            "original_title": "Black Adam"
+          }
+        },
+        {
+          "title": "Shazam! Fury of the Gods (2023)",
+          "tmdb": {
+            "id": 594767,
+            "poster_path": "/3G6cDr3n3ZxCDLQ74G72gr2FjYUE113MJ5.jpg",
+            "overview": "Billy Batson and his foster siblings, who transform into superheroes by saying \"Shazam!\", are forced to get back into action and fight the Daughters of Atlas, who they must stop from using a weapon that could destroy the world.",
+            "release_date": "2023-03-15",
+            "vote_average": 6.411,
+            "popularity": 8.6029,
+            "backdrop_path": "/kQV9sV0IbastbU5FYxuYwxfMawz.jpg",
+            "original_title": "Shazam! Fury of the Gods"
+          }
+        },
+        {
+          "title": "The Flash (2023)",
+          "tmdb": {
+            "id": 298618,
+            "poster_path": "/rktDFPbfHfUbArZ6OOOKsXcv0Bm.jpg",
+            "overview": "When his attempt to save his family inadvertently alters the future, Barry Allen becomes trapped in a reality in which General Zod has returned and there are no Super Heroes to turn to. In order to save the world that he is in and return to the future that he knows, Barry's only hope is to race for his life. But will making the ultimate sacrifice be enough to reset the universe?",
+            "release_date": "2023-06-13",
+            "vote_average": 6.621,
+            "popularity": 17.1706,
+            "backdrop_path": "/yF1eOkaYvwiORauRCPWznV9xVvi.jpg",
+            "original_title": "The Flash"
+          }
+        },
+        {
+          "title": "Blue Beetle (2023)",
+          "tmdb": {
+            "id": 565770,
+            "poster_path": "/mXLOHHc1Zeuwsl4xYKjKh2280oL.jpg",
+            "overview": "Recent college grad Jaime Reyes returns home full of aspirations for his future, only to find that home is not quite as he left it. As he searches to find his purpose in the world, fate intervenes when Jaime unexpectedly finds himself in possession of an ancient relic of alien biotechnology: the Scarab.",
+            "release_date": "2023-08-16",
+            "vote_average": 6.63,
+            "popularity": 8.9743,
+            "backdrop_path": "/bVyFGnX8kt0XtJXdx2F1HyOkIic.jpg",
+            "original_title": "Blue Beetle"
+          }
+        },
+        {
+          "title": "Aquaman and the Lost Kingdom (2023)",
+          "tmdb": {
+            "id": 572802,
+            "poster_path": "/7lTnXOy0iNtBAdRP3TZvaKJ77F6.jpg",
+            "overview": "Black Manta seeks revenge on Aquaman for his father's death. Wielding the Black Trident's power, he becomes a formidable foe. To defend Atlantis, Arthur (Aquaman) forges an alliance with his imprisoned brother. They must protect the kingdom.",
+            "release_date": "2023-12-20",
+            "vote_average": 6.519,
+            "popularity": 29.8359,
+            "backdrop_path": "/bckxSN9ueOgm0gJpVJmPQrecWul.jpg",
+            "original_title": "Aquaman and the Lost Kingdom"
+          }
+        }
+      ],
+      "tv_series": [
+        {
+          "name": "Peacemaker",
+          "tmdb": {
+            "id": 110492,
+            "poster_path": "/eYzbGcYnOUlvj2fa76pTgIXogd7.jpg",
+            "overview": "The continuing story of Peacemaker, a vainglorious superhero/supervillain who believes in peace at any cost — no matter how many people he has to kill. After a miraculous recovery from his duel with Bloodsport, Peacemaker soon discovers that his freedom comes at a price.",
+            "first_air_date": "2022-01-13",
+            "vote_average": 8.185,
+            "popularity": 41.4144,
+            "backdrop_path": "/aJcUU3LMlqMKBi8L3eaxGfAbd4G.jpg",
+            "original_name": "Peacemaker"
+          }
+        },
+        {
+          "name": "The Penguin",
+          "tmdb": {
+            "id": 194764,
+            "poster_path": "/vOWcqC4oDQws1doDWLO7d3dh5qc.jpg",
+            "overview": "With the city in peril following the seawall's collapse, Oswald \"Oz\" Cobb seeks to fill the power vacuum left by the death of Carmine Falcone and finally give his mother Francis the life he's always promised. But first, Oz must confront his enemies and his own demoralizing reputation as \"the Penguin.\"",
+            "first_air_date": "2024-09-19",
+            "vote_average": 8.348,
+            "popularity": 22.8099,
+            "backdrop_path": "/4TdmuuwiIiKw3JOjIuhdgYxRXnN.jpg",
+            "original_name": "The Penguin"
+          }
+        }
+      ]
+    },
+    {
+      "rank": 9,
+      "name": "Jurassic Park",
+      "total_box_office_billions": 12.3,
+      "number_of_movies": 6,
+      "poster": "A massive Tyrannosaurus Rex roars against a fiery volcanic sky. In the foreground, a jeep is overturned with a DNA helix glowing above the iconic Jurassic Park gates.",
+      "movies": [
+        {
+          "title": "Jurassic Park (1993)",
+          "tmdb": {
+            "id": 329,
+            "poster_path": "/b1xCNnyrPebIc7EWNZIa6jhb1Ww.jpg",
+            "overview": "A wealthy entrepreneur secretly creates a theme park featuring living dinosaurs drawn from prehistoric DNA. Before opening day, he invites a team of experts and his two eager grandchildren to experience the park and help calm anxious investors. However, the park is anything but amusing as the security systems go off-line and the dinosaurs escape.",
+            "release_date": "1993-06-11",
+            "vote_average": 7.976,
+            "popularity": 12.565,
+            "backdrop_path": "/o7LzVmlOSYc3EspyVMC9bsTTARc.jpg",
+            "original_title": "Jurassic Park"
+          }
+        },
+        {
+          "title": "The Lost World: Jurassic Park (1997)",
+          "tmdb": {
+            "id": 330,
+            "poster_path": "/ss6cqHQc72eCsXrvne11XVZs3bR.jpg",
+            "overview": "Four years after Jurassic Park's genetically bred dinosaurs ran amok, multimillionaire John Hammond shocks chaos theorist Ian Malcolm by revealing that he has been breeding more beasties at a secret location. Malcolm, his paleontologist ladylove and a wildlife videographer join an expedition to document the lethal lizards' natural behavior in this action-packed thriller.",
+            "release_date": "1997-05-23",
+            "vote_average": 6.568,
+            "popularity": 0.728,
+            "backdrop_path": "/AcbXX3KgvqD7B8Y4WjCu6yNx1Prfu5cNHz.jpg",
+            "original_title": "The Lost World: Jurassic Park"
+          }
+        },
+        {
+          "title": "Jurassic Park III (2001)",
+          "tmdb": {
+            "id": 331,
+            "poster_path": "/oQXj4NUfS3r3gHXtDOzcJgj1lLc.jpg",
+            "overview": "In need of funds for research, Dr. Alan Grant accepts a large sum of money to accompany Paul and Amanda Kirby on an aerial tour of the infamous Isla Sorna. It isn't long before all hell breaks loose and the stranded wayfarers must fight for survival as a host of new -- and even more deadly -- dinosaurs try to make snacks of them.",
+            "release_date": "2001-07-18",
+            "vote_average": 6.178,
+            "popularity": 0.5867,
+            "backdrop_path": "/8v8x4vVbRgrsdU3M4drnD7HQbfe.jpg",
+            "original_title": "Jurassic Park III"
+          }
+        },
+        {
+          "title": "Jurassic World (2015)",
+          "tmdb": {
+            "id": 135397,
+            "poster_path": "/rhr4y79GpxQF9IsfJItRXVaoGs4.jpg",
+            "overview": "Twenty-two years after the events of Jurassic Park, Isla Nublar now features a fully functioning dinosaur theme park, Jurassic World, as originally envisioned by John Hammond.",
+            "release_date": "2015-06-06",
+            "vote_average": 6.703,
+            "popularity": 17.6481,
+            "backdrop_path": "/dF6FjTZzRTENfB4R17HDN20jLT2.jpg",
+            "original_title": "Jurassic World"
+          }
+        },
+        {
+          "title": "Jurassic World: Fallen Kingdom (2018)",
+          "tmdb": {
+            "id": 351286,
+            "poster_path": "/x2Us3jR6ToMJjbcPbLimYoxf6xr.jpg",
+            "overview": "Three years after Jurassic World was destroyed, Isla Nublar now sits abandoned. When the island's dormant volcano begins roaring to life, Owen and Claire mount a campaign to rescue the remaining dinosaurs from this extinction-level event.",
+            "release_date": "2018-06-06",
+            "vote_average": 6.5,
+            "popularity": 13.7933,
+            "backdrop_path": "/6WA9stUMbIkEPxn3D5SWlA8FIi7.jpg",
+            "original_title": "Jurassic World: Fallen Kingdom"
+          }
+        },
+        {
+          "title": "Jurassic World Dominion (2022)",
+          "tmdb": {
+            "id": 507086,
+            "poster_path": "/jbAvCACjLf1ZG0unB2tdmx5HAf1.jpg",
+            "overview": "Four years after Isla Nublar was destroyed, dinosaurs now live—and hunt—alongside humans all over the world. This fragile balance will reshape the future and determine, once and for all, whether human beings are to remain the apex predators on a planet they now share with history's most fearsome creatures.",
+            "release_date": "2022-06-01",
+            "vote_average": 6.601,
+            "popularity": 18.5523,
+            "backdrop_path": "/698FjyzLdpgXmUSr63LaRwblTmx.jpg",
+            "original_title": "Jurassic World Dominion"
+          }
+        }
+      ],
+      "tv_series": [
+        {
+          "name": "Jurassic World: Camp Cretaceous",
+          "tmdb": {
+            "id": 93741,
+            "poster_path": "/pwte1p4ZySI1qAVSVdSTRKjuIAa.jpg",
+            "overview": "Six teens attending an adventure camp on the opposite side of Isla Nublar must band together to survive when dinosaurs wreak havoc on the island.",
+            "first_air_date": "2020-09-18",
+            "vote_average": 8.017,
+            "popularity": 14.1836,
+            "backdrop_path": "/4WIglfr4lDFVjCEcXzCeu6cJsOh.jpg",
+            "original_name": "Jurassic World Camp Cretaceous"
+          }
+        },
+        {
+          "name": "Jurassic World: Chaos Theory",
+          "tmdb": {
+            "id": 237512,
+            "poster_path": "/c2Od0cY2IeayDj5osUxZSAD1QK.jpg",
+            "overview": "The Camp Cretaceous gang comes together to unravel a mystery when they discover a global conspiracy that brings danger to dinosaurs — and to themselves.",
+            "first_air_date": "2024-05-24",
+            "vote_average": 8.316,
+            "popularity": 14.7859,
+            "backdrop_path": "/qqs43fx570zvp04qu6mcjf70v4xjfh0pxynf52dq46.jpg",
+            "original_name": "Jurassic World: Chaos Theory"
+          }
+        }
+      ]
+    },
+    {
+      "rank": 10,
+      "name": "Transformers",
+      "total_box_office_billions": 11.8,
+      "number_of_movies": 8,
+      "poster": "Optimus Prime and Bumblebee stand back-to-back amidst a destroyed city. Explosions and metallic debris fly around them, with the Autobot symbol glowing in the center.",
+      "movies": [
+        {
+          "title": "Transformers (2007)",
+          "tmdb": {
+            "id": 1858,
+            "poster_path": "/lkZ9gqCEjzX85lKR6Jjd1uGAXNp.jpg",
+            "overview": "Young teenager Sam Witwicky becomes involved in the ancient struggle between two extraterrestrial factions of transforming robots – the heroic Autobots and the evil Decepticons. Sam holds the clue to unimaginable power and the Decepticons will stop at nothing to retrieve it.",
+            "release_date": "2007-06-27",
+            "vote_average": 6.84,
+            "popularity": 4.5218,
+            "backdrop_path": "/iCDMBi6WLjUBnt24dNwHqqF81UL.jpg",
+            "original_title": "Transformers"
+          }
+        },
+        {
+          "title": "Transformers: Revenge of the Fallen (2009)",
+          "tmdb": {
+            "id": 8373,
+            "poster_path": "/pLBb0whOzVDtJvyD4DPeQyQNOqp.jpg",
+            "overview": "Sam Witwicky leaves the Autobots behind for a normal life. But when his mind is filled with cryptic symbols, the Decepticons target him and he is dragged back into the Transformers' war.",
+            "release_date": "2009-06-19",
+            "vote_average": 6.223,
+            "popularity": 5.0936,
+            "backdrop_path": "/bH1bhjn37uA1zOPvyHbzJSvza7v.jpg",
+            "original_title": "Transformers: Revenge of the Fallen"
+          }
+        },
+        {
+          "title": "Transformers: Dark of the Moon (2011)",
+          "tmdb": {
+            "id": 38356,
+            "poster_path": "/28YlCLrFhONteYSs9hKjD1Km0Cj.jpg",
+            "overview": "The Autobots continue to work for NEST, now no longer in secret. But after discovering a strange artifact during a mission in Chernobyl, it becomes apparent to Optimus Prime that the United States government has been less than forthright with them.",
+            "release_date": "2011-06-28",
+            "vote_average": 6.238,
+            "popularity": 3.566,
+            "backdrop_path": "/h3js4rulxzKMOokM2oO5Kr0mBZU.jpg",
+            "original_title": "Transformers: Dark of the Moon"
+          }
+        },
+        {
+          "title": "Transformers: Age of Extinction (2014)",
+          "tmdb": {
+            "id": 91314,
+            "poster_path": "/jyzrfx2WaeY60kYZpPYepSjGz4S.jpg",
+            "overview": "As humanity picks up the pieces after the battle of Chicago, a shadowy group reveals itself in an attempt to control the direction of history…while an ancient, powerful new menace sets Earth in its crosshairs. With help from Cade Yeager, Optimus Prime and the Autobots rise to meet their most fearsome challenge yet.",
+            "release_date": "2014-06-25",
+            "vote_average": 5.97,
+            "popularity": 13.7852,
+            "backdrop_path": "/wxr4Z6E83h14CogsZOzDm1vuDX3.jpg",
+            "original_title": "Transformers: Age of Extinction"
+          }
+        },
+        {
+          "title": "Transformers: The Last Knight (2017)",
+          "tmdb": {
+            "id": 335988,
+            "poster_path": "/s5HQf2Gb3lIO2cRcFwNL9sn1o1o.jpg",
+            "overview": "Humans and Transformers are at war. Optimus Prime is gone. The key to saving our future lies buried in the secrets of the past, in the hidden history of Transformers on Earth. Saving our world falls upon the shoulders of an unlikely alliance: Cade Yeager; Bumblebee; an English Lord; and an Oxford Professor.",
+            "release_date": "2017-06-16",
+            "vote_average": 6.06,
+            "popularity": 11.4866,
+            "backdrop_path": "/1K1cikegartWRQKqFGTz6JGy2jQkAbwbEC.jpg",
+            "original_title": "Transformers: The Last Knight"
+          }
+        },
+        {
+          "title": "Bumblebee (2018)",
+          "tmdb": {
+            "id": 424783,
+            "poster_path": "/fw02ONlDhrYjTSZV8XO6hhU3ds3.jpg",
+            "overview": "On the run in the year 1987, Bumblebee finds refuge in a junkyard in a small Californian beach town. Charlie, on the cusp of turning 18 and trying to find her place in the world, discovers Bumblebee, battle-scarred and broken.  When Charlie revives him, she quickly learns this is no ordinary yellow VW bug.",
+            "release_date": "2018-11-22",
+            "vote_average": 6.72,
+            "popularity": 8.4942,
+            "backdrop_path": "/hMANgfPHR1tRObNp2oPiOi9mMlz.jpg",
+            "original_title": "Bumblebee"
+          }
+        },
+        {
+          "title": "Transformers: Rise of the Beasts (2023)",
+          "tmdb": {
+            "id": 667538,
+            "poster_path": "/gPbM0MK8CP8A174rmUwGsADNYKD.jpg",
+            "overview": "When a new threat capable of destroying the entire planet emerges, Optimus Prime and the Autobots must team up with a powerful faction known as the Maximals. With the fate of humanity hanging in the balance, humans Noah and Elena will do whatever it takes to help the Transformers as they engage in the ultimate battle to save Earth.",
+            "release_date": "2023-06-06",
+            "vote_average": 7.169,
+            "popularity": 17.1938,
+            "backdrop_path": "/2vFuG6bWGyQUzYS9d69E5l85nIz.jpg",
+            "original_title": "Transformers: Rise of the Beasts"
+          }
+        },
+        {
+          "title": "Transformers: The Movie (1986)",
+          "tmdb": {
+            "id": 1857,
+            "poster_path": "/xJ5W0mOAWCVaXmU0pBZh4NjSRv2.jpg",
+            "overview": "The Autobots must stop a colossal planet-consuming robot who goes after the Autobot Matrix of Leadership. At the same time, they must defend themselves against an all-out attack from the Decepticons.",
+            "release_date": "1986-08-08",
+            "vote_average": 7.149,
+            "popularity": 5.184,
+            "backdrop_path": "/8NvaYUSmpe56dBz7B5m3jSpJI3t.jpg",
+            "original_title": "The Transformers: The Movie"
+          }
+        }
+      ],
+      "tv_series": [
+        {
+          "name": "Transformers: Prime",
+          "tmdb": {
+            "id": 32910,
+            "poster_path": "/ilOKsGRHYc78R2tSMusAd3xGJWq.jpg",
+            "overview": "Roll out with Optimus Prime, Bumblebee, Arcee, Ratchet, Bulkhead, and the rest of the heroic Autobots as they battle the evil Decepticons. Now that big bad Megatron has returned with a mysterious and dangerous element, Team Prime must prepare for an epic battle.",
+            "first_air_date": "2010-11-26",
+            "vote_average": 8.103,
+            "popularity": 17.241,
+            "backdrop_path": "/owhEUs8ZVyuXpxsD2BIcriBotUo.jpg",
+            "original_name": "Transformers: Prime"
+          }
+        },
+        {
+          "name": "Transformers: Animated",
+          "tmdb": {
+            "id": 10548,
+            "poster_path": "/kZkn34WF6AIYlPP2w1iR6g0gcIZ.jpg",
+            "overview": "The evil Decepticons have appeared in Detroit. With the all powerful Allspark, Megatron can use it to turn all of Earth's robots into Decepticons. However, Optimus Prime and his Autobots arrive and plan to stop Megatron and his evil plan in Transformers Animated.",
+            "first_air_date": "2007-12-26",
+            "vote_average": 8,
+            "popularity": 10.0311,
+            "backdrop_path": "/oMSLTx2LcQug67O2OD06lLB0xNS.jpg",
+            "original_name": "Transformers: Animated"
+          }
+        },
+        {
+          "name": "Transformers: EarthSpark",
+          "tmdb": {
+            "id": 157747,
+            "poster_path": "/jLwU37QusZDkkOuFNb1TA6NQZNT.jpg",
+            "overview": "The Malto Family’s world turns upside down when the Terrans, the first Earthborn Transformers robots, spark to life. The Terrans will forge an alliance between the human Malto family and the legendary Autobots, uniting them in a shared mission.",
+            "first_air_date": "2022-11-11",
+            "vote_average": 7.103,
+            "popularity": 10.3124,
+            "backdrop_path": "/gzVkLZOM0er10OwEUJyhl9G7oE7.jpg",
+            "original_name": "Transformers: EarthSpark"
+          }
+        }
+      ]
+    },
+    {
+      "rank": 11,
+      "name": "X-Men",
+      "total_box_office_billions": 11.7,
+      "number_of_movies": 13,
+      "poster": "Professor Xavier and Magneto face each other with divided loyalties. Wolverine's adamantium claws are central, surrounded by Cyclops, Storm, Jean Grey, and Mystique in a dark, dramatic composition.",
+      "movies": [
+        {
+          "title": "X-Men (2000)",
+          "tmdb": {
+            "id": 447399,
+            "poster_path": "/vF02RqXLgtmpJM5CRLSuvN3fVHi.jpg",
+            "overview": "While Senator Kelly addresses a senate committee about the supposed mutant menace, we learn about the making of the movie, X-Men (2000)",
+            "release_date": "2000-07-02",
+            "vote_average": 7.025,
+            "popularity": 2.2461,
+            "backdrop_path": null,
+            "original_title": "X-Men: The Mutant Watch"
+          }
+        },
+        {
+          "title": "X2 (2003)",
+          "tmdb": {
+            "id": 447133,
+            "poster_path": "/fbKrtVCaTBBdgwvrLiyYFsCewlK.jpg",
+            "overview": "In this piece, Michael Broidy of Fox Publicity sits with Bryan Singer, producers Ralph Winter and Lauren Shuler Donner, and actors Hugh Jackman, James Marsden, Anna Paquin, Rebecca Romijn-Stamos, Alan Cumming, Famke Janssen, Shawn Ashmore, Aaron Stanford, and Kelly Hu for an Internet-based chat. Each participant appears solo in this set of excerpts. They take queries from various international chat rooms and discuss a number of topics in this reasonably informative and interesting discussion.",
+            "release_date": "2003-11-25",
+            "vote_average": 5.667,
+            "popularity": 0.962,
+            "backdrop_path": null,
+            "original_title": "X2 Global Webcast Highlights"
+          }
+        },
+        {
+          "title": "X-Men: The Last Stand (2006)",
+          "tmdb": {
+            "id": 36668,
+            "poster_path": "/a2xicU8DpKtRizOHjQLC1JyCSRS.jpg",
+            "overview": "When a cure is found to treat mutations, lines are drawn amongst the X-Men led by Professor Charles Xavier, and Magneto's Brotherhood of Mutants.",
+            "release_date": "2006-05-24",
+            "vote_average": 6.425,
+            "popularity": 0.9135,
+            "backdrop_path": "/sBl1n4Oi2wX81EtXIb8NsPqJf3W.jpg",
+            "original_title": "X-Men: The Last Stand"
+          }
+        },
+        {
+          "title": "X-Men Origins: Wolverine (2009)",
+          "tmdb": {
+            "id": 2080,
+            "poster_path": "/yj8LbTju1p7CUJg7US2unSBk33s.jpg",
+            "overview": "After seeking to live a normal life after 200 years, Logan sets out to avenge a death by undergoing the mutant Weapon X program and becoming Wolverine.",
+            "release_date": "2009-04-28",
+            "vote_average": 6.296,
+            "popularity": 1.7311,
+            "backdrop_path": "/p4GzAzjlL7lXIVGvayg7zvzGTSi.jpg",
+            "original_title": "X-Men Origins: Wolverine"
+          }
+        },
+        {
+          "title": "X-Men: First Class (2011)",
+          "tmdb": {
+            "id": 49538,
+            "poster_path": "/hNEokmUke0dazoBhttFN0o3L7Xv.jpg",
+            "overview": "Before Charles Xavier and Erik Lensherr took the names Professor X and Magneto, they were two young men discovering their powers for the first time. Before they were arch-enemies, they were closest of friends, working together with other mutants (some familiar, some new), to stop the greatest threat the world has ever known.",
+            "release_date": "2011-06-01",
+            "vote_average": 7.302,
+            "popularity": 0.9765,
+            "backdrop_path": "/yhp5Pt4GugkCs5mz63qWz5khHXe.jpg",
+            "original_title": "X-Men: First Class"
+          }
+        },
+        {
+          "title": "The Wolverine (2013)",
+          "tmdb": {
+            "id": 76170,
+            "poster_path": "/t2wVAcoRlKvEIVSbiYDb8d0QqqS.jpg",
+            "overview": "Wolverine faces his ultimate nemesis - and tests of his physical, emotional, and mortal limits - in a life-changing voyage to modern-day Japan.",
+            "release_date": "2013-07-21",
+            "vote_average": 6.436,
+            "popularity": 3.2968,
+            "backdrop_path": "/bEAQfLTykGg232kJogBlxRYaRqU.jpg",
+            "original_title": "The Wolverine"
+          }
+        },
+        {
+          "title": "X-Men: Days of Future Past (2014)",
+          "tmdb": {
+            "id": 127585,
+            "poster_path": "/tYfijzolzgoMOtegh1Y7j2Enorg.jpg",
+            "overview": "The ultimate X-Men ensemble fights a war for the survival of the species across two time periods as they join forces with their younger selves in an epic battle that must change the past – to save our future.",
+            "release_date": "2014-05-15",
+            "vote_average": 7.534,
+            "popularity": 16.6689,
+            "backdrop_path": "/3KNJwB1G7ZveASfkR9nXXo5UcANPaURsXD.jpg",
+            "original_title": "X-Men: Days of Future Past"
+          }
+        },
+        {
+          "title": "Deadpool (2016)",
+          "tmdb": {
+            "id": 293660,
+            "poster_path": "/3EPFfFsS2LTviJoFSVRC3E3vi56cKN1vUw.jpg",
+            "overview": "The origin story of former Special Forces operative turned mercenary Wade Wilson, who, after being subjected to a rogue experiment that leaves him with accelerated healing powers, adopts the alter ego Deadpool. Armed with his new abilities and a dark, twisted sense of humor, Deadpool hunts down the man who nearly destroyed his life.",
+            "release_date": "2016-02-09",
+            "vote_average": 7.624,
+            "popularity": 23.9737,
+            "backdrop_path": "/en971MEXui9diirXlogOrPKmsEn.jpg",
+            "original_title": "Deadpool"
+          }
+        },
+        {
+          "title": "X-Men: Apocalypse (2016)",
+          "tmdb": {
+            "id": 246655,
+            "poster_path": "/ikA8UhYdTGpqbatFa93nIf6noSr.jpg",
+            "overview": "After the re-emergence of the world's first mutant, world-destroyer Apocalypse, the X-Men must unite to defeat his extinction level plan.",
+            "release_date": "2016-05-18",
+            "vote_average": 6.527,
+            "popularity": 18.2659,
+            "backdrop_path": "/sTQNRqLbfCXolrb5CizAW1dj528.jpg",
+            "original_title": "X-Men: Apocalypse"
+          }
+        },
+        {
+          "title": "Logan (2017)",
+          "tmdb": {
+            "id": 263115,
+            "poster_path": "/fnbjcRDYn6YviCcePDnGdyAkYsB.jpg",
+            "overview": "In the near future, a weary Logan cares for an ailing Professor X in a hideout on the Mexican border. But Logan's attempts to hide from the world and his legacy are upended when a young mutant arrives, pursued by dark forces.",
+            "release_date": "2017-02-28",
+            "vote_average": 7.822,
+            "popularity": 18.7125,
+            "backdrop_path": "/4DZxWNSAyksN6N3JkvpJ53Yq6zU.jpg",
+            "original_title": "Logan"
+          }
+        },
+        {
+          "title": "Deadpool 2 (2018)",
+          "tmdb": {
+            "id": 383498,
+            "poster_path": "/to0spRl1CMDvyUbOnbb4fTk3VAd.jpg",
+            "overview": "Wisecracking mercenary Deadpool battles the evil and powerful Cable and other bad guys to save a boy's life.",
+            "release_date": "2018-05-15",
+            "vote_average": 7.491,
+            "popularity": 15.5407,
+            "backdrop_path": "/3PMBN8CNAMHUa7VWFNfjaknq7Z99EwJnji.jpg",
+            "original_title": "Deadpool 2"
+          }
+        },
+        {
+          "title": "Dark Phoenix (2019)",
+          "tmdb": {
+            "id": 320288,
+            "poster_path": "/cCTJPelKGLhALq3r51A9uMonxKj.jpg",
+            "overview": "The X-Men face their most formidable and powerful foe when one of their own, Jean Grey, starts to spiral out of control. During a rescue mission in outer space, Jean is nearly killed when she's hit by a mysterious cosmic force. Once she returns home, this force not only makes her infinitely more powerful, but far more unstable. The X-Men must now band together to save her soul and battle aliens that want to use Grey's new abilities to rule the galaxy.",
+            "release_date": "2019-06-05",
+            "vote_average": 5.969,
+            "popularity": 15.1393,
+            "backdrop_path": "/cjRUhKyt2Jo3V1KNzc5tpPNfccG.jpg",
+            "original_title": "Dark Phoenix"
+          }
+        },
+        {
+          "title": "The New Mutants (2020)",
+          "tmdb": {
+            "id": 340102,
+            "poster_path": "/xiDGcXJTvu1lazFRYip6g1eLt9c.jpg",
+            "overview": "Five young mutants, just discovering their abilities while held in a secret facility against their will, fight to escape their past sins and save themselves.",
+            "release_date": "2020-04-02",
+            "vote_average": 6.069,
+            "popularity": 12.8404,
+            "backdrop_path": "/1MjRuZwQqZVKpk1giNibXGuDjbKFcunhtK.jpg",
+            "original_title": "The New Mutants"
+          }
+        }
+      ],
+      "tv_series": [
+        {
+          "name": "X-Men: The Animated Series",
+          "tmdb": {
+            "id": 4574,
+            "poster_path": "/2OFwsFhAobczgJWnVdwd9oZAF2N.jpg",
+            "overview": "The X-Men are an elite team of mutants, genetically gifted human beings with superpowers, sworn to fight for mutant rights against hostile Government agencies, whilst at the same time protecting mankind from mutant supremacist Magneto who seeks to destroy the human race in return for the atrocities committed against mutant kind.",
+            "first_air_date": "1992-10-31",
+            "vote_average": 8.18,
+            "popularity": 25.5467,
+            "backdrop_path": "/8GlKBQJTFZp9mpLXJrmNCtdTyxx.jpg",
+            "original_name": "X-Men"
+          }
+        },
+        {
+          "name": "Wolverine and the X-Men",
+          "tmdb": {
+            "id": 6549,
+            "poster_path": "/oSeJ2nESB77iC6SLo4qcqoadjdt.jpg",
+            "overview": "Wolverine and the X-Men must join together again to not only battle the increasingly powerful Mutant Response Division, but also to prevent a catastrophic future that Xavier has warned Wolverine must never come to pass.",
+            "first_air_date": "2009-01-23",
+            "vote_average": 7.5,
+            "popularity": 3.8451,
+            "backdrop_path": "/uPbpYFYXlUdTDEmfoubKNfdEZZx.jpg",
+            "original_name": "Wolverine and the X-Men"
+          }
+        },
+        {
+          "name": "Legion",
+          "tmdb": {
+            "id": 67195,
+            "poster_path": "/xhJtYVTsdXQCIlB5hAXkMCPUG9y.jpg",
+            "overview": "David Haller, AKA Legion, is a troubled young man who may be more than human. Diagnosed as schizophrenic, David has been in and out of psychiatric hospitals for years. But after a strange encounter with a fellow patient, he’s confronted with the possibility that the voices he hears and the visions he sees might be real.",
+            "first_air_date": "2017-02-08",
+            "vote_average": 7.512,
+            "popularity": 17.9023,
+            "backdrop_path": "/87eP7ITTrOWvkA4EqCuoRdyjzLy.jpg",
+            "original_name": "Legion"
+          }
+        },
+        {
+          "name": "The Gifted",
+          "tmdb": {
+            "id": 69629,
+            "poster_path": "/nshCqszjTNuqhrB53vrSqWO18sE.jpg",
+            "overview": "A suburban couple's ordinary lives are rocked by the sudden discovery that their children possess mutant powers. Forced to go on the run from a hostile government, the family joins up with an underground network of mutants and must fight to survive.",
+            "first_air_date": "2017-10-02",
+            "vote_average": 7.588,
+            "popularity": 16.7156,
+            "backdrop_path": "/18inwHlpKnK9mt02wFBJoIVKXI.jpg",
+            "original_name": "The Gifted"
+          }
+        }
+      ]
+    },
+    {
+      "rank": 12,
+      "name": "Pirates of the Caribbean",
+      "total_box_office_billions": 11.5,
+      "number_of_movies": 5,
+      "poster": "Captain Jack Sparrow stands on the bow of the Black Pearl during a thunderstorm, holding his compass. A kraken tentacle rises from the sea, with the 'Pirates' title in gold lettering.",
+      "movies": [
+        {
+          "title": "Pirates of the Caribbean: The Curse of the Black Pearl (2003)",
+          "tmdb": {
+            "id": 22,
+            "poster_path": "/poHwCZeWzJCShH7tOjg8RIoyjcw.jpg",
+            "overview": "When wily pirate Captain Barbossa seizes Jack Sparrow’s beloved ship, the Black Pearl, and kidnaps the governor’s daughter, Elizabeth Swann, blacksmith Will Turner reluctantly teams up with the unpredictable pirate Jack to rescue her—only to uncover a terrifying curse that turns Barbossa’s crew into the undead.",
+            "release_date": "2003-07-09",
+            "vote_average": 7.831,
+            "popularity": 26.2501,
+            "backdrop_path": "/uRNgkJSkNBFbbn9fPsEjDIy8Sh3.jpg",
+            "original_title": "Pirates of the Caribbean: The Curse of the Black Pearl"
+          }
+        },
+        {
+          "title": "Pirates of the Caribbean: Dead Man's Chest (2006)",
+          "tmdb": {
+            "id": 58,
+            "poster_path": "/uXEqmloGyP7UXAiphJUu2v2pcuE.jpg",
+            "overview": "Captain Jack Sparrow’s got a blood debt to pay: he owes his soul to the legendary Davy Jones, ghastly Ruler of the Ocean Depths. To escape eternal servitude aboard the Flying Dutchman, ever-crafty Jack must track down the still-beating heart of Jones. But he won’t do it alone: Will Turner and Elizabeth Swann are drawn back into another one of his perilous quests—assuming they can evade execution for aiding a pirate.",
+            "release_date": "2006-07-06",
+            "vote_average": 7.4,
+            "popularity": 20.1934,
+            "backdrop_path": "/vr6n6ZFUZvedvIlhfYcbCWcaKyW.jpg",
+            "original_title": "Pirates of the Caribbean: Dead Man's Chest"
+          }
+        },
+        {
+          "title": "Pirates of the Caribbean: At World's End (2007)",
+          "tmdb": {
+            "id": 285,
+            "poster_path": "/jGWpG4YhpQwVmjyHEGkxEkeRf0S.jpg",
+            "overview": "After losing Captain Jack Sparrow to the locker of Davy Jones, Will Turner, Elizabeth Swann, and Captain Barbossa journey to the ends of the earth to rescue him. And as the East India Trading Company tightens its grip on the seas under Lord Cutler Beckett—now in control of Davy Jones—the fate of piracy hangs by a thread. Now, they must unite the pirate lords for one final stand. But as loyalties are tested and alliances shift, each must ultimately choose where they stand in the battle for freedom on the high seas.",
+            "release_date": "2007-05-19",
+            "vote_average": 7.3,
+            "popularity": 18.2583,
+            "backdrop_path": "/1GdYPEJfXAzrov5K1j8pSs4RY6Z6oFrn85.jpg",
+            "original_title": "Pirates of the Caribbean: At World's End"
+          }
+        },
+        {
+          "title": "Pirates of the Caribbean: On Stranger Tides (2011)",
+          "tmdb": {
+            "id": 1865,
+            "poster_path": "/keGfSvCmYj7CvdRx36OdVrAEibE.jpg",
+            "overview": "When Jack crosses paths with a woman from his past, he's not sure if it's love...or if she's a ruthless con artist using him to find the fabled Fountain of Youth.",
+            "release_date": "2011-05-15",
+            "vote_average": 6.6,
+            "popularity": 17.7389,
+            "backdrop_path": "/uzIGtyS6bbnJzGsPL93WCF1FWm8.jpg",
+            "original_title": "Pirates of the Caribbean: On Stranger Tides"
+          }
+        },
+        {
+          "title": "Pirates of the Caribbean: Dead Men Tell No Tales (2017)",
+          "tmdb": {
+            "id": 166426,
+            "poster_path": "/6lAPOAFYFWIO3SQRemEY2wInQMC.jpg",
+            "overview": "Thrust into an all-new adventure, a down-on-his-luck Capt. Jack Sparrow feels the winds of ill-fortune blowing even more strongly when deadly ghost sailors led by his old nemesis, the evil Capt. Salazar, escape from the Devil's Triangle. Jack's only hope of survival lies in seeking out the legendary Trident of Poseidon, but to find it, he must forge an uneasy alliance with a brilliant and beautiful astronomer and a headstrong young man in the British navy.",
+            "release_date": "2017-05-23",
+            "vote_average": 6.7,
+            "popularity": 12.0901,
+            "backdrop_path": "/7C921eWK06n12c1miRXnYoEu5Yv.jpg",
+            "original_title": "Pirates of the Caribbean: Dead Men Tell No Tales"
+          }
+        }
+      ],
+      "tv_series": []
+    },
+    {
+      "rank": 13,
+      "name": "Despicable Me / Minions",
+      "total_box_office_billions": 11.1,
+      "number_of_movies": 5,
+      "poster": "Gru and his Minions pose comically with the moon in the background. One Minion is holding a banana, while another is accidentally launching a rocket. Bright yellow and blue color scheme.",
+      "movies": [
+        {
+          "title": "Despicable Me (2010)",
+          "tmdb": {
+            "id": 20352,
+            "poster_path": "/b1BT309QWjtFUlJPLmXmrcHOWEL.jpg",
+            "overview": "Determined to prove he's the world's greatest supervillain, Gru hatches an audacious plan to steal the Moon. To pull it off, he adopts three orphaned girls—Margo, Edith, and Agnes—intending to use them as part of his scheme. But the unexpected bond they form forces him to question the life he's always known.",
+            "release_date": "2010-07-08",
+            "vote_average": 7.261,
+            "popularity": 20.3616,
+            "backdrop_path": "/2XSeKDmIa2KxaiJy4J9e8FrIZhk.jpg",
+            "original_title": "Despicable Me"
+          }
+        },
+        {
+          "title": "Despicable Me 2 (2013)",
+          "tmdb": {
+            "id": 93456,
+            "poster_path": "/5Fh4NdoEnCjCK9wLjdJ9DJNFl2b.jpg",
+            "overview": "Gru is recruited by the Anti-Villain League to help deal with a powerful new super criminal.",
+            "release_date": "2013-06-26",
+            "vote_average": 6.9,
+            "popularity": 15.1461,
+            "backdrop_path": "/uD267eSiACfWLxp47t3gYymOQRj.jpg",
+            "original_title": "Despicable Me 2"
+          }
+        },
+        {
+          "title": "Minions (2015)",
+          "tmdb": {
+            "id": 211672,
+            "poster_path": "/dr02BdCNAUPVU07aOodwPYv6HCf.jpg",
+            "overview": "Minions Stuart, Kevin and Bob are recruited by Scarlet Overkill, a super-villain who, alongside her inventor husband Herb, hatches a plot to take over the world.",
+            "release_date": "2015-06-17",
+            "vote_average": 6.4,
+            "popularity": 11.0753,
+            "backdrop_path": "/wKrxeY6lbu7KFBsWVcMH6M8avwr.jpg",
+            "original_title": "Minions"
+          }
+        },
+        {
+          "title": "Despicable Me 3 (2017)",
+          "tmdb": {
+            "id": 324852,
+            "poster_path": "/6t3YWl7hrr88lCEFlGVqW5yV99R.jpg",
+            "overview": "Gru and his wife Lucy must stop former '80s child star Balthazar Bratt from achieving world domination.",
+            "release_date": "2017-06-15",
+            "vote_average": 6.5,
+            "popularity": 10.9794,
+            "backdrop_path": "/ftRkFtAGuHngHnLiOxktq0aCVMF.jpg",
+            "original_title": "Despicable Me 3"
+          }
+        },
+        {
+          "title": "Minions: The Rise of Gru (2022)",
+          "tmdb": {
+            "id": 438148,
+            "poster_path": "/wKiOkZTN9lUUUNZLmtnwubZYONg.jpg",
+            "overview": "A fanboy of a supervillain supergroup known as the Vicious 6, Gru hatches a plan to become evil enough to join them, with the backup of his followers, the Minions.",
+            "release_date": "2022-06-29",
+            "vote_average": 7.3,
+            "popularity": 17.7934,
+            "backdrop_path": "/wZS4xSfPtk1NPQnx9zsT5R2WhCu.jpg",
+            "original_title": "Minions: The Rise of Gru"
+          }
+        }
+      ],
+      "tv_series": []
+    },
+    {
+      "rank": 14,
+      "name": "Mission: Impossible",
+      "total_box_office_billions": 10.2,
+      "number_of_movies": 7,
+      "poster": "Ethan Hunt hangs precariously from a skyscraper or helicopter. The IMF logo glows behind him, with a fuse burning down to the title. High-contrast red and black tones.",
+      "movies": [
+        {
+          "title": "Mission: Impossible (1996)",
+          "tmdb": {
+            "id": 954,
+            "poster_path": "/l5uxY5m5OInWpcExIpKG6AR3rgL.jpg",
+            "overview": "When Ethan Hunt, the leader of a crack espionage team whose perilous operation has gone awry with no explanation, discovers that a mole has penetrated the CIA, he's surprised to learn that he's the prime suspect. To clear his name, Hunt now must ferret out the real double agent and, in the process, even the score.",
+            "release_date": "1996-05-22",
+            "vote_average": 7.026,
+            "popularity": 11.2487,
+            "backdrop_path": "/sra8XnL96OyLHENcglmZJg6HA8z.jpg",
+            "original_title": "Mission: Impossible"
+          }
+        },
+        {
+          "title": "Mission: Impossible II (2000)",
+          "tmdb": {
+            "id": 955,
+            "poster_path": "/hfnrual76gPeNFduhD4xzHWpfTw.jpg",
+            "overview": "With computer genius Luther Stickell at his side and a beautiful thief on his mind, agent Ethan Hunt races across Australia and Spain to stop a former IMF agent from unleashing a genetically engineered biological weapon called Chimera. This mission, should Hunt choose to accept it, plunges him into the center of an international crisis of terrifying magnitude.",
+            "release_date": "2000-05-24",
+            "vote_average": 6.143,
+            "popularity": 8.1191,
+            "backdrop_path": "/24DZfupDlhXeTchmcOkoGRhP5Vg.jpg",
+            "original_title": "Mission: Impossible II"
+          }
+        },
+        {
+          "title": "Mission: Impossible III (2006)",
+          "tmdb": {
+            "id": 956,
+            "poster_path": "/vKGYCpmQyV9uHybWDzXuII8Los5.jpg",
+            "overview": "Retired from active duty, and training recruits for the Impossible Mission Force, agent Ethan Hunt faces the toughest foe of his career: Owen Davian, an international broker of arms and information, who's as cunning as he is ruthless. Davian emerges to threaten Hunt and all that he holds dear – including the woman Hunt loves.",
+            "release_date": "2006-04-25",
+            "vote_average": 6.768,
+            "popularity": 8.4317,
+            "backdrop_path": "/bYKeB9uUcPmvikjouEEQ86uvPw9.jpg",
+            "original_title": "Mission: Impossible III"
+          }
+        },
+        {
+          "title": "Mission: Impossible – Ghost Protocol (2011)",
+          "tmdb": {
+            "id": 56292,
+            "poster_path": "/eRZTGx7GsiKqPch96k27LK005ZL.jpg",
+            "overview": "Ethan Hunt and his team are racing against time to track down a dangerous terrorist named Hendricks, who has gained access to Russian nuclear launch codes and is planning a strike on the United States. An attempt to stop him ends in an explosion causing severe destruction to the Kremlin and the IMF to be implicated in the bombing, forcing the President to disavow them. No longer being aided by the government, Ethan and his team chase Hendricks around the globe, although they might still be too late to stop a disaster.",
+            "release_date": "2011-12-07",
+            "vote_average": 7.114,
+            "popularity": 10.6131,
+            "backdrop_path": "/ih4lZkUpmSE7AP3maymiO72xJ1z.jpg",
+            "original_title": "Mission: Impossible - Ghost Protocol"
+          }
+        },
+        {
+          "title": "Mission: Impossible – Rogue Nation (2015)",
+          "tmdb": {
+            "id": 177677,
+            "poster_path": "/fRJLXQBHK2wyznK5yZbO7vmsuVK.jpg",
+            "overview": "Ethan and team take on their most impossible mission yet—eradicating 'The Syndicate', an International and highly-skilled rogue organization committed to destroying the IMF.",
+            "release_date": "2015-07-28",
+            "vote_average": 7.225,
+            "popularity": 10.6332,
+            "backdrop_path": "/vYIUN5rrCncHFY8WvcuXQlM4hk5.jpg",
+            "original_title": "Mission: Impossible - Rogue Nation"
+          }
+        },
+        {
+          "title": "Mission: Impossible – Fallout (2018)",
+          "tmdb": {
+            "id": 353081,
+            "poster_path": "/AcbXX3KgvqD7B8Y4WjCu6yNx1Prfu5cNHz.jpg",
+            "overview": "When an IMF mission ends badly, the world is faced with dire consequences. As Ethan Hunt takes it upon himself to fulfill his original briefing, the CIA begin to question his loyalty and his motives. The IMF team find themselves in a race against time, hunted by assassins while trying to prevent a global catastrophe.",
+            "release_date": "2018-07-25",
+            "vote_average": 7.451,
+            "popularity": 11.6881,
+            "backdrop_path": "/3PVtnfjav5yJMyUkDq4iZLLncyQvtd8XhT.jpg",
+            "original_title": "Mission: Impossible - Fallout"
+          }
+        },
+        {
+          "title": "Mission: Impossible – Dead Reckoning Part One (2023)",
+          "tmdb": {
+            "id": 575264,
+            "poster_path": "/NNxYkU70HPurnNCSiCjYAmacwm.jpg",
+            "overview": "Ethan Hunt and his IMF team embark on their most dangerous mission yet: To track down a terrifying new weapon that threatens all of humanity before it falls into the wrong hands. With control of the future and the world's fate at stake and dark forces from Ethan's past closing in, a deadly race around the globe begins. Confronted by a mysterious, all-powerful enemy, Ethan must consider that nothing can matter more than his mission—not even the lives of those he cares about most.",
+            "release_date": "2023-07-08",
+            "vote_average": 7.503,
+            "popularity": 12.8799,
+            "backdrop_path": "/628Dep6AxEtDxjZoGP78TsOxYbK.jpg",
+            "original_title": "Mission: Impossible - Dead Reckoning Part One"
+          }
+        }
+      ],
+      "tv_series": [
+        {
+          "name": "Mission: Impossible (1966 TV series)",
+          "tmdb": null
+        }
+      ]
+    },
+    {
+      "rank": 15,
+      "name": "Shrek",
+      "total_box_office_billions": 10.1,
+      "number_of_movies": 5,
+      "poster": "Shrek and Donkey stand in front of Far Far Away castle. Fiona, Puss in Boots, and various fairy tale characters are scattered around. Bright green swamp tones with comedic expressions.",
+      "movies": [
+        {
+          "title": "Shrek (2001)",
+          "tmdb": {
+            "id": 808,
+            "poster_path": "/iB64vpL3dIObOtMZgX3RqdVdQDc.jpg",
+            "overview": "It ain't easy bein' green -- especially if you're a likable (albeit smelly) ogre named Shrek. On a mission to retrieve a gorgeous princess from the clutches of a fire-breathing dragon, Shrek teams up with an unlikely compatriot -- a wisecracking donkey.",
+            "release_date": "2001-05-18",
+            "vote_average": 7.773,
+            "popularity": 24.458,
+            "backdrop_path": "/sRvXNDItGlWCqtO3j6wks52FmbD.jpg",
+            "original_title": "Shrek"
+          }
+        },
+        {
+          "title": "Shrek 2 (2004)",
+          "tmdb": {
+            "id": 809,
+            "poster_path": "/2yYP0PQjG8zVqturh1BAqu2Tixl.jpg",
+            "overview": "Happily ever after never seemed so far far away when a trip to meet the in-laws turns into a hilariously twisted adventure for Shrek and Fiona. With the help of ever-faithful Donkey, Shrek takes on the potion-brewing Fairy Godmother, pompous Prince Charming, and infamous ogre-killer Puss In Boots.",
+            "release_date": "2004-05-19",
+            "vote_average": 7.327,
+            "popularity": 21.553,
+            "backdrop_path": "/8ohobj5lAIbl5XWw11FywS3IRrS.jpg",
+            "original_title": "Shrek 2"
+          }
+        },
+        {
+          "title": "Shrek the Third (2007)",
+          "tmdb": {
+            "id": 810,
+            "poster_path": "/n4SexGGQzI26E269tfpa80MZaGV.jpg",
+            "overview": "After the King of Far Far Away dies, Shrek and Fiona are to succede. However, Shrek wants to return to his cozy swamp and live in peace and quiet, so when he finds out there is another heir to the throne, he and Donkey set off to bring him back to rule the kingdom.",
+            "release_date": "2007-05-17",
+            "vote_average": 6.313,
+            "popularity": 11.9966,
+            "backdrop_path": "/wvXxKpFGXvQJRB0nvvfURhRD3C0.jpg",
+            "original_title": "Shrek the Third"
+          }
+        },
+        {
+          "title": "Shrek Forever After (2010)",
+          "tmdb": {
+            "id": 10192,
+            "poster_path": "/6HrfPZtKcGmX2tUWW3cnciZTaSD.jpg",
+            "overview": "A midlife-crisis burdened Shrek, longing for the days when he felt like a real ogre, makes a pact with magic deal-maker Rumpelstiltskin. But when he's duped and sent to a twisted version of Far Far Away—where Rumpelstiltskin is king, ogres are hunted, and he and Fiona have never met—he sets out to restore his world and reclaim his true love.",
+            "release_date": "2010-05-16",
+            "vote_average": 6.409,
+            "popularity": 11.5931,
+            "backdrop_path": "/uzzTystB8lL0mRDII5Sfs5HxgkI.jpg",
+            "original_title": "Shrek Forever After"
+          }
+        },
+        {
+          "title": "Puss in Boots (2011)",
+          "tmdb": {
+            "id": 417859,
+            "poster_path": "/7a5Jzjr9TmffGy76y1SZhn3sCiz.jpg",
+            "overview": "Long before he even met Shrek, the notorious fighter, lover and outlaw Puss in Boots becomes a hero when he sets off on an adventure with the tough and street smart Kitty Softpaws and the mastermind Humpty Dumpty to save his town. This is the true story of The Cat, The Myth, The Legend... The Boots.",
+            "release_date": "2011-10-27",
+            "vote_average": 6.6,
+            "popularity": 8.5281,
+            "backdrop_path": "/c5MCkebYhFuhmi32x760HfcvLIO.jpg",
+            "original_title": "Puss in Boots"
+          }
+        }
+      ],
+      "tv_series": [
+        {
+          "name": "The Adventures of Puss in Boots",
+          "tmdb": {
+            "id": 61886,
+            "poster_path": "/uHpUlyWCqXXUDY7zekQdJmf6QkP.jpg",
+            "overview": "The world's greatest feline fighter, lover and milk connoisseur is back in this original series filled with daring adventures, great boots, and laugh-out-loud fun! The entire family will be entranced by Puss' fantastical CG world filled with new characters, exotic locations and mystical tales that make up the stuff of legends. There's nothing that can get in this celebrated swashbuckling kitty's way...except maybe a hairball.",
+            "first_air_date": "2015-01-16",
+            "vote_average": 7.126,
+            "popularity": 15.3533,
+            "backdrop_path": "/nd11dhqVr4r2UVlIVjq17Sums04.jpg",
+            "original_name": "The Adventures of Puss in Boots"
+          }
+        }
+      ]
+    },
+    {
+      "rank": 16,
+      "name": "Middle-earth (The Lord of the Rings / The Hobbit)",
+      "total_box_office_billions": 9.8,
+      "number_of_movies": 6,
+      "poster": "The One Ring sits on a map of Middle-earth with the Fellowship walking towards Mount Doom. Gandalf, Aragorn, and Frodo are silhouetted against a sunrise over the mountains.",
+      "movies": [
+        {
+          "title": "The Lord of the Rings: The Fellowship of the Ring (2001)",
+          "tmdb": {
+            "id": 120,
+            "poster_path": "/6oom5QYQ2yQTMJIbnvbkBL9cHo6.jpg",
+            "overview": "Young hobbit Frodo Baggins, after inheriting a mysterious ring from his uncle Bilbo, must leave his home in order to keep it from falling into the hands of its evil creator. Along the way, a fellowship is formed to protect the ringbearer and make sure that the ring arrives at its final destination: Mt. Doom, the only place where it can be destroyed.",
+            "release_date": "2001-12-18",
+            "vote_average": 8.4,
+            "popularity": 44.3627,
+            "backdrop_path": "/mWDdRXTivGE7aaY2vo1Ie0PfCX5.jpg",
+            "original_title": "The Lord of the Rings: The Fellowship of the Ring"
+          }
+        },
+        {
+          "title": "The Lord of the Rings: The Two Towers (2002)",
+          "tmdb": {
+            "id": 121,
+            "poster_path": "/5VTN0pR8gcqV3EPUHHfMGnJYN9L.jpg",
+            "overview": "Frodo Baggins and the other members of the Fellowship continue on their sacred quest to destroy the One Ring--but on separate paths. Their destinies lie at two towers--Orthanc Tower in Isengard, where the corrupt wizard Saruman awaits, and Sauron's fortress at Barad-dur, deep within the dark lands of Mordor. Frodo and Sam are trekking to Mordor to destroy the One Ring of Power while Gimli, Legolas and Aragorn search for the orc-captured Merry and Pippin. All along, nefarious wizard Saruman awaits the Fellowship members at the Orthanc Tower in Isengard.",
+            "release_date": "2002-12-18",
+            "vote_average": 8.424,
+            "popularity": 37.1092,
+            "backdrop_path": "/kWYfW2Re0rUDE6IHhy4CRuKWeFr.jpg",
+            "original_title": "The Lord of the Rings: The Two Towers"
+          }
+        },
+        {
+          "title": "The Lord of the Rings: The Return of the King (2003)",
+          "tmdb": {
+            "id": 122,
+            "poster_path": "/rCzpDGLbOoPwLjy3OAm5NUPOTrC.jpg",
+            "overview": "As armies mass for a final battle that will decide the fate of the world--and powerful, ancient forces of Light and Dark compete to determine the outcome--one member of the Fellowship of the Ring is revealed as the noble heir to the throne of the Kings of Men. Yet, the sole hope for triumph over evil lies with a brave hobbit, Frodo, who, accompanied by his loyal friend Sam and the hideous, wretched Gollum, ventures deep into the very dark heart of Mordor on his seemingly impossible quest to destroy the Ring of Power.​",
+            "release_date": "2003-12-17",
+            "vote_average": 8.502,
+            "popularity": 50.4067,
+            "backdrop_path": "/2u7zbn8EudG6kLlBzUYqP8RyFU4.jpg",
+            "original_title": "The Lord of the Rings: The Return of the King"
+          }
+        },
+        {
+          "title": "The Hobbit: An Unexpected Journey (2012)",
+          "tmdb": {
+            "id": 49051,
+            "poster_path": "/yHA9Fc37VmpUA5UncTxxo3rTGVA.jpg",
+            "overview": "Bilbo Baggins, a hobbit enjoying his quiet life, is swept into an epic quest by Gandalf the Grey and thirteen dwarves who seek to reclaim their mountain home from Smaug, the dragon.",
+            "release_date": "2012-12-12",
+            "vote_average": 7.4,
+            "popularity": 19.3697,
+            "backdrop_path": "/xyXmtuvsoM5J3yNad0nvcetpBdY.jpg",
+            "original_title": "The Hobbit: An Unexpected Journey"
+          }
+        },
+        {
+          "title": "The Hobbit: The Desolation of Smaug (2013)",
+          "tmdb": {
+            "id": 57158,
+            "poster_path": "/xQYiXsheRCDBA39DOrmaw1aSpbk.jpg",
+            "overview": "The Dwarves, Bilbo and Gandalf have successfully escaped the Misty Mountains, and Bilbo has gained the One Ring. They all continue their journey to get their gold back from the Dragon, Smaug.",
+            "release_date": "2013-12-11",
+            "vote_average": 7.583,
+            "popularity": 15.7034,
+            "backdrop_path": "/6GGpZHvSpeIm5Tk5yn5P5ibUNjF.jpg",
+            "original_title": "The Hobbit: The Desolation of Smaug"
+          }
+        },
+        {
+          "title": "The Hobbit: The Battle of the Five Armies (2014)",
+          "tmdb": {
+            "id": 122917,
+            "poster_path": "/xT98tLqatZPQApyRmlPL12LtiWp.jpg",
+            "overview": "Following Smaug's attack on Laketown, Bilbo and the dwarves try to defend Erebor's mountain of treasure from others who claim it: the men of the ruined Laketown and the elves of Mirkwood. Meanwhile an army of Orcs led by Azog the Defiler is marching on Erebor, fueled by the rise of the dark lord Sauron. Dwarves, elves and men must unite, and the hope for Middle-Earth falls into Bilbo's hands.",
+            "release_date": "2014-12-10",
+            "vote_average": 7.3,
+            "popularity": 31.1049,
+            "backdrop_path": "/395xVupoPgh2L5Jfg9Ad5R3m46Uqpg3vyX.jpg",
+            "original_title": "The Hobbit: The Battle of the Five Armies"
+          }
+        }
+      ],
+      "tv_series": [
+        {
+          "name": "The Lord of the Rings: The Rings of Power",
+          "tmdb": {
+            "id": 84773,
+            "poster_path": "/kf5Hz70tjNAHg4swGDzOr9BfoZ1.jpg",
+            "overview": "Beginning in a time of relative peace, we follow an ensemble cast of characters as they confront the re-emergence of evil to Middle-earth. From the darkest depths of the Misty Mountains, to the majestic forests of Lindon, to the breathtaking island kingdom of Númenor, to the furthest reaches of the map, these kingdoms and characters will carve out legacies that live on long after they are gone.",
+            "first_air_date": "2022-09-01",
+            "vote_average": 7.23,
+            "popularity": 72.4963,
+            "backdrop_path": "/o2wg8QiSCQrhj91tBfxunE3O5Ba.jpg",
+            "original_name": "The Lord of the Rings: The Rings of Power"
+          }
+        }
+      ]
+    },
+    {
+      "rank": 18,
+      "name": "The Hunger Games",
+      "total_box_office_billions": 8.8,
+      "number_of_movies": 5,
+      "poster": "Katniss Everdeen stands with her bow drawn, wearing a mockingjay pin. The Capitol looms in the distance with flames rising behind her. Metallic and fiery color scheme.",
+      "movies": [
+        {
+          "title": "The Hunger Games (2012)",
+          "tmdb": {
+            "id": 70160,
+            "poster_path": "/yXCbOiVDCxO71zI7cuwBRXdftq8.jpg",
+            "overview": "In a dystopian society where the Capitol forces each district to send two young tributes to fight to the death in a televised spectacle, a girl volunteers to take her sister’s place, setting the stage for a struggle of survival and defiance.",
+            "release_date": "2012-03-12",
+            "vote_average": 7.224,
+            "popularity": 9.861,
+            "backdrop_path": "/yVBQ65YBYZ9UhzJ4NGdRgeXtyTL.jpg",
+            "original_title": "The Hunger Games"
+          }
+        },
+        {
+          "title": "The Hunger Games: Catching Fire (2013)",
+          "tmdb": {
+            "id": 101299,
+            "poster_path": "/vrQHDXjVmbYzadOXQ0UaObunoy2.jpg",
+            "overview": "After surviving the Hunger Games, Katniss and Peeta struggle with the consequences of their victory as unrest spreads across Panem. Forced back into the spotlight, they become symbols of hope and resistance while the Capitol prepares a new and deadly challenge that will change the future of the nation forever.",
+            "release_date": "2013-11-15",
+            "vote_average": 7.429,
+            "popularity": 11.9648,
+            "backdrop_path": "/eHaazLxM5LRMh0ySkVy7SK6wUWt.jpg",
+            "original_title": "The Hunger Games: Catching Fire"
+          }
+        },
+        {
+          "title": "The Hunger Games: Mockingjay – Part 1 (2014)",
+          "tmdb": {
+            "id": 131631,
+            "poster_path": "/4FAA18ZIja70d1Tu5hr5cj2q1sB.jpg",
+            "overview": "After surviving the Quarter Quell, Katniss finds herself in the hidden stronghold of District 13, where the rebellion against the Capitol is gaining momentum. Struggling with the weight of becoming the symbol of resistance, she must navigate fragile alliances while trying to protect those she loves. As propaganda battles rage and Panem moves closer to full-scale war, Katniss is forced to confront the true cost of revolution.",
+            "release_date": "2014-11-19",
+            "vote_average": 6.818,
+            "popularity": 13.0533,
+            "backdrop_path": "/lV1P1Q5gLDXVG1ZYCxZHStkcQC3.jpg",
+            "original_title": "The Hunger Games: Mockingjay - Part 1"
+          }
+        },
+        {
+          "title": "The Hunger Games: Mockingjay – Part 2 (2015)",
+          "tmdb": {
+            "id": 131634,
+            "poster_path": "/lImKHDfExAulp16grYm8zD5eONE.jpg",
+            "overview": "As the war between the Capitol and the districts reaches its peak, Katniss Everdeen embarks on a perilous mission to liberate Panem and confront President Snow. Joined by a team of trusted allies, she navigates deadly traps, shifting loyalties, and the heavy cost of rebellion, determined to bring freedom to her people and end the Hunger Games once and for all.",
+            "release_date": "2015-11-18",
+            "vote_average": 6.902,
+            "popularity": 9.7377,
+            "backdrop_path": "/qqs43fx570zvp04qu6mcjf70v4xjfh0pxynf52dq46.jpg",
+            "original_title": "The Hunger Games: Mockingjay - Part 2"
+          }
+        },
+        {
+          "title": "The Hunger Games: The Ballad of Songbirds & Snakes (2023)",
+          "tmdb": {
+            "id": 695721,
+            "poster_path": "/mBaXZ95R2OxueZhvQbcEWy2DqyO.jpg",
+            "overview": "64 years before he becomes the tyrannical president of Panem, Coriolanus Snow sees a chance for a change in fortunes when he mentors Lucy Gray Baird, the female tribute from District 12.",
+            "release_date": "2023-11-15",
+            "vote_average": 6.973,
+            "popularity": 11.2888,
+            "backdrop_path": "/bk1TitfD4YIGrM6AvljonMCtfnl.jpg",
+            "original_title": "The Hunger Games: The Ballad of Songbirds & Snakes"
+          }
+        }
+      ],
+      "tv_series": []
+    },
+    {
+      "rank": 19,
+      "name": "Alien / Predator",
+      "total_box_office_billions": 8.5,
+      "number_of_movies": 14,
+      "poster": "A dark, sci-fi horror composition with the Xenomorph and Predator facing each other in a jungle. Green acid blood drips, and the spaceship lights illuminate the shadows.",
+      "movies": [
+        {
+          "title": "Alien (1979)",
+          "tmdb": {
+            "id": 348,
+            "poster_path": "/vfrQk5IPloGg1v9Rzbh2Eg3VGyM.jpg",
+            "overview": "During its return to the earth, commercial spaceship Nostromo intercepts a distress signal from a distant planet. When a three-member team of the crew discovers a chamber containing thousands of eggs on the planet, a creature inside one of the eggs attacks an explorer. The entire crew is unaware of the impending nightmare set to descend upon them when the alien parasite planted inside its unfortunate host is birthed.",
+            "release_date": "1979-05-25",
+            "vote_average": 8.2,
+            "popularity": 21.1762,
+            "backdrop_path": "/AcbXX3KgvqD7B8Y4WjCu6yNx1Prfu5cNHz.jpg",
+            "original_title": "Alien"
+          }
+        },
+        {
+          "title": "Aliens (1986)",
+          "tmdb": {
+            "id": 679,
+            "poster_path": "/r1x5JGpyqZU8PYhbs4UcrO1Xb6x.jpg",
+            "overview": "Ripley, the sole survivor of the Nostromo's deadly encounter with the monstrous Alien, returns to Earth after drifting through space in hypersleep for 57 years. Although her story is initially met with skepticism, she agrees to accompany a team of Colonial Marines back to LV-426.",
+            "release_date": "1986-07-18",
+            "vote_average": 7.966,
+            "popularity": 20.9891,
+            "backdrop_path": "/4kix6fAblJIH6eMs0Ku2loyZJXK.jpg",
+            "original_title": "Aliens"
+          }
+        },
+        {
+          "title": "Alien 3 (1992)",
+          "tmdb": {
+            "id": 8077,
+            "poster_path": "/xh5wI0UoW7DfS1IyLy3d2CgrCEP.jpg",
+            "overview": "After escaping with Newt and Hicks from the alien planet, Ripley crash lands on Fiorina 161, a prison planet and host to a correctional facility. Unfortunately, although Newt and Hicks do not survive the crash, a more unwelcome visitor does. The prison does not allow weapons of any kind, and with aid being a long time away, the prisoners must simply survive in any way they can.",
+            "release_date": "1992-05-22",
+            "vote_average": 6.389,
+            "popularity": 12.7805,
+            "backdrop_path": "/lU0zVj8KcQVkPczdGGraYGiRC72.jpg",
+            "original_title": "Alien³"
+          }
+        },
+        {
+          "title": "Alien Resurrection (1997)",
+          "tmdb": {
+            "id": 8078,
+            "poster_path": "/9aRDMlU5Zwpysilm0WCWzU2PCFv.jpg",
+            "overview": "Two hundred years after Lt. Ripley died, a group of scientists clone her, hoping to breed the ultimate weapon. But the new Ripley is full of surprises … as are the new aliens. Ripley must team with a band of smugglers to keep the creatures from reaching Earth.",
+            "release_date": "1997-11-12",
+            "vote_average": 6.174,
+            "popularity": 14.2378,
+            "backdrop_path": "/zQI8yxl61JTpjCB3MrTbcQBOT82.jpg",
+            "original_title": "Alien Resurrection"
+          }
+        },
+        {
+          "title": "Predator (1987)",
+          "tmdb": {
+            "id": 106,
+            "poster_path": "/aN3cdjIK70KGmD84et8MMblU87Q.jpg",
+            "overview": "A team of elite commandos on a secret mission in a Central American jungle come to find themselves hunted by an extraterrestrial warrior.",
+            "release_date": "1987-06-12",
+            "vote_average": 7.573,
+            "popularity": 20.5094,
+            "backdrop_path": "/YL3GPOiDcNraIJOVDCZsoOBoDy.jpg",
+            "original_title": "Predator"
+          }
+        },
+        {
+          "title": "Predator 2 (1990)",
+          "tmdb": {
+            "id": 169,
+            "poster_path": "/83X4VwY9sdSJykskmsplIVG0a4h.jpg",
+            "overview": "A police chief in the war-torn streets of Los Angeles discovers that an extraterrestrial creature is hunting down residents - and that he is the next target.",
+            "release_date": "1990-11-21",
+            "vote_average": 6.308,
+            "popularity": 13.5033,
+            "backdrop_path": "/8GGAXEXaTPMDGa0sCPyFcitvlD9.jpg",
+            "original_title": "Predator 2"
+          }
+        },
+        {
+          "title": "Alien vs. Predator (2004)",
+          "tmdb": {
+            "id": 395,
+            "poster_path": "/ySWu5bCnnmgV1cVacvFnFIhgOjp.jpg",
+            "overview": "When scientists discover something near Antarctica that appears to be a buried Pyramid, they send a research team out to investigate. Little do they know that they are about to step into a hunting ground where Aliens are grown as sport for the Predator race.",
+            "release_date": "2004-08-12",
+            "vote_average": 5.952,
+            "popularity": 9.8246,
+            "backdrop_path": "/xvq1RLaiwSdHwPHe7WUhqZa1rCA.jpg",
+            "original_title": "AVP: Alien vs. Predator"
+          }
+        },
+        {
+          "title": "Aliens vs. Predator: Requiem (2007)",
+          "tmdb": {
+            "id": 440,
+            "poster_path": "/5iTwPDNtvK6ZZF607BHBbU3HO0B.jpg",
+            "overview": "After a horrifying PredAlien crash-lands near a small Colorado town, killing everyone it encounters and producing countless Alien offspring, a lone Predator arrives to \"clean up\" the infestation.",
+            "release_date": "2007-12-25",
+            "vote_average": 5.166,
+            "popularity": 12.7957,
+            "backdrop_path": "/jXntuh47VtKLeoyBQ268rv24Igw.jpg",
+            "original_title": "Aliens vs Predator: Requiem"
+          }
+        },
+        {
+          "title": "Predators (2010)",
+          "tmdb": {
+            "id": 34851,
+            "poster_path": "/wdniP8NDaJIydi1hMxhpbJMUfr6.jpg",
+            "overview": "A group of cold-blooded killers find themselves trapped on an alien planet to be hunted by extraterrestrial Predators.",
+            "release_date": "2010-07-07",
+            "vote_average": 6.305,
+            "popularity": 10.0634,
+            "backdrop_path": "/yVSgw4UyXWg0Edl7KMehdhhgIwL.jpg",
+            "original_title": "Predators"
+          }
+        },
+        {
+          "title": "Prometheus (2012)",
+          "tmdb": {
+            "id": 70981,
+            "poster_path": "/qqs43fx570zvp04qu6mcjf70v4xjfh0pxynf52dq46.jpg",
+            "overview": "A team of explorers discover a clue to the origins of mankind on Earth, leading them on a journey to the darkest corners of the universe. There, they must fight a terrifying battle to save the future of the human race.",
+            "release_date": "2012-05-30",
+            "vote_average": 6.601,
+            "popularity": 18.2868,
+            "backdrop_path": "/qqs43fx570zvp04qu6mcjf70v4xjfh0pxynf52dq46.jpg",
+            "original_title": "Prometheus"
+          }
+        },
+        {
+          "title": "Alien: Covenant (2017)",
+          "tmdb": {
+            "id": 126889,
+            "poster_path": "/zecMELPbU5YMQpC81Z8ImaaXuf9.jpg",
+            "overview": "The crew of the colony ship Covenant, bound for a remote planet on the far side of the galaxy, discovers what they think is an uncharted paradise but is actually a dark, dangerous world.",
+            "release_date": "2017-05-09",
+            "vote_average": 6.183,
+            "popularity": 11.5765,
+            "backdrop_path": "/iXXPaQPfQowpQ5UvhsHLj9BgFhe.jpg",
+            "original_title": "Alien: Covenant"
+          }
+        },
+        {
+          "title": "The Predator (2018)",
+          "tmdb": {
+            "id": 346910,
+            "poster_path": "/a3eWGF6YPF7No5Rbtjc8QpDvz7l.jpg",
+            "overview": "When a young boy accidentally triggers the universe's most lethal hunters' return to Earth, only a ragtag crew of ex-soldiers and a disgruntled scientist can prevent the end of the human race.",
+            "release_date": "2018-09-05",
+            "vote_average": 5.622,
+            "popularity": 9.3151,
+            "backdrop_path": "/b96OdaJce7Zu70NYe8vmlfOQUUN.jpg",
+            "original_title": "The Predator"
+          }
+        },
+        {
+          "title": "Prey (2022)",
+          "tmdb": {
+            "id": 766507,
+            "poster_path": "/ujr5pztc1oitbe7ViMUOilFaJ7s.jpg",
+            "overview": "When danger threatens her camp, the fierce and highly skilled Comanche warrior Naru sets out to protect her people. But the prey she stalks turns out to be a highly evolved alien predator with a technically advanced arsenal.",
+            "release_date": "2022-08-02",
+            "vote_average": 7.658,
+            "popularity": 15.5918,
+            "backdrop_path": "/7ZO9yoEU2fAHKhmJWfAc2QIPWJg.jpg",
+            "original_title": "Prey"
+          }
+        },
+        {
+          "title": "Alien: Romulus (2024)",
+          "tmdb": {
+            "id": 945961,
+            "poster_path": "/b33nnKl1GSFbao4l3fZDDqsMx0F.jpg",
+            "overview": "While scavenging the deep ends of a derelict space station, a group of young space colonizers come face to face with the most terrifying life form in the universe.",
+            "release_date": "2024-08-13",
+            "vote_average": 7.169,
+            "popularity": 25.1916,
+            "backdrop_path": "/iYqSQaWDttQIQzsxg9xHyg0bttG.jpg",
+            "original_title": "Alien: Romulus"
+          }
+        }
+      ],
+      "tv_series": [
+        {
+          "name": "Alien (upcoming FX series)",
+          "tmdb": null
+        }
+      ]
+    },
+    {
+      "rank": 20,
+      "name": "MonsterVerse (Godzilla / Kong)",
+      "total_box_office_billions": 8.4,
+      "number_of_movies": 5,
+      "poster": "Godzilla and King Kong roar at each other in a destroyed city with lightning cracking the sky. Massive scale, with jets and helicopters flying around them.",
+      "movies": [
+        {
+          "title": "Godzilla (2014)",
+          "tmdb": {
+            "id": 124905,
+            "poster_path": "/z0CpCYiaUikJrcftPnb0jYCYmoo.jpg",
+            "overview": "Ford Brody, a Navy bomb expert, has just reunited with his family in San Francisco when he is forced to go to Japan to help his estranged father, Joe. Soon, both men are swept up in an escalating crisis when an ancient alpha predator arises from the sea to combat malevolent adversaries that threaten the survival of humanity. The creatures leave colossal destruction in their wake, as they make their way toward their final battleground: San Francisco.",
+            "release_date": "2014-05-14",
+            "vote_average": 6.362,
+            "popularity": 11.33,
+            "backdrop_path": "/cHvwgJPaT59H1HiQsvBrGD5I46g.jpg",
+            "original_title": "Godzilla"
+          }
+        },
+        {
+          "title": "Kong: Skull Island (2017)",
+          "tmdb": {
+            "id": 293167,
+            "poster_path": "/r2517Vz9EhDhj88qwbDVj8DCRZN.jpg",
+            "overview": "Explore the mysterious and dangerous home of the king of the apes as a team of explorers ventures deep inside the treacherous, primordial island.",
+            "release_date": "2017-03-08",
+            "vote_average": 6.6,
+            "popularity": 15.113,
+            "backdrop_path": "/nVodCGKYLpqNC8YwQAbivKlWCgZ.jpg",
+            "original_title": "Kong: Skull Island"
+          }
+        },
+        {
+          "title": "Godzilla: King of the Monsters (2019)",
+          "tmdb": {
+            "id": 373571,
+            "poster_path": "/mzOHg7Q5q9yUmY0b9Esu8Qe6Nnm.jpg",
+            "overview": "Follows the heroic efforts of the crypto-zoological agency Monarch as its members face off against a battery of god-sized monsters, including the mighty Godzilla, who collides with Mothra, Rodan, and his ultimate nemesis, the three-headed King Ghidorah. When these ancient super-species, thought to be mere myths, rise again, they all vie for supremacy, leaving humanity's very existence hanging in the balance.",
+            "release_date": "2019-05-29",
+            "vote_average": 6.691,
+            "popularity": 13.8714,
+            "backdrop_path": "/mzRJpkWPjXdXak0WCc8ZxVH4hug.jpg",
+            "original_title": "Godzilla: King of the Monsters"
+          }
+        },
+        {
+          "title": "Godzilla vs. Kong (2021)",
+          "tmdb": {
+            "id": 399566,
+            "poster_path": "/pgqgaUx1cJb5oZQQ5v0tNARCeBp.jpg",
+            "overview": "In a time when monsters walk the Earth, humanity’s fight for its future sets Godzilla and Kong on a collision course that will see the two most powerful forces of nature on the planet collide in a spectacular battle for the ages.",
+            "release_date": "2021-03-24",
+            "vote_average": 7.531,
+            "popularity": 16.0061,
+            "backdrop_path": "/wWqTMWkEw6HouLd1zPZbZWxtAPr.jpg",
+            "original_title": "Godzilla vs. Kong"
+          }
+        },
+        {
+          "title": "Godzilla x Kong: The New Empire (2024)",
+          "tmdb": {
+            "id": 823464,
+            "poster_path": "/z1p34vh7dEOnLDmyCrlUVLuoDzd.jpg",
+            "overview": "Following their explosive showdown, Godzilla and Kong must reunite against a colossal undiscovered threat hidden within our world, challenging their very existence – and our own.",
+            "release_date": "2024-03-27",
+            "vote_average": 7.047,
+            "popularity": 17.4115,
+            "backdrop_path": "/gvLG3Fnznkxl4SmYfcK8gUuqxM8.jpg",
+            "original_title": "Godzilla x Kong: The New Empire"
+          }
+        }
+      ],
+      "tv_series": [
+        {
+          "name": "Monarch: Legacy of Monsters",
+          "tmdb": {
+            "id": 202411,
+            "poster_path": "/7LBbaEaLSbqdviBYaSS1rRPMnrs.jpg",
+            "overview": "After surviving Godzilla's attack on San Francisco, Cate is shaken yet again by a shocking secret. Amid monstrous threats, she embarks on a globetrotting adventure to learn the truth about her family—and the mysterious organization known as Monarch.",
+            "first_air_date": "2023-11-16",
+            "vote_average": 7.742,
+            "popularity": 37.4523,
+            "backdrop_path": "/n5FGEUmId87nZAdFiOFmCKXynmT.jpg",
+            "original_name": "Monarch: Legacy of Monsters"
+          }
+        }
+      ]
+    }
+  ]
+}

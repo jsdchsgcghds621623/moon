@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useCallback, memo } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Search, X, Loader2, Play, ChevronLeft } from 'lucide-react';
+import { Search, X, Loader2, Play, ChevronLeft, Sparkles } from 'lucide-react';
 import { Movie, TVShow } from '@/lib/tmdb';
 import { useDebounce } from '@/hooks/useDebounce';
 import { useSearch, useTrending } from '@/hooks/useTMDBQuery';
@@ -211,6 +211,25 @@ export const MobileSearchView = ({
 
       {/* Results */}
       <div className="flex-1 overflow-y-auto overscroll-contain">
+        <div className="border-b border-white/[0.08] bg-[#111111]/90 px-4 py-3">
+          <button
+            type="button"
+            onClick={() => navigate('/ai-search')}
+            className="flex w-full items-center justify-between rounded-2xl border border-[#54b9c5]/20 bg-gradient-to-r from-[#54b9c5]/10 to-white/5 px-3 py-3 text-left"
+          >
+            <div className="flex items-center gap-2">
+              <div className="flex h-9 w-9 items-center justify-center rounded-xl border border-[#54b9c5]/25 bg-[#54b9c5]/10">
+                <Sparkles className="h-4 w-4 text-[#54b9c5]" />
+              </div>
+              <div>
+                <p className="text-sm font-semibold text-white">AI Search</p>
+                <p className="text-xs text-white/55">Mood, vibe, and smart picks</p>
+              </div>
+            </div>
+            <div className="text-white/40">›</div>
+          </button>
+        </div>
+
         {showTrending ? (
           <div className="py-4">
             <p className="px-4 text-white/50 text-xs uppercase tracking-widest mb-3">

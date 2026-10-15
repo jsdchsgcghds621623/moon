@@ -60,7 +60,7 @@ const IconBtn = ({
 
 /* ─── component ─────────────────────────────────────────────────── */
 export const OptimizedMediaCard = React.memo(
-  ({ item, onMoreInfo, rank, progress }: MediaCardProps) => {
+  ({ item, onPlay, onMoreInfo, rank, progress }: MediaCardProps) => {
     const [isHovered, setIsHovered]   = useState(false);
     const [isMuted,   setIsMuted]     = useState(true);
     const hoverTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -122,6 +122,10 @@ export const OptimizedMediaCard = React.memo(
     const handleMyList = useCallback(
       (e: React.MouseEvent) => { e.stopPropagation(); toggleMyList(item, mediaType); },
       [item, mediaType, toggleMyList],
+    );
+    const handlePlay = useCallback(
+      (e: React.MouseEvent) => { e.stopPropagation(); onPlay(item, mediaType); },
+      [item, mediaType, onPlay],
     );
     const handleMoreInfo = useCallback(
       (e: React.MouseEvent) => { e.stopPropagation(); onMoreInfo(item, mediaType); },
@@ -291,11 +295,16 @@ export const OptimizedMediaCard = React.memo(
                 " />
 
                 {/* Play on hover */}
-                <div className="
-                  absolute inset-0 flex items-center justify-center
-                  opacity-0 group-hover/thumb:opacity-100
-                  transition-opacity duration-200
-                ">
+                <button
+                  type="button"
+                  onClick={handlePlay}
+                  className="
+                    absolute inset-0 flex items-center justify-center
+                    opacity-0 group-hover/thumb:opacity-100
+                    transition-opacity duration-200
+                    focus:outline-none
+                  "
+                >
                   <div className="
                     w-12 h-12 rounded-full bg-white/90
                     flex items-center justify-center shadow-xl
@@ -304,7 +313,7 @@ export const OptimizedMediaCard = React.memo(
                   ">
                     <Play className="h-5 w-5 text-black fill-black ml-0.5" />
                   </div>
-                </div>
+                </button>
 
                 {/* Mute toggle */}
                 <button
@@ -347,7 +356,7 @@ export const OptimizedMediaCard = React.memo(
                 {/* Action row */}
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-1.5">
-                    <IconBtn onClick={handleMoreInfo} title="Play" filled>
+                    <IconBtn onClick={handlePlay} title="Play" filled>
                       <Play className="h-4 w-4 text-black fill-black ml-0.5" />
                     </IconBtn>
 

@@ -34,6 +34,7 @@ interface MediaModalProps {
   item: Movie | TVShow | null;
   mediaType: 'movie' | 'tv';
   onPlay: (item: Movie | TVShow, mediaType: 'movie' | 'tv') => void;
+  onPlayInitiated?: (item: Movie | TVShow, mediaType: 'movie' | 'tv') => void;
   onMoreInfo?: (item: Movie | TVShow, mediaType: 'movie' | 'tv') => void;
   source?: 'continue-watching' | 'default';
 }
@@ -142,7 +143,7 @@ const NetflixEpisodeRow = ({ episode, index, onPlay }: {
 
 // ─────────────────────────────────────────────────────────────────────────────
 
-export const MediaModal = ({ isOpen, onClose, item, mediaType, onPlay, onMoreInfo, source = 'default' }: MediaModalProps) => {
+export const MediaModal = ({ isOpen, onClose, item, mediaType, onPlay, onPlayInitiated, onMoreInfo, source = 'default' }: MediaModalProps) => {
   const [isMuted, setIsMuted] = useState(true);
   const [selectedSeason, setSelectedSeason] = useState(1);
   const [hasUserSelectedSeason, setHasUserSelectedSeason] = useState(false);
@@ -263,6 +264,7 @@ export const MediaModal = ({ isOpen, onClose, item, mediaType, onPlay, onMoreInf
   }, [item, details]);
 
   const handlePlayMovie = useCallback(() => {
+    onPlayInitiated?.(item, 'movie');
     setPlaybackInfo({
       type: 'movie',
       id: item.id,
@@ -272,6 +274,7 @@ export const MediaModal = ({ isOpen, onClose, item, mediaType, onPlay, onMoreInf
   }, [item]);
 
   const handlePlayTVSeries = useCallback(() => {
+    onPlayInitiated?.(item, 'tv');
     const seriesTitle = 'title' in item ? item.title : item.name;
     const season = selectedSeason;
     const episode = resumeData.hasWatchHistory && resumeData.seasonNumber === selectedSeason ? resumeData.episodeNumber : 1;
@@ -294,6 +297,7 @@ export const MediaModal = ({ isOpen, onClose, item, mediaType, onPlay, onMoreInf
   }, []);
 
   const handlePlayEpisode = useCallback((episode: Episode) => {
+    onPlayInitiated?.(item, 'tv');
     const seriesTitle = 'title' in item ? item.title : item.name;
     const seasonNum = selectedSeason.toString().padStart(2, '0');
     const episodeNum = episode.episode_number.toString().padStart(2, '0');

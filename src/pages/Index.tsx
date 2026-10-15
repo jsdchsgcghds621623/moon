@@ -1,4 +1,6 @@
 import { useState, useEffect, useMemo, useCallback, lazy, Suspense, memo } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 import { HeroSection } from '@/components/HeroSection';
 import { MediaCarousel } from '@/components/MediaCarousel';
 import { SearchResults } from '@/components/SearchResults';
@@ -22,10 +24,14 @@ import {
   usePopularMovies,
   usePopularTVShows,
   useTopRatedTVShows,
+  useRecommendationsForItem,
   useUpcomingMovies,
   useNowPlayingMovies,
   useMoviesByGenre,
   useNetflixMovies,
+  useFranchiseCollectionCards,
+  useAiRecommendedMovies,
+  useAiRecommendedSeries,
   useSearch,
   useAnimeShows,
   useKDramaShows,
@@ -48,16 +54,54 @@ const scheduleIdleWork = (cb: () => void) => {
   return () => window.clearTimeout(t);
 };
 
+interface RecentlyWatchedItem {
+  title?: string;
+  tmdbId?: number;
+  type?: string;
+  image?: string;
+  watchedAt?: number;
+}
+
+const saveRecentlyWatchedItem = (item: Movie | TVShow, mediaType: 'movie' | 'tv') => {
+  if (typeof window === 'undefined') return;
+
+  try {
+    const existing = JSON.parse(localStorage.getItem('recentlyWatched') || '[]') as RecentlyWatchedItem[];
+    const title = 'title' in item ? item.title : item.name;
+    const poster = item.backdrop_path || item.poster_path;
+    const imageUrl = poster ? `https://image.tmdb.org/t/p/w500${poster}` : '/fallback.jpg';
+
+    const newItem: RecentlyWatchedItem = {
+      title,
+      tmdbId: item.id,
+      type: mediaType,
+      image: imageUrl,
+      watchedAt: Date.now(),
+    };
+
+    const updated = [
+      newItem,
+      ...existing.filter((entry) => entry.tmdbId !== item.id || entry.type !== mediaType),
+    ].slice(0, 30);
+
+    localStorage.setItem('recentlyWatched', JSON.stringify(updated));
+  } catch (error) {
+    console.error('Error saving recently watched content:', error);
+  }
+};
+
 const Index = memo(() => {
   const [currentSection, setCurrentSection] = useState('home');
   const [idleFeedsActive, setIdleFeedsActive] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
+  const navigate = useNavigate();
   const [selectedItem, setSelectedItem] = useState<Movie | TVShow | null>(null);
   const [selectedMediaType, setSelectedMediaType] = useState<'movie' | 'tv'>('movie');
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isTrailerOpen, setIsTrailerOpen] = useState(false);
   const [trailerKey, setTrailerKey] = useState<string | null>(null);
   const [selectedSource, setSelectedSource] = useState<'continue-watching' | 'default'>('default');
+  const [watchedContent, setWatchedContent] = useState<{ id: number; mediaType: 'movie' | 'tv'; title: string } | null>(null);
   
   // const { addToContinueWatching } = useContinueWatching();
 
@@ -69,6 +113,9 @@ const Index = memo(() => {
   const { data: popularTVShows = [], isLoading: isPopularTVLoading } = usePopularTVShows();
   const { data: nowPlayingMovies = [], isLoading: isNowPlayingLoading } = useNowPlayingMovies();
   const { data: netflixMovies = [], isLoading: isNetflixMoviesLoading } = useNetflixMovies();
+  const { data: franchiseCollectionMovies = [], isLoading: isFranchiseCollectionLoading } = useFranchiseCollectionCards();
+  const { data: aiRecommendedMovies = [], isLoading: isAiRecommendedMoviesLoading } = useAiRecommendedMovies();
+  const { data: aiRecommendedSeries = [], isLoading: isAiRecommendedSeriesLoading } = useAiRecommendedSeries();
 
   const { data: topRatedTVShows = [], isLoading: isTopRatedTVLoading } = useTopRatedTVShows(idleFeedsActive);
   const { data: upcomingMovies = [], isLoading: isUpcomingLoading } = useUpcomingMovies(idleFeedsActive);
@@ -78,6 +125,12 @@ const Index = memo(() => {
   const { data: animeShows = [], isLoading: isAnimeLoading } = useAnimeShows(idleFeedsActive);
   const { data: kDramaShows = [], isLoading: isKDramaLoading } = useKDramaShows(idleFeedsActive);
   const { data: sciFiFantasyShows = [], isLoading: isSciFiFantasyLoading } = useSciFiFantasyShows(idleFeedsActive);
+
+  const { data: recommendedContent = [], isLoading: isRecommendationsLoading } = useRecommendationsForItem(
+    watchedContent?.mediaType ?? null,
+    watchedContent?.id ?? null,
+    Boolean(watchedContent)
+  );
 
   // Search with React Query
   const { data: searchResults = [], isLoading: isSearching } = useSearch(searchQuery, searchQuery.trim().length > 0);
@@ -145,7 +198,23 @@ const Index = memo(() => {
     }
   }, []);
 
+  const triggerRecommendationForItem = useCallback((item: Movie | TVShow, mediaType: 'movie' | 'tv') => {
+    saveRecentlyWatchedItem(item, mediaType);
+    setWatchedContent({
+      id: item.id,
+      mediaType,
+      title: 'title' in item ? item.title : item.name,
+    });
+  }, []);
+
   const handlePlay = useCallback(async (item: Movie | TVShow, mediaType: 'movie' | 'tv') => {
+    if ('franchiseSlug' in item && item.franchiseSlug) {
+      navigate(`/franchise/${item.franchiseSlug}`);
+      return;
+    }
+
+    triggerRecommendationForItem(item, mediaType);
+
     try {
       // addToContinueWatching(item, mediaType, Math.random() * 60 + 10);
 
@@ -168,10 +237,18 @@ const Index = memo(() => {
       }
     } catch (error) {
       console.error('Error playing content:', error);
+      setSelectedItem(item);
+      setSelectedMediaType(mediaType);
+      setIsModalOpen(true);
     }
-  }, []);
+  }, [navigate, triggerRecommendationForItem]);
 
   const handleMoreInfo = useCallback((item: Movie | TVShow, mediaType: 'movie' | 'tv', source?: 'continue-watching') => {
+    if ('franchiseSlug' in item && item.franchiseSlug) {
+      navigate(`/franchise/${item.franchiseSlug}`);
+      return;
+    }
+
     // Prevent opening modal if it's already open with the same item
     if (isModalOpen && selectedItem?.id === item.id) {
       return;
@@ -181,7 +258,7 @@ const Index = memo(() => {
     setSelectedMediaType(mediaType);
     setSelectedSource(source || 'default');
     setIsModalOpen(true);
-  }, [isModalOpen, selectedItem]);
+  }, [isModalOpen, selectedItem, navigate]);
 
   const navbarSearchActions = useMemo(
     () => ({ onPlay: handlePlay, onMoreInfo: handleMoreInfo }),
@@ -226,6 +303,16 @@ const Index = memo(() => {
           />
           */}
 
+          {watchedContent && (isRecommendationsLoading || recommendedContent.length > 0) && (
+            <MediaCarousel
+              title={`More Like ${watchedContent.title}`}
+              items={recommendedContent}
+              onPlay={handlePlay}
+              onMoreInfo={handleMoreInfo}
+              isLoading={isRecommendationsLoading}
+            />
+          )}
+
           <MediaCarousel
             title="Trending Now"
             items={deduplicatedContent.trending}
@@ -235,6 +322,15 @@ const Index = memo(() => {
           />
           
           <Top10Carousel
+            title="Top 10 Movies in Netflix Today"
+            items={netflixMovies}
+            onPlay={handlePlay}
+            onMoreInfo={handleMoreInfo}
+            isLoading={isNetflixMoviesLoading}
+            mobileItemsToShow={3}
+          />
+
+          <Top10Carousel
             title="Top 10 Series in Netflix Today"
             items={deduplicatedContent.popularTVShows}
             onPlay={handlePlay}
@@ -242,14 +338,29 @@ const Index = memo(() => {
             isLoading={isPopularTVLoading}
             mobileItemsToShow={3}
           />
-          
-          <Top10Carousel
-            title="Top 10 Movies in Netflix Today"
-            items={netflixMovies}
+
+          <MediaCarousel
+            title="AI Recommended Movies"
+            items={aiRecommendedMovies}
             onPlay={handlePlay}
             onMoreInfo={handleMoreInfo}
-            isLoading={isNetflixMoviesLoading}
-            mobileItemsToShow={3}
+            isLoading={isAiRecommendedMoviesLoading}
+          />
+
+          <MediaCarousel
+            title="AI Recommended Series"
+            items={aiRecommendedSeries}
+            onPlay={handlePlay}
+            onMoreInfo={handleMoreInfo}
+            isLoading={isAiRecommendedSeriesLoading}
+          />
+
+          <MediaCarousel
+            title="Franchise Collection"
+            items={franchiseCollectionMovies}
+            onPlay={handlePlay}
+            onMoreInfo={handleMoreInfo}
+            isLoading={isFranchiseCollectionLoading}
           />
           
           <MediaCarousel
@@ -333,9 +444,18 @@ const Index = memo(() => {
     isSearching,
     deduplicatedContent,
     isTrendingLoading,
+    isRecommendationsLoading,
+    recommendedContent,
+    watchedContent,
     isNowPlayingLoading,
     isPopularTVLoading,
     isNetflixMoviesLoading,
+    isFranchiseCollectionLoading,
+    franchiseCollectionMovies,
+    isAiRecommendedMoviesLoading,
+    aiRecommendedMovies,
+    isAiRecommendedSeriesLoading,
+    aiRecommendedSeries,
     isAnimeLoading,
     isKDramaLoading,
     isSciFiFantasyLoading,
@@ -357,6 +477,7 @@ const Index = memo(() => {
         {selectedItem && (
           <MediaModal
             isOpen={isModalOpen}
+            onPlayInitiated={triggerRecommendationForItem}
             onClose={() => {
               // Add slight delay to prevent rapid state changes
               if (isModalOpen) {

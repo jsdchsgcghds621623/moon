@@ -150,6 +150,39 @@ export const getNowPlaying = async () => {
   return response.data;
 };
 
+export const getFranchiseCollectionMovies = async () => {
+  try {
+    const response = await tmdbApi.get('/discover/movie', {
+      params: {
+        with_keywords: '9715,180547',
+        sort_by: 'popularity.desc',
+        include_adult: false,
+        page: 1,
+        'vote_count.gte': 200,
+      },
+    });
+
+    const results = (response.data.results ?? []).slice(0, 12);
+    if (results.length >= 6) {
+      return { ...response.data, results };
+    }
+  } catch (error) {
+    console.error('Error fetching franchise collection movies:', error);
+  }
+
+  const fallback = await tmdbApi.get('/movie/popular', {
+    params: {
+      page: 1,
+      language: 'en-US',
+    },
+  });
+
+  return {
+    ...fallback.data,
+    results: (fallback.data.results ?? []).slice(0, 12),
+  };
+};
+
 export const getGenres = async (mediaType: 'movie' | 'tv') => {
   const response = await tmdbApi.get(`/genre/${mediaType}/list`);
   return response.data;
@@ -188,6 +221,15 @@ export const getTVShowDetails = async (id: number): Promise<TVShowDetails> => {
   const response = await tmdbApi.get(`/tv/${id}`, {
     params: {
       append_to_response: 'videos,credits',
+    },
+  });
+  return response.data;
+};
+
+export const getRecommendations = async (mediaType: 'movie' | 'tv', id: number, page: number = 1) => {
+  const response = await tmdbApi.get(`/${mediaType}/${id}/recommendations`, {
+    params: {
+      page,
     },
   });
   return response.data;
@@ -277,3 +319,45 @@ export interface Episode {
   show_id: number;
   still_path: string;
 }
+
+/**
+ * Fetch a mixed list of random movies and TV shows (up to `count`).
+ * It fetches popular movies and TV shows, merges them and returns a random selection.
+ */
+export const getRandomItems = async (count: number = 6) => {
+  try {
+    const [moviesResp, tvResp] = await Promise.all([
+      tmdbApi.get('/movie/popular', { params: { page: 1 } }),
+      tmdbApi.get('/tv/popular', { params: { page: 1 } }),
+    ]);
+
+    const movies = (moviesResp.data.results ?? []).map((m: any) => ({
+      id: m.id,
+      media_type: 'movie' as const,
+      title: m.title,
+      poster_path: m.poster_path,
+      overview: m.overview,
+    }));
+
+    const tv = (tvResp.data.results ?? []).map((t: any) => ({
+      id: t.id,
+      media_type: 'tv' as const,
+      title: t.name,
+      poster_path: t.poster_path,
+      overview: t.overview,
+    }));
+
+    const combined = [...movies, ...tv].filter((it) => it.poster_path != null);
+
+    // Shuffle
+    for (let i = combined.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [combined[i], combined[j]] = [combined[j], combined[i]];
+    }
+
+    return combined.slice(0, count);
+  } catch (error) {
+    console.error('Error fetching random TMDB items', error);
+    return [];
+  }
+};

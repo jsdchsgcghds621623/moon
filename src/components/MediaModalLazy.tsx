@@ -7,6 +7,7 @@ interface MediaModalLazyProps {
   item: Movie | TVShow | null;
   mediaType: 'movie' | 'tv';
   onPlay: (item: Movie | TVShow, mediaType: 'movie' | 'tv') => void;
+  onPlayInitiated?: (item: Movie | TVShow, mediaType: 'movie' | 'tv') => void;
   onMoreInfo?: (item: Movie | TVShow, mediaType: 'movie' | 'tv') => void;
   source?: 'continue-watching' | 'default';
 }
