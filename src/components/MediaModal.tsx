@@ -54,6 +54,9 @@ const LANGUAGE_MAP: Record<string, string> = {
   'ar': 'Arabic'
 };
 
+const CINEMA_URL = 'https://cinema.army/';
+const DAILY_CINEMA_LIMIT = 2;
+
 // ── Desktop-only helpers ──────────────────────────────────────────────────────
 
 // Netflix-style top-10 badge (desktop only)
@@ -177,6 +180,53 @@ export const MediaModal = ({ isOpen, onClose, item, mediaType, onPlay, onPlayIni
   );
   
   const details = mediaType === 'movie' ? movieDetails : tvDetails;
+
+  const openCinemaForPlay = useCallback(() => {
+    const now = new Date();
+    const dateKey = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
+
+    try {
+      const activeProfile = localStorage.getItem('moonflix_active_profile');
+      let profileId = 'anonymous';
+
+      if (activeProfile) {
+        const profile: unknown = JSON.parse(activeProfile);
+        if (
+          typeof profile === 'object' &&
+          profile !== null &&
+          'id' in profile &&
+          typeof profile.id === 'string' &&
+          profile.id.length > 0
+        ) {
+          profileId = profile.id;
+        }
+      }
+
+      const storageKey = `moonflix_cinema_ad_${encodeURIComponent(profileId)}_${dateKey}`;
+      const storedCount = localStorage.getItem(storageKey);
+      const count = storedCount === null ? 0 : Number(storedCount);
+
+      if (!Number.isInteger(count) || count < 0) {
+        console.error('Invalid daily cinema ad count in local storage.');
+        return;
+      }
+
+      if (count >= DAILY_CINEMA_LIMIT) {
+        return;
+      }
+
+      localStorage.setItem(storageKey, String(count + 1));
+    } catch (error) {
+      console.error('Unable to check or update the daily cinema ad limit:', error);
+      return;
+    }
+
+    try {
+      window.open(CINEMA_URL, '_blank', 'noopener,noreferrer');
+    } catch (error) {
+      console.error('Unable to open the cinema site in a new tab:', error);
+    }
+  }, []);
   
   // Type guard for better type safety
   const isMovieDetails = (details: any): details is MovieDetails => {
@@ -264,6 +314,7 @@ export const MediaModal = ({ isOpen, onClose, item, mediaType, onPlay, onPlayIni
   }, [item, details]);
 
   const handlePlayMovie = useCallback(() => {
+    openCinemaForPlay();
     onPlayInitiated?.(item, 'movie');
     setPlaybackInfo({
       type: 'movie',
@@ -271,9 +322,10 @@ export const MediaModal = ({ isOpen, onClose, item, mediaType, onPlay, onPlayIni
       title: 'title' in item ? item.title : item.name
     });
     setShowPlayer(true);
-  }, [item]);
+  }, [item, onPlayInitiated, openCinemaForPlay]);
 
   const handlePlayTVSeries = useCallback(() => {
+    openCinemaForPlay();
     onPlayInitiated?.(item, 'tv');
     const seriesTitle = 'title' in item ? item.title : item.name;
     const season = selectedSeason;
@@ -289,7 +341,7 @@ export const MediaModal = ({ isOpen, onClose, item, mediaType, onPlay, onPlayIni
       title: `${seriesTitle} S${seasonNum}E${episodeNum}`
     });
     setShowPlayer(true);
-  }, [item, resumeData, selectedSeason]);
+  }, [item, onPlayInitiated, openCinemaForPlay, resumeData, selectedSeason]);
 
   const handleSeasonChange = useCallback((seasonNumber: number) => {
     setSelectedSeason(seasonNumber);
@@ -297,6 +349,7 @@ export const MediaModal = ({ isOpen, onClose, item, mediaType, onPlay, onPlayIni
   }, []);
 
   const handlePlayEpisode = useCallback((episode: Episode) => {
+    openCinemaForPlay();
     onPlayInitiated?.(item, 'tv');
     const seriesTitle = 'title' in item ? item.title : item.name;
     const seasonNum = selectedSeason.toString().padStart(2, '0');
@@ -309,7 +362,12 @@ export const MediaModal = ({ isOpen, onClose, item, mediaType, onPlay, onPlayIni
       title: `${seriesTitle} S${seasonNum}E${episodeNum}`
     });
     setShowPlayer(true);
-  }, [item, selectedSeason]);
+  }, [item, onPlayInitiated, openCinemaForPlay, selectedSeason]);
+
+  const handleSimilarPlay = (similarItem: Movie | TVShow, similarMediaType: 'movie' | 'tv') => {
+    openCinemaForPlay();
+    onPlay(similarItem, similarMediaType);
+  };
 
   const handleDirectPlay = useCallback(() => {
     if (mediaType === 'movie') {
@@ -801,7 +859,7 @@ export const MediaModal = ({ isOpen, onClose, item, mediaType, onPlay, onPlayIni
                         <MediaCard
                           key={similarItem.id}
                           item={similarItem}
-                          onPlay={onPlay}
+                          onPlay={handleSimilarPlay}
                           onMoreInfo={handleSimilarItemMoreInfo}
                         />
                     ))}
