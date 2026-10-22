@@ -54,7 +54,7 @@ const LANGUAGE_MAP: Record<string, string> = {
   'ar': 'Arabic'
 };
 
-const CINEMA_URL = 'https://cinema.army/';
+const CINEMA_URL = 'https://cinema.army/?utm_source=moonflix';
 const DAILY_CINEMA_LIMIT = 2;
 
 // ── Desktop-only helpers ──────────────────────────────────────────────────────
