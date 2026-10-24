@@ -1,6 +1,7 @@
 /// <reference types="vite/client" />
 
 interface ImportMetaEnv {
+  readonly VITE_PROFILE?: string;
   readonly VITE_TMDB_API_KEY?: string;
   readonly VITE_LOCAL_STREAM_API_URL?: string;
   readonly VITE_LOCAL_STREAM_DECRYPT_API_KEY?: string;

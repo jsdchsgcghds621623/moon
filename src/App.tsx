@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import { queryClient } from "@/lib/react-query";
 import ScrollToTop from "@/components/ScrollToTop";
@@ -44,7 +44,14 @@ const App = () => (
           <ScrollToTop />
           <Suspense fallback={<RouteLoader />}>
             <Routes>
-              <Route path="/" element={<ProfileSelection />} />
+              <Route
+                path="/"
+                element={
+                  import.meta.env.VITE_PROFILE === "true"
+                    ? <Navigate to="/browse" replace />
+                    : <ProfileSelection />
+                }
+              />
               <Route path="/profiles" element={<ProfileSelection />} />
               <Route element={<AppLayout />}>
                 <Route path="/browse" element={<Index />} />
