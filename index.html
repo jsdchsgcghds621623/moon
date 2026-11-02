@@ -183,39 +183,6 @@
     });
   </script>
 
-  <!-- Ads -->
-  <script type="text/javascript">
-    (function () {
-      let adsEnabled = true;
-
-      try {
-        adsEnabled = localStorage.getItem('moonflix_ads_enabled') !== 'false';
-      } catch (error) {
-        adsEnabled = true;
-      }
-
-      if (!adsEnabled) {
-        return;
-      }
-
-      const script = document.createElement('script');
-      script.id = 'aclib';
-      script.type = 'text/javascript';
-      script.src = '//acscdn.com/script/aclib.js';
-
-      script.onload = function () {
-        if (window.aclib && typeof window.aclib.runAutoTag === 'function') {
-          window.aclib.runAutoTag({
-            zoneId: 'ou75jahjw6',
-          });
-        }
-      };
-
-      document.body.appendChild(script);
-    })();
-  </script>
-
-
   <!-- NoScript -->
   <noscript>
     <div>
