@@ -111,11 +111,11 @@ const Index = memo(() => {
   const { data: trending = [], isLoading: isTrendingLoading } = useTrending('all', 'week');
   const { data: popularMovies = [], isLoading: isPopularMoviesLoading } = usePopularMovies();
   const { data: popularTVShows = [], isLoading: isPopularTVLoading } = usePopularTVShows();
-  const { data: nowPlayingMovies = [], isLoading: isNowPlayingLoading } = useNowPlayingMovies();
+  const { data: nowPlayingMovies = [], isLoading: isNowPlayingLoading } = useNowPlayingMovies(idleFeedsActive);
   const { data: netflixMovies = [], isLoading: isNetflixMoviesLoading } = useNetflixMovies();
-  const { data: franchiseCollectionMovies = [], isLoading: isFranchiseCollectionLoading } = useFranchiseCollectionCards();
-  const { data: aiRecommendedMovies = [], isLoading: isAiRecommendedMoviesLoading } = useAiRecommendedMovies();
-  const { data: aiRecommendedSeries = [], isLoading: isAiRecommendedSeriesLoading } = useAiRecommendedSeries();
+  const { data: franchiseCollectionMovies = [], isLoading: isFranchiseCollectionLoading } = useFranchiseCollectionCards(idleFeedsActive);
+  const { data: aiRecommendedMovies = [], isLoading: isAiRecommendedMoviesLoading } = useAiRecommendedMovies(idleFeedsActive);
+  const { data: aiRecommendedSeries = [], isLoading: isAiRecommendedSeriesLoading } = useAiRecommendedSeries(idleFeedsActive);
 
   const { data: topRatedTVShows = [], isLoading: isTopRatedTVLoading } = useTopRatedTVShows(idleFeedsActive);
   const { data: upcomingMovies = [], isLoading: isUpcomingLoading } = useUpcomingMovies(idleFeedsActive);

@@ -122,11 +122,10 @@ const fetchAiRecommendedContent = async (endpoint: 'movies' | 'series') => {
   return data.metas ?? [];
 };
 
-// Trending content hook - using discover movies for better variety
 export const useTrending = (mediaType: 'all' | 'movie' | 'tv' = 'all', timeWindow: 'day' | 'week' = 'week') => {
   return useQuery({
     queryKey: ['trending', mediaType, timeWindow],
-    queryFn: () => getMoviesByGenre(28), // Action movies for trending
+    queryFn: () => getTrending(mediaType, timeWindow),
     select: (data) => data.results,
   });
 };
@@ -300,9 +299,10 @@ export const useFranchiseCollectionDetail = (slug: string | undefined, enabled =
   });
 };
 
-export const useNowPlayingMovies = () => {
+export const useNowPlayingMovies = (enabled = true) => {
   return useQuery({
     queryKey: ['nowPlaying'],
+    enabled,
     queryFn: getNowPlaying,
     select: (data) => data.results,
   });

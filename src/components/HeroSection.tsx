@@ -1,7 +1,8 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
 import { Play, Plus, Info, Volume2, VolumeX } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { TMDB_IMAGE_URL, Movie, TVShow, getTrending, getTVShowDetails } from '@/lib/tmdb';
+import { TMDB_IMAGE_URL, Movie, TVShow, getTVShowDetails } from '@/lib/tmdb';
+import { useTrending } from '@/hooks/useTMDBQuery';
 import { useMyList } from '@/hooks/useMyList';
 import { useIsMobile } from '@/hooks/use-mobile';
 
@@ -11,7 +12,7 @@ interface HeroSectionProps {
 }
 
 const WEDNESDAY_BANNER =
-  'https://image.tmdb.org/t/p/original/cbODFqkcmRgrYH8NkG4Q4Hcg8Z1.jpg';
+  'https://image.tmdb.org/t/p/w780/cbODFqkcmRgrYH8NkG4Q4Hcg8Z1.jpg';
 
 const WEDNESDAY_ID = 273240;
 
@@ -19,48 +20,31 @@ export const HeroSection = ({
   onPlayClick,
   onInfoClick,
 }: HeroSectionProps) => {
-  const [featuredContent, setFeaturedContent] = useState<Movie | TVShow | null>(null);
   const [wednesdayData, setWednesdayData] = useState<TVShow | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isWednesdayLoading, setIsWednesdayLoading] = useState(true);
   const [isMuted, setIsMuted] = useState(true);
 
   const isMobile = useIsMobile();
   const { isInMyList, toggleMyList } = useMyList();
+  const { data: trendingItems, isLoading: isTrendingLoading } = useTrending('all', 'week');
+  const randomTrendingItem = useMemo(() => {
+    if (!trendingItems?.length) return null;
+
+    const candidates = trendingItems.slice(0, 10);
+    return candidates[Math.floor(Math.random() * candidates.length)];
+  }, [trendingItems]);
 
   /* ───────────────── FETCH ───────────────── */
   useEffect(() => {
     let cancelled = false;
 
     const fetchFeaturedContent = async () => {
-      const mobileViewport =
-        typeof window !== 'undefined' && window.innerWidth < 768;
-
       try {
-        if (mobileViewport) {
-          const wednesdayResponse = await getTVShowDetails(WEDNESDAY_ID);
-
-          if (cancelled) return;
-
-          setWednesdayData(wednesdayResponse);
-          setFeaturedContent(wednesdayResponse);
-          return;
-        }
-
-        const [wednesdayResponse, trendingResponse] = await Promise.all([
-          getTVShowDetails(WEDNESDAY_ID),
-          getTrending('all', 'week'),
-        ]);
+        const wednesdayResponse = await getTVShowDetails(WEDNESDAY_ID);
 
         if (cancelled) return;
 
         setWednesdayData(wednesdayResponse);
-
-        const results = trendingResponse.results ?? [];
-        const randomIndex = Math.floor(
-          Math.random() * Math.min(results.length, 10)
-        );
-
-        setFeaturedContent(results[randomIndex] ?? wednesdayResponse);
       } catch (error) {
         console.error('Error fetching featured content:', error);
 
@@ -69,13 +53,12 @@ export const HeroSection = ({
 
           if (cancelled) return;
 
-          setFeaturedContent(fallback);
           setWednesdayData(fallback);
         } catch (fallbackError) {
           console.error('Failed to fetch Wednesday fallback:', fallbackError);
         }
       } finally {
-        if (!cancelled) setIsLoading(false);
+        if (!cancelled) setIsWednesdayLoading(false);
       }
     };
 
@@ -86,16 +69,12 @@ export const HeroSection = ({
     };
   }, []);
 
-  /* ───────────────── MOBILE SWITCH ───────────────── */
-  useEffect(() => {
-    if (
-      isMobile &&
-      wednesdayData &&
-      featuredContent?.id !== WEDNESDAY_ID
-    ) {
-      setFeaturedContent(wednesdayData);
-    }
-  }, [isMobile, wednesdayData, featuredContent?.id]);
+  const featuredContent = isMobile
+    ? wednesdayData
+    : randomTrendingItem ?? (!isTrendingLoading ? wednesdayData : null);
+  const isLoading = isMobile
+    ? isWednesdayLoading
+    : isTrendingLoading || (!featuredContent && isWednesdayLoading);
 
   /* ───────────────── HANDLERS ───────────────── */
   const handlePlayClick = useCallback(() => {
@@ -156,7 +135,7 @@ export const HeroSection = ({
   const backdropUrl = isMobile
     ? WEDNESDAY_BANNER
     : featuredContent.backdrop_path
-      ? `${TMDB_IMAGE_URL.original}${featuredContent.backdrop_path}`
+      ? `${TMDB_IMAGE_URL.w1280}${featuredContent.backdrop_path}`
       : WEDNESDAY_BANNER;
 
   const inList = isInMyList(featuredContent.id);
@@ -166,16 +145,18 @@ export const HeroSection = ({
     <div className="relative h-screen overflow-hidden">
       {/* Background */}
       {backdropUrl && (
-        <div
-          className="absolute inset-0 scale-105 bg-cover bg-center bg-no-repeat will-change-transform"
+        <img
+          src={backdropUrl}
+          alt=""
+          aria-hidden="true"
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
+          className="absolute inset-0 h-full w-full object-cover object-center"
           style={{
-            backgroundImage: `url(${backdropUrl})`,
             filter: isMobile
               ? 'none'
               : 'brightness(0.85) contrast(1.1) saturate(1.2)',
-            height: '100vh',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center center',
           }}
         />
       )}
