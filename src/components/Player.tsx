@@ -58,7 +58,7 @@ export const Player: React.FC<PlayerProps> = ({
 }) => {
   const [contentYear, setContentYear] = useState<number>(new Date().getFullYear());
   const [error, setError] = useState('');
-  const [loadedEmbedUrl, setLoadedEmbedUrl] = useState<string | null>(null);
+  const [loading, setLoading] = useState(true);
   const [contentDuration, setContentDuration] = useState<number>(0);
   const [isRequesting, setIsRequesting] = useState(false);
   const [requestStatus, setRequestStatus] = useState<'none' | 'success' | 'already_requested'>('none');
@@ -131,6 +131,8 @@ export const Player: React.FC<PlayerProps> = ({
       } catch (err) {
         console.error('Error fetching content info:', err);
         if (isMounted) setReleaseStatus('released');
+      } finally {
+        if (isMounted) setLoading(false);
       }
     };
 
@@ -293,6 +295,16 @@ export const Player: React.FC<PlayerProps> = ({
     </button>
   );
 
+  // --- Loading screen ---
+  if (loading) {
+    return (
+      <div className="fixed inset-0 bg-black z-[999999] flex items-center justify-center">
+        {onClose && <CloseButton />}
+        <div className="text-white text-xl">Loading player...</div>
+      </div>
+    );
+  }
+
   // --- Not yet released ---
   if (error && releaseStatus === 'not_released') {
     return (
@@ -309,37 +321,26 @@ export const Player: React.FC<PlayerProps> = ({
   // --- Build embed URLs ---
   const moonflixEmbedUrl = buildMoonflixEmbedUrl(tmdbId, type, season, episode);
 
+  // --- Mobile iframe props (only for mobile) ---
+  const mobileIframeProps = isMobile
+    ? { referrerPolicy: 'no-referrer' as const, loading: 'eager' as const }
+    : {};
+
   return (
     <div className="fixed inset-0 bg-black z-[999999] flex flex-col">
       {onClose && <CloseButton />}
 
-      <div className="relative w-full h-full">
+      <div className="w-full h-full">
         <iframe
           src={moonflixEmbedUrl}
-          title={`Moonflix player - ${title}`}
+          title="Moonflix player"
           frameBorder="0"
           allow="autoplay; fullscreen"
           allowFullScreen
           scrolling="no"
-          loading="eager"
-          fetchPriority="high"
-          referrerPolicy={isMobile ? 'no-referrer' : 'strict-origin-when-cross-origin'}
           className="w-full h-full border-none block"
-          onLoad={() => setLoadedEmbedUrl(moonflixEmbedUrl)}
+          {...mobileIframeProps}
         />
-        {loadedEmbedUrl !== moonflixEmbedUrl && (
-          <div
-            className="absolute inset-0 flex flex-col items-center justify-center gap-4 bg-[#080808] text-white"
-            role="status"
-            aria-live="polite"
-          >
-            <div className="h-10 w-10 animate-spin rounded-full border-2 border-white/20 border-t-[#E50914]" />
-            <div className="text-center">
-              <p className="font-semibold">{title}</p>
-              <p className="mt-1 text-sm text-white/60">Preparing your stream…</p>
-            </div>
-          </div>
-        )}
       </div>
     </div>
   );
