@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Outlet, useLocation } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import { NavbarSearchProvider } from '@/context/NavbarSearchContext';
@@ -7,9 +7,6 @@ import { RouteSeo } from '@/components/RouteSeo';
 import { syncHeapIdentity } from '@/lib/heap';
 
 export default function AppLayout() {
-  const location = useLocation();
-  const hideChrome = location.pathname === '/ai-search' || location.pathname === '/wrapped';
-
   useEffect(() => {
     syncHeapIdentity();
   }, []);
@@ -24,11 +21,11 @@ export default function AppLayout() {
         >
           Skip to main content
         </a>
-        {!hideChrome && <Navbar />}
-        <main id="main-content" className={hideChrome ? '' : 'pt-nav-offset'} tabIndex={-1}>
+        <Navbar />
+        <main id="main-content" className="pt-nav-offset" tabIndex={-1}>
           <Outlet />
         </main>
-        {!hideChrome && <Footer />}
+        <Footer />
       </div>
     </NavbarSearchProvider>
   );

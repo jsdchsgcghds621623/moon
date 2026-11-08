@@ -4,7 +4,6 @@ import { Link, useLocation } from 'react-router-dom';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { SearchBar } from '@/components/SearchBar';
-import { AiSearchPanel } from '@/components/AiSearchPanel';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import {
   DropdownMenu,
@@ -237,17 +236,28 @@ export const Navbar = () => {
         {/* Right Side */}
         <div className="flex items-center space-x-2 sm:space-x-3 lg:space-x-4">
           <SearchBar />
-          <AiSearchPanel />
 
           <Button
             type="button"
             variant="outline"
             size="sm"
-            className="hidden sm:inline-flex h-8 sm:h-10 px-3 text-xs sm:text-sm font-medium"
+            className="hidden sm:inline-flex h-9 sm:h-10 gap-2 rounded-full border-[#54b9c5]/30 bg-[#54b9c5]/10 px-3 text-xs font-semibold tracking-wide text-[#8de3ea] transition-all hover:-translate-y-0.5 hover:border-[#54b9c5]/60 hover:bg-[#54b9c5]/20 hover:text-white sm:text-sm"
             onClick={() => window.open('https://player.moonflix.website', '_blank', 'noopener,noreferrer')}
           >
-            API
+            <span>API</span>
+            <ExternalLink className="h-3.5 w-3.5 opacity-70" aria-hidden="true" />
           </Button>
+
+          <a
+            href="https://discord.gg/XgndcbuKNG"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Join Moonflix on Discord"
+            title="Join Moonflix on Discord"
+            className="inline-flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-md hover:bg-muted/50 transition-colors"
+          >
+            <img src="/discord.svg" alt="" className="h-5 w-5 sm:h-6 sm:w-6" />
+          </a>
 
           {/* Notifications */}
           <Popover open={isNotificationOpen} onOpenChange={setIsNotificationOpen}>
@@ -260,7 +270,7 @@ export const Navbar = () => {
                 <Bell className="h-4 w-4 sm:h-5 sm:w-5 text-muted-foreground hover:text-foreground" />
                 {/* Notification Badge */}
                 <span className="absolute -top-1 -right-1 h-4 w-4 sm:h-5 sm:w-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center font-bold animate-pulse">
-                  2
+                  3
                 </span>
               </Button>
             </PopoverTrigger>
@@ -271,7 +281,7 @@ export const Navbar = () => {
             >
               <div className="p-4 sm:p-5 border-b border-border/50">
                 <h2 className="font-bold text-base text-foreground">Notifications</h2>
-                <p className="text-xs text-muted-foreground mt-0.5">2 new updates for you</p>
+                <p className="text-xs text-muted-foreground mt-0.5">3 new updates for you</p>
               </div>
 
               {/* Share Moonflix */}
@@ -379,6 +389,30 @@ export const Navbar = () => {
                   onClick={() => setIsNotificationOpen(false)}
                 >
                   Join Channel
+                  <ExternalLink className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </a>
+              </div>
+
+              {/* Discord */}
+              <div className="p-4 sm:p-5 border-t border-border/50">
+                <div className="flex items-center gap-4 mb-3">
+                  <div className="bg-[#5865F2] rounded-xl p-3 shadow-lg shrink-0">
+                    <img src="/discord.svg" alt="" className="h-6 w-6 brightness-0 invert" />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="font-bold text-base text-foreground">Join Our Discord Server</h3>
+                    <p className="text-sm text-muted-foreground">Chat with the Moonflix community</p>
+                  </div>
+                </div>
+
+                <a
+                  href="https://discord.gg/XgndcbuKNG"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 w-full bg-[#5865F2] hover:bg-[#4752C4] text-white font-medium py-3 px-4 rounded-lg transition-colors group"
+                  onClick={() => setIsNotificationOpen(false)}
+                >
+                  Join Discord
                   <ExternalLink className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </a>
               </div>
@@ -500,6 +534,22 @@ export const Navbar = () => {
                   </motion.div>
                 </motion.li>
               ))}
+              <motion.li
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: navItems.length * 0.1 }}
+              >
+                <a
+                  href="https://discord.gg/XgndcbuKNG"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex w-full items-center gap-2 text-left text-foreground hover:text-muted-foreground transition-colors text-sm py-2 tv-focus-ring rounded-sm"
+                >
+                  <img src="/discord.svg" alt="" className="h-5 w-5" />
+                  Discord
+                  <ExternalLink className="h-3.5 w-3.5" />
+                </a>
+              </motion.li>
             </motion.ul>
           </motion.div>
         )}

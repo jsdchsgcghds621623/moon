@@ -146,6 +146,17 @@ export const Navbar = component$(() => {
             )}
           </div>
 
+          <a
+            href="https://discord.gg/XgndcbuKNG"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Join Moonflix on Discord"
+            title="Join Moonflix on Discord"
+            class="inline-flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-md hover:bg-muted/50 transition-colors"
+          >
+            <img src="/discord.svg" alt="" class="h-5 w-5 sm:h-6 sm:w-6" />
+          </a>
+
           {/* Notifications */}
           <div class="relative">
             <Button 
@@ -156,7 +167,7 @@ export const Navbar = component$(() => {
             >
               <Bell class="h-4 w-4 sm:h-5 sm:w-5 text-muted-foreground hover:text-foreground" />
               <span class="absolute -top-1 -right-1 h-4 w-4 sm:h-5 sm:w-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center font-bold animate-pulse">
-                1
+                2
               </span>
             </Button>
             
@@ -207,6 +218,29 @@ export const Navbar = component$(() => {
                     onClick$={() => store.isNotificationOpen = false}
                   >
                     Join Channel
+                    <ExternalLink class="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </a>
+                </div>
+
+                <div class="border-t border-border/50 p-6">
+                  <div class="flex items-center gap-4 mb-4">
+                    <div class="bg-[#5865F2] rounded-xl p-3 shadow-lg">
+                      <img src="/discord.svg" alt="" class="h-6 w-6 brightness-0 invert" />
+                    </div>
+                    <div class="flex-1">
+                      <h3 class="font-bold text-lg text-foreground">Join Our Discord Server</h3>
+                      <p class="text-sm text-muted-foreground">Chat with the Moonflix community</p>
+                    </div>
+                  </div>
+
+                  <a
+                    href="https://discord.gg/XgndcbuKNG"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="flex items-center justify-center gap-2 w-full bg-[#5865F2] hover:bg-[#4752C4] text-white font-medium py-3 px-4 rounded-lg transition-colors group"
+                    onClick$={() => store.isNotificationOpen = false}
+                  >
+                    Join Discord
                     <ExternalLink class="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </a>
                 </div>
@@ -285,6 +319,18 @@ export const Navbar = component$(() => {
                 </Link>
               </li>
             ))}
+            <li>
+              <a
+                href="https://discord.gg/XgndcbuKNG"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex w-full items-center gap-2 text-left text-foreground hover:text-muted-foreground transition-colors text-sm py-2"
+              >
+                <img src="/discord.svg" alt="" class="h-5 w-5" />
+                Discord
+                <ExternalLink class="h-3.5 w-3.5" />
+              </a>
+            </li>
           </ul>
         </div>
       )}

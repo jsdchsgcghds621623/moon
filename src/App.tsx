@@ -24,8 +24,6 @@ const NotFound = lazy(() => import("./pages/NotFound"));
 const MediaDetailPage = lazy(() => import("./pages/MediaDetailPage"));
 const FranchiseCollectionPage = lazy(() => import("./pages/FranchiseCollectionPage"));
 const CategoryBrowsePage = lazy(() => import("./pages/CategoryBrowsePage"));
-const AiSearchMobilePage = lazy(() => import("./pages/AiSearchMobilePage"));
-const MoonflixWrapped = lazy(() => import("./pages/MoonflixWrapped"));
 
 // Loading component for route transitions
 const RouteLoader = () => (
@@ -53,6 +51,8 @@ const App = () => (
                 }
               />
               <Route path="/profiles" element={<ProfileSelection />} />
+              <Route path="/ai-search" element={<Navigate to="/search" replace />} />
+              <Route path="/wrapped" element={<Navigate to="/search" replace />} />
               <Route element={<AppLayout />}>
                 <Route path="/browse" element={<Index />} />
                 <Route path="/movies" element={<Movies />} />
@@ -60,8 +60,6 @@ const App = () => (
                 <Route path="/new-popular" element={<NewAndPopular />} />
                 <Route path="/my-list" element={<MyList />} />
                 <Route path="/search" element={<Search />} />
-                <Route path="/ai-search" element={<AiSearchMobilePage />} />
-                <Route path="/wrapped" element={<MoonflixWrapped />} />
                 <Route path="/disclaimer" element={<Disclaimer />} />
                 <Route path="/what-is-moonflix" element={<WhatIsMoonflix />} />
                 <Route path="/franchise/:slug" element={<FranchiseCollectionPage />} />
